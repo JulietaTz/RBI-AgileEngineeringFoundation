@@ -12,3 +12,6 @@ valuable time, and ensures every customer, regardless of location, ability, or t
 Our long-term goal is to become the most trusted professional tools marketplace globally, where customers don't just buy tools but discover 
 optimal solutions through data-driven insights, community wisdom, and intelligent assistance, while we build sustainable competitive advantage 
 through innovation, quality, and genuine inclusivity that sets new industry standards for what e-commerce should be.
+
+
+
