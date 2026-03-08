@@ -44,12 +44,9 @@ Are you ready for this journey?
   - 1000-1300
     - Sprint Planning ZERO
       - Sprint Goals
-       - SG1: The application can be deployed via GitHub Actions to these environments.
-       - SG2: The shop is available at DEV/TEST/PROD 
-       - SG3: New logo is available in PROD.
 
     - Sprint Execution
-      - Backlog Grooming
+      - Backlog Grooming / Sprint Planning
         - Explain the sprint goals
         - Which stories do we need for the sprint?
         - Explain the stories (rough)
