@@ -3,4 +3,4 @@ combining European engineering excellence with American practicality. We are com
 sustainability, offering ESG-compliant tools that meet ANSI and OSHA standards while providing a seamless
 e-commerce experience tailored to US customer expectations. Through imperial measurements, local payment
 options, and clear environmental impact ratings, we empower American contractors, craftspeople, and DIY 
-enthusiasts to make informed, sustainable choices without compromising on quality or convenience.
+enthusiasts to make informed, sustainable choices without compromising on quality or convenience.   
