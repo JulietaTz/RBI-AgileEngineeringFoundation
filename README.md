@@ -1,4 +1,4 @@
-# RBI Agile Engineering Foundation Program
+# RBI Agile Engineering Foundation Program 
 
 ## The Seal-Team-42 Story
 Once upon a time, in the busy world of software startups, there was a small but ambitious company called TechGenius Inc. With a team of bright minds and a revolutionary idea, they set out to develop an e-commerce store for the major tools brand " Roy's-Roy's Tools”.
