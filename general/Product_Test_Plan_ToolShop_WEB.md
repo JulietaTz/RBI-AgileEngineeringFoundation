@@ -41,7 +41,7 @@ The main objectives of this test plan are:
 
 ### 3.1 In Scope
 
-The test scope is derived from the feature classification and focuses on business-critical (**MUST**) and supporting (**SHOULD**) functionalities.
+The test scope is derived from the defined use cases and focuses on business-critical (**MUST**) and supporting (**SHOULD**) functionalities.
 
 The following use cases are covered by this test plan:
 
@@ -71,7 +71,7 @@ These use cases are considered business-critical as they are essential for compl
 
 ---
 
-The classification of business-critical (**MUST**) and supporting (**SHOULD**) features is based on the feature overview provided in the project repository.
+The classification of business-critical (**MUST**) and supporting (**SHOULD**) use cases is based on the project requirements and scope definition.
 
 A detailed mapping of all relevant features is provided in the **Feature Classification Table** below.
 
