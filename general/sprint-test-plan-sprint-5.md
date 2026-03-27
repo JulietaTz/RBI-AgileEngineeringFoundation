@@ -14,7 +14,7 @@
 
 This Sprint Test Plan is derived from the Product Test Plan and focuses on the ESG features delivered in the current sprint.
 
-The goal is to validate these features functionally and to ensure a fast and pragmatic verification in order to provide early feedback.
+The goal is to validate the ESG features and verify that they function correctly, while ensuring a fast and pragmatic testing approach to provide early feedback.
 
 ---
 
