@@ -9,7 +9,7 @@
   - Physical Scrum Board is available and ready for sprint 6.1
   - Sprint Backlog 6.1 is ready
 - Implementation
-  - All UI-Defect on Homepage (sprint5-with-bugs) are fixed and accepted by PO
+  - 
   - ToolShop is available with new logo (ESG / China)
   - EGS (E1.1, E1.2) Accepted by PO (at least T1)
   - EGS (E1.4, E.2.1) Accepted by PO (at least T1)
@@ -19,12 +19,10 @@
 
 
 ## Sprint 6.1 (13:45-15:00) (US Ready Payment)
-- Regression Tests for login and registration are implemented
+- US1009 - Regression Tests for login and registration are implemented
 - User can pay via AfterPay
 - Shop is GDPR ready (GDPR Statement)
-- Shop is ESG ready (ESG Code of Conduct)
 - Shop is support ready (Version Number)
-- Bugfixxing
 - Sprint Backlog 6.2 is ready
 
 ## Sprint 6.2 (AI start) (15:15-16:30)
