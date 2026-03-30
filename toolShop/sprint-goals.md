@@ -14,6 +14,8 @@
   - ToolShop is available with new logo (ESG / China)
   - EGS (E1.1, E1.2) Accepted by PO (at least T1)
   - EGS (E1.4, E.2.1) Accepted by PO (at least T1)
+  - US6000 Contact form 
+  - US6000 Contact file upload
 
 
 
