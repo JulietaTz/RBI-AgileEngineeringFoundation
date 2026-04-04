@@ -1,0 +1,4 @@
+- Gülbin: ISTQB GenAI
+- Serife: ISTQB GenAI
+- Julietta: ISTQB FL
+- Dilek: ISTQB Test Automation Engineer
