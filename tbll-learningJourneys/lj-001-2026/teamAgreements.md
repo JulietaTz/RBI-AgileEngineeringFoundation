@@ -26,7 +26,7 @@ Jede Studentin hat eine eigene Spalte mit:
 
 - **Backlog**
 - **In Progress**
-- **Done**
+
 
 ### Regeln:
 - Maximal **1–2 Tasks gleichzeitig in “In Progress”**
