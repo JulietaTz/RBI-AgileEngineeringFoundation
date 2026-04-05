@@ -33,14 +33,21 @@ Jede Studentin hat eine eigene Spalte mit:
 - “Done” enthält nur **abgeschlossene Tasks des aktuellen Sprints**
 - Backlog enthält nur **kurzfristig relevante Tasks (max. 2 Sprints voraus)**
 
+
 ---
 
 ## 4. Backlog-Regeln
 
-Tasks müssen:
-- ein klares **Lernziel** haben  
-- in einem Sprint **abschließbar** sein  
-- ein **konkretes Ergebnis liefern**
+Tasks
+- müssen ein klares **Lernziel** haben  
+- müssen in einem Sprint **abschließbar** sein  
+- müssen ein **konkretes Ergebnis liefern das im Task definiert ist**
+- dürfen nicht **mehr als 8h für die Umsetzung dauern**
+- müssen Subtasks **(Todo's haben )**
+- - Beispiel: Lernzirkel neu organisieren
+- - - Teamagreements definieren
+- - - Neue Organ bekanntgeben
+- - - Repo umgestalten
 
 ### Beispiele:
 
