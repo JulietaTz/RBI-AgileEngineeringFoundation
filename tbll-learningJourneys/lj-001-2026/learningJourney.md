@@ -13,7 +13,7 @@
 - Friday we are running a 1 hour meeting to discuss the progress and upcoming tasks
 
 ## Learning Tasks (LT)
-- Every chapter/section of the Syllabus will be defined as a learning task in the sprint backlog. 
+- Every chapter/section of the Syllabus will be defined by the students as a learning task in the sprint backlog. 
 
 ### Learning Task Example
 - 1.1.1 Explain the Advantages and Disadvantages of Test Automation
@@ -27,7 +27,18 @@ Solution
 
 ### Transfer Task Example
 - 1.1.1 Explain the Advantages and Disadvantages of Test Automation
-    - TBD
+    - **TT-1.1.1 (max. 30 min): Mini comparison Manual vs. Automated Test**
+        - **SUT:** https://practicesoftwaretesting.com/
+        - **Goal:** Explain at least 3 advantages and 3 disadvantages of test automation based on a real task.
+        - **Timebox:**
+            - 5 min: Define one simple test scenario (e.g., search for "hammer" and open a product detail page).
+            - 10 min: Execute the scenario manually and note effort, speed, repeatability, and risk of human error.
+            - 10 min: Sketch a pseudo-automated version (steps in Playwright/Cypress style, no full implementation required).
+            - 5 min: Compare manual vs. automated execution and document findings.
+        - **Expected Output (short note):**
+            - 3 advantages of automation (e.g., repeatability, speed in regression, reduced human error)
+            - 3 disadvantages of automation (e.g., initial setup effort, maintenance cost, need for technical skills)
+            - 1 conclusion: When automation is useful for this scenario and when manual testing is still better.
 - 2.2.1 Analyze a System Under Test to Determine the Appropriate Test Automation
 Solution
     - TBD
@@ -36,3 +47,6 @@ Solution
 
 ## System Under Test (SUT) 
 As System under Test (SUT) we will use https://practicesoftwaretesting.com/
+
+## Prompt to create a transfer task
+- 
