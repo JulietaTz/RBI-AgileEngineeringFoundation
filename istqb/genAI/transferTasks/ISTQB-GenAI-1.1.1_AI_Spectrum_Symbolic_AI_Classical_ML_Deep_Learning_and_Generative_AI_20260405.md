@@ -1,5 +1,5 @@
 ### 1. Title
-Compare AI Paradigms for Practical Test Work
+Quick AI Spectrum Mapping for Toolshop Testing
 
 ---
 
@@ -9,38 +9,44 @@ ISTQB GenAI – 1.1.1 AI Spectrum: Symbolic AI, Classical Machine Learning, Deep
 ---
 
 ### 3. Learning Objective
-Understand how different AI paradigms differ in capability, explainability, and suitability for software testing tasks.
+Identify, in a simple and practical way, when each AI paradigm is useful for testing in Toolshop. Produce a lightweight comparison your Scrum team can use immediately.
 
 ---
 
 ### 4. Context / Scenario
-Your test team discusses where to use AI support in upcoming sprints. Before selecting tools, the team needs a practical comparison of AI paradigms for test-related work.
+During sprint planning, your team wants to use AI support in Toolshop testing but is unsure which paradigm fits which task. You create a quick decision aid focused on one real Toolshop feature.
 
 ---
 
 ### 5. Task Instructions
-1. Create a comparison table with four rows: Symbolic AI, Classical ML, Deep Learning, Generative AI.
-2. For each row, add:
-   - Typical input data
-   - Typical testing use case
-   - Main strength
-   - Main limitation
-   - Main risk
-3. Add one concrete Toolshop-related example per paradigm.
-4. Conclude which paradigm is best suited for requirement-to-test-case generation and why.
+1. Open https://practicesoftwaretesting.com/ and choose one feature flow (e.g., search, login, or checkout).
+2. Create a table with exactly four rows: Symbolic AI, Classical ML, Deep Learning, Generative AI.
+3. For each row, fill only these three fields:
+   - One testing use case for your chosen Toolshop flow
+   - One main strength
+   - One caution/risk
+4. Add one sentence: Which paradigm would you use first for requirement-to-test-case generation in this sprint, and why?
+5. Use this starter template to keep it fast:
+
+| Paradigm | Toolshop testing use case | Main strength | Caution/risk |
+|---|---|---|---|
+| Symbolic AI |  |  |  |
+| Classical ML |  |  |  |
+| Deep Learning |  |  |  |
+| Generative AI |  |  |  |
 
 ---
 
 ### 6. Expected Outcome / Deliverable
-A markdown file with a comparison table and a short conclusion (5 bullets max).
+One markdown note containing the completed 4-row table and one final decision sentence.
 
 ---
 
 ### 7. Timebox
-20 minutes
+15 minutes
 
 ---
 
 ### 8. Hints (Optional)
-- Prefer practical examples over theoretical definitions.
-- Keep risks test-quality-focused (e.g., false confidence, missing coverage).
+- Stay concrete: write examples for your chosen Toolshop flow only.
+- If unsure, start with Generative AI for draft test ideas and note one review risk.
