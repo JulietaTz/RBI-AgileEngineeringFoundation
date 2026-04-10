@@ -49,7 +49,7 @@ Serife joins sprint preparation for the Toolshop webshop. The team needs a quick
 
 ### Empfehlung
 
-Start mit Generative AI, da schnell Testfälle aus Anforderungen generiert werden können.
+Start mit Generative AI, da schnell Testfälle aus Anforderungen generiert werden können.  
 ---
 
 ### 6. Expected Outcome / Deliverable
