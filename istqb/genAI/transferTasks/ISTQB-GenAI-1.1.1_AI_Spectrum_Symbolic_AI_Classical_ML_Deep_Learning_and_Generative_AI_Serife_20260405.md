@@ -49,11 +49,11 @@ Ich habe den Cart- und Checkout-Flow im Toolshop getestet. Dabei habe ich ein Pr
 ### Decision Matrix
 
 | Paradigma     | Toolshop Testing Use Case                               | Hauptvorteil                | Risiko                                 |
-| ------------- | ------------------------------------------------------- | --------------------------- | -------------------------------------- |
+| --- | --- | --- | --- |
 | Symbolic AI   | Validierung der Warenkorb-Gesamtsumme und Löschfunktion | Klare regelbasierte Logik   | Wenig flexibel bei unerwarteten Fällen |
 | Classical ML  | Analyse von Abbrüchen im Checkout                       | Lernt aus Nutzerdaten       | Benötigt ausreichend Daten             |
 | Deep Learning | Erkennung ungewöhnlicher Checkout-Verhalten             | Erkennt komplexe Muster     | Schwer zu interpretieren               |
-| Generative AI | Generierung von Testfällen für Cart und Checkout        | Schnelle Testfallerstellung | Kann fehlerhafte Tests erzeugen        |
+| Generative AI | Generierung von Testfällen für Cart und Checkout        | Schnelle Testfallerstellung | Kann fehlerhafte Tests erzeugen        
 
 ### Empfehlung
 
