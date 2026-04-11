@@ -19,11 +19,6 @@ Identify, in a simple and practical way, when each AI paradigm is useful for tes
 ### 4. Context / Scenario
 
 During sprint planning, your team wants to use AI support in Toolshop testing but is unsure which paradigm fits which task. You create a quick decision aid focused on one real Toolshop feature.
-
-### Kontext
-
-Ich habe den Cart- und Checkout-Flow im Toolshop getestet. Dabei habe ich ein Produkt hinzugefügt, die Menge geändert und den Checkout gestartet. Während des Tests habe ich Probleme festgestellt, zum Beispiel eine falsche Gesamtberechnung und einen nicht funktionierenden Delete-Button.
-
 ---
 
 ### 5. Task Instructions
