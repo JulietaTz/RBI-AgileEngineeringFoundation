@@ -16,6 +16,10 @@ Identify, in a simple and practical way, when each AI paradigm is useful for tes
 ### 4. Context / Scenario
 During sprint planning, your team wants to use AI support in Toolshop testing but is unsure which paradigm fits which task. You create a quick decision aid focused on one real Toolshop feature.
 
+### Selected Use Case
+
+E1.1 – CO2 Impact Rating Display (Toolshop)
+
 ---
 
 ### 5. Task Instructions
@@ -28,12 +32,17 @@ During sprint planning, your team wants to use AI support in Toolshop testing bu
 4. Add one sentence: Which paradigm would you use first for requirement-to-test-case generation in this sprint, and why?
 5. Use this starter template to keep it fast:
 
-| Paradigm | Toolshop testing use case | Main strength | Caution/risk |
-|---|---|---|---|
-| Symbolic AI |  |  |  |
-| Classical ML |  |  |  |
-| Deep Learning |  |  |  |
-| Generative AI |  |  |  |
+
+| Paradigm      | Toolshop testing use case                                | Main strength                                      | Caution/risk                    |
+|---------------|----------------------------------------------------------|----------------------------------------------------|---------------------------------|
+| Symbolic AI   | Validate CO2 rating per product using predefined rules   | Clear rules enable simple, deterministic validation| Only detects predefined errors  |
+| Classical ML  | Detect unusual CO2 values                                | Identifies anomalies in data                       | Requires large amounts of data  |
+| Deep Learning | Detect the Eco symbol correctly in the UI                | Detects errors in complex patterns                 | Requires careful preparation    |
+| Generative AI | Generate edge cases for CO2 rating                       | Quickly generates many alternative test cases      | Results must be reviewed        |
+
+### Final Decision
+
+I would start with Symbolic AI for this use case, as the CO2 rating can be validated using predefined rules.  
 
 ---
 

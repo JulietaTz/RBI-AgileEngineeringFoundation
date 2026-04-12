@@ -1,6 +1,6 @@
 ### 1. Title
 
-AI Paradigm Fit Check for Toolshop Cart Testing
+Quick AI Spectrum Mapping for Toolshop Testing
 
 ---
 
@@ -12,49 +12,53 @@ ISTQB GenAI – 1.1.1 AI Spectrum: Symbolic AI, Classical Machine Learning, Deep
 
 ### 3. Learning Objective
 
-Apply the AI spectrum to one concrete Toolshop testing context and decide which paradigm gives the best starting point for sprint test design.
+Identify, in a simple and practical way, when each AI paradigm is useful for testing in Toolshop. Produce a lightweight comparison your Scrum team can use immediately.
 
 ---
 
 ### 4. Context / Scenario
 
-Serife joins sprint preparation for the Toolshop webshop. The team needs a quick, practical decision on how different AI paradigms could support testing of the cart and checkout area in the upcoming sprint.
-
+During sprint planning, your team wants to use AI support in Toolshop testing but is unsure which paradigm fits which task. You create a quick decision aid focused on one real Toolshop feature.
 ---
 
 ### 5. Task Instructions
 
-1. Open https://practicesoftwaretesting.com/ and execute a short cart flow: add one product to cart, open cart, start checkout.
-2. Open Toolshop documentation and review one relevant behavior statement for cart/checkout:
-   - https://github.com/testsmith-io/practice-software-testing/tree/main/docs
-   - https://github.com/testsmith-io/practice-software-testing/tree/main/sprint5
-3. Fill in the matrix below for all four paradigms, using short phrases (max. 12 words per cell).
-4. Add one final recommendation sentence for this sprint: “Start with **_ because _**.”
+1. Open https://practicesoftwaretesting.com/ and choose one feature flow (e.g., search, login, or checkout).
+2. Create a table with exactly four rows: Symbolic AI, Classical ML, Deep Learning, Generative AI.
+3. For each row, fill only these three fields:
+   - One testing use case for your chosen Toolshop flow
+   - One main strength
+   - One caution/risk
+4. Add one sentence: Which paradigm would you use first for requirement-to-test-case generation in this sprint, and why?
+5. Use this starter template to keep it fast:
 
-| Paradigm | Best use in cart/checkout testing | Why useful here | Key caution |
+| Paradigm      | Toolshop testing use case | Main strength | Caution/risk |
+| ------------- | ------------------------- | ------------- | ------------ |
+| Symbolic AI   |                           |               |              |
+| Classical ML  |                           |               |              |
+| Deep Learning |                           |               |              |
+| Generative AI |                           |               |              |
 
-| Symbolic AI | | | |
-| Classical ML | | | |
-| Deep Learning | | | |
-| Generative AI | | | |
+## AI Paradigm Fit Check for Toolshop Cart Testing
 
 ### Decision Matrix
 
-| Paradigma | Toolshop Testing Use Case | Hauptvorteil | Risiko |
-
-| Symbolic AI | Validierung der Warenkorb-Gesamtsumme und Löschfunktion | Klare regelbasierte Logik | Wenig flexibel bei unerwarteten Fällen |
-| Classical ML | Analyse von Abbrüchen im Checkout | Lernt aus Nutzerdaten | Benötigt ausreichend Daten |
-| Deep Learning | Erkennung ungewöhnlicher Checkout-Verhalten | Erkennt komplexe Muster | Schwer zu interpretieren |
-| Generative AI | Generierung von Testfällen für Cart und Checkout | Schnelle Testfallerstellung | Kann fehlerhafte Tests erzeugen |
+| Paradigma     | Toolshop Testing Use Case                               | Hauptvorteil                | Risiko                                 |
+| --- | --- | --- | --- |
+| Symbolic AI   | Validierung der Warenkorb-Gesamtsumme und Löschfunktion | Klare regelbasierte Logik   | Wenig flexibel bei unerwarteten Fällen |
+| Classical ML  | Analyse von Abbrüchen im Checkout                       | Lernt aus Nutzerdaten       | Benötigt ausreichend Daten             |
+| Deep Learning | Erkennung ungewöhnlicher Checkout-Verhalten             | Erkennt komplexe Muster     | Schwer zu interpretieren               |
+| Generative AI | Generierung von Testfällen für Cart und Checkout        | Schnelle Testfallerstellung | Kann fehlerhafte Tests erzeugen        
 
 ### Empfehlung
 
 Start mit Generative AI, da schnell Testfälle aus Anforderungen generiert werden können.
+
 ---
 
 ### 6. Expected Outcome / Deliverable
 
-One markdown artifact with a completed 4-row matrix and one sprint recommendation sentence.
+One markdown note containing the completed 4-row table and one final decision sentence.
 
 ---
 
@@ -66,5 +70,5 @@ One markdown artifact with a completed 4-row matrix and one sprint recommendatio
 
 ### 8. Hints (Optional)
 
-- Keep each cell short and practical, not theoretical.
-- If uncertain, compare Symbolic AI and Generative AI first, then complete the other two.
+- Stay concrete: write examples for your chosen Toolshop flow only.
+- If unsure, start with Generative AI for draft test ideas and note one review risk.
