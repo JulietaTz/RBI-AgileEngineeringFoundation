@@ -9,7 +9,7 @@ ISTQB TAE – 3.1.2 Explain How to Design a Test Automation Solution
 ---
 
 ### 3. Learning Objective
-Create a lightweight but complete solution design that links scope, architecture, data, and execution strategy.
+Create a lightweight but complete solution design based on your test automation strategy (from TT3.1.1) that links scope, architecture, data, and execution strategy.
 
 ---
 

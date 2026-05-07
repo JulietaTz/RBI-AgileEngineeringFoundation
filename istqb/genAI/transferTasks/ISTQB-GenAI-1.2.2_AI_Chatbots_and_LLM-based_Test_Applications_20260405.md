@@ -36,7 +36,7 @@ A one-page team guideline for chatbot usage in testing.
 ---
 
 ### 7. Timebox
-20 minutes
+60 minutes
 
 ---
 

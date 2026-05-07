@@ -76,7 +76,6 @@ T5                      Misuse Case             Deliberate misuse or
 manipulation attempts
 to test system
 robustness.
-  -----------------------------------------------------------------------
 
 ------------------------------------------------------------------------
 
@@ -161,7 +160,7 @@ Characteristics:
 
 Example:
 
-T5_login_validUserWithLockedIdCard_userGetErrormessageAndIsNotLoggedIN
+T5_login_withSQLInjection-userGetsErrormessage
 
 ------------------------------------------------------------------------
 
