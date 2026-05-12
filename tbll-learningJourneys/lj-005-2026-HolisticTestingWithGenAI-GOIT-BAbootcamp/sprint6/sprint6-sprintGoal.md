@@ -1,2 +1,0 @@
-# Sprint Goal - Sprint 6
-Establish the foundation for entering the Czech market as an alternative growth strategy after the cancellation of the planned China expansion, by enabling Czech customer support through marketplace integration with Alza.cz, Czech language capabilities, localized product offerings, and integration of the local payment solution "PayU Czech Republic" to validate market acceptance and commercial potential in Czechia.

@@ -1,0 +1,12 @@
+---
+description: Instructional Designer Standards
+alwaysApply: true
+---
+
+- All outcomes must be markdown files
+- Always create structured section headings
+- TRATAS must be hands-on
+- Prefer real-world examples
+- Prompts must be implementation-ready
+- Prompts should guide the AI step-by-step
+- Use concise and structured language
