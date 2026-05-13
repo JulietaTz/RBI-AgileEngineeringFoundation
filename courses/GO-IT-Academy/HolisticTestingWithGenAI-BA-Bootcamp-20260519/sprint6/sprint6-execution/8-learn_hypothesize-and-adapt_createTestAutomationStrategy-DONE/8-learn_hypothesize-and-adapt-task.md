@@ -1,6 +1,6 @@
-# Hands-On Task: Learn Stage - Improve the Test Automation Strategy
+# Transfer Task: Learn Stage - Improve the Test Automation Strategy
 
-## Objective
+## 1. Description
 
 Reflect on the findings, risks, defects, observations, and insights
 from the previously executed tasks and use them to improve the Test
@@ -12,7 +12,7 @@ engineering approaches.
 
 ---
 
-# Background
+## 2. Background
 
 During the previous stages of the Holistic Testing Model, multiple
 activities were executed, including:
@@ -28,9 +28,19 @@ The collected findings now serve as input for the final Learn stage.
 
 ---
 
-# Task Description
+## 3. References
 
-## Part 1 - Reflect on the Findings
+- File:         sprint6-input/sprint6-content.md
+- File:         sprint6-input/sprint6-sprintGoal.md
+- User Stories: sprint6-input/USxx.md
+- List of bugs: sprint6-input/list-of-bugs.md
+- LogFiles:     7-observe_monitor-errors-warnings/test*.log
+
+---
+
+## Task Description
+
+### Part 1 - (Title)
 
 Review the outcomes from the previous stages and identify:
 - Critical defects
@@ -49,26 +59,7 @@ Identify:
 
 ---
 
-## Part 2 - Adapt the Test Automation Strategy
-
-Adjust the existing Test Automation Strategy based on the findings.
-
-Consider:
-- Automation priorities
-- Regression risks
-- Production incidents
-- Business-critical workflows
-- Stability and maintainability
-- Monitoring and feedback loops
-
-Define:
-- Which areas should be automated first
-- Which tests should remain manual or exploratory
-- Which risks should be continuously monitored
-
----
-
-## Part 3 - Define the Top 10 Automation Candidates
+### Part 2 - (Title))
 
 Create a prioritized list of the 10 most important T1&T5 tests that
 should be automated.
@@ -87,27 +78,27 @@ Focus on:
 
 ---
 
-# Expected Deliverables
+### Part 3 - (Title)
 
-## Deliverables
-- Reflection summary
-- Updated Test Automation Strategy
-- Prioritized Top 10 automation candidates
-- Short rationale for each automation decision
+Adjust the existing Test Automation Strategy based on the findings.
 
----
+Consider:
+- Automation priorities
+- Regression risks
+- Production incidents
+- Business-critical workflows
+- Stability and maintainability
+- Monitoring and feedback loops
+- Consider the next goal for sprint 7 & 8 (go with the toolshop to new markets: United States & China, Customer Growth)
 
-# Timebox
+Define:
+- Which areas should be automated first
+- Which tests should remain manual or exploratory
+- Which risks should be continuously monitored
 
-60-90 minutes
-
----
-
-# Learning Goals
-
-Participants learn how to:
-- Use testing feedback for continuous improvement
-- Adapt automation strategies based on real findings
-- Prioritize automation using risks and business value
-- Connect exploratory testing and automation decisions
-- Think strategically about sustainable test automation
+## Outcome
+- Create a table with following columns: 
+- Name of use case/feature that should be covered with an automated test
+- T1T5 test title 
+- Implementation order (1-10)
+- Reason
