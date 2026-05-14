@@ -12,3 +12,17 @@ See as example: @courses/GO-IT-Academy/HolisticTestingWithGenAI-BA-Bootcamp-2026
 Create a markdown file x.md in the sprint6-execution directory.
 
 Do not change any other file.
+
+
+
+
+
+
+
+
+## Create a black story
+Act a blackstory-designer-agent. 
+
+Create a black story for file: <file-name>
+
+Create a dark noir SVG card design for this Black Story.
