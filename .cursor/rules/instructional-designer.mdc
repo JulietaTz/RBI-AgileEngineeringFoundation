@@ -3,10 +3,12 @@ description: Instructional Designer Standards
 alwaysApply: true
 ---
 
-- All outcomes must be markdown files
-- Always create structured section headings
-- TRATAS must be hands-on
-- Prefer real-world examples
-- Prompts must be implementation-ready
-- Prompts should guide the AI step-by-step
+- Create one markdown file per transfer task in the current directory
+- The system under test is always the ToolShop
+- Always create following structured section headings
+- **Title**
+- **Background**
+- **Reference**
+- **Tasks**
 - Use concise and structured language
+- Do not create any other sections

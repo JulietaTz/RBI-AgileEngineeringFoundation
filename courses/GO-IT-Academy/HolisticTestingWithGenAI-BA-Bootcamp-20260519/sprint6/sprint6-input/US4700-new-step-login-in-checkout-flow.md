@@ -27,3 +27,14 @@ And on the checkout-UI
 When the user clicks "Proceed to Checkout"
 Then the first checkout step will be displayed.
 
+### Acceptance criteria
+- ACC-01: When a not logged-in user clicks "Proceed to Checkout", a login dialog is displayed.
+- ACC-02: After a successful login during checkout, the user is redirected to the first checkout step.
+- ACC-03: The products currently stored in the shopping cart remain unchanged after login.
+- ACC-04: Logged-in users can directly access the first checkout step without seeing the login dialog.
+- ACC-05: Invalid login credentials entered during checkout display an appropriate error message.
+- ACC-06: The user can retry the login process after a failed login attempt without leaving the checkout workflow.
+- ACC-07: The login dialog provides access to the "Forgot Password" functionality.
+- ACC-08: The login dialog provides access to the user registration workflow for new customers.
+- ACC-09: The checkout workflow continues correctly after login without losing checkout-related data.
+- ACC-10: Unauthorized users cannot access protected checkout steps without successful authentication.
