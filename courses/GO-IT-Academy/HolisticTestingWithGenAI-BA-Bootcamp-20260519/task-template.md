@@ -17,7 +17,7 @@
 
 - File:         sprint6-input/sprint6-content.md
 - File:         sprint6-input/sprint6-sprintGoal.md
-- User Stories: sprint6-input/sprint6-input
+- User Stories: sprint6-input/USxx.md
 
 ---
 
@@ -37,12 +37,7 @@
 
 ### Part 3 - (Title)
 
-Use different GenAI models and compare:
-- Risk assessment results
-- Prioritization decisions
-- Reasoning quality
-- Identified risks
-- Suggested testing focus
+...
 
 ---
 
