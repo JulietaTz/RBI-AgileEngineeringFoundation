@@ -1,0 +1,15 @@
+---
+description: Instructional Designer Standards
+alwaysApply: true
+---
+
+- Create one markdown file per transfer task in the current directory
+- The system under test is always the ToolShop
+- Always create following structured section headings
+- **Title**
+- **Learning Objective**
+- **Background**
+- **Reference**
+- **Tasks**
+- Use concise and structured language
+- Do not create any other sections
