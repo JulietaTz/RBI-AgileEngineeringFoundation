@@ -6,7 +6,7 @@ Apply Testware on Toolshop – Product Search Regression Test
 
 
 ## 2. Syllabus Reference
-ISTQB FL 4.0 – 1.4.2 Testware
+ISTQB FL 4.0 – 1.4.3 Testware
 
 ### Definition
 Testware includes all work products created and used during testing activities.
