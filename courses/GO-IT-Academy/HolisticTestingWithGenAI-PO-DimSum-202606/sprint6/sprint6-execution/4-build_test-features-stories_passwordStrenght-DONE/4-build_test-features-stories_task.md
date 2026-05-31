@@ -7,6 +7,13 @@ Design a set of **test situations** to validate the password strenght feature.
 
 A **test situation** is an isolated condition under which the test object displays a specific behaviour that needs to be tested. Test situations are in other words isolated or individual possibilities that needs to be tested.
 
+Example for a **test situation** for the registration feature:
+- Register with valid data
+- Register with social media Google
+- Register with already registered user
+- Register with invalid password
+- Register with a too weak password
+
 ---
 
 ## 2. Background
