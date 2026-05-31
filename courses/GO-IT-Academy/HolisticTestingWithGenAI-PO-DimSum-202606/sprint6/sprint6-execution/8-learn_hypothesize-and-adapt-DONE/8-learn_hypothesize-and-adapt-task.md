@@ -34,7 +34,8 @@ The collected findings now serve as input for the final Learn stage.
 - File:         sprint6-input/sprint6-sprintGoal.md
 - User Stories: sprint6-input/USxx.md
 - List of bugs: sprint6-input/list-of-bugs.md
-- LogFiles:     7-observe_monitor-errors-warnings/test*.log
+- LogFiles TA:      5-deploy_run-automated-tests_analyzeLogfile-DONE/ta*.log
+- LogFiles TIP:     7-observe_monitor-errors-warnings-DONE/test*.log
 
 ---
 
