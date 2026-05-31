@@ -1,23 +1,101 @@
-# ToolShop automated test log review — prioritized improvements
+# ToolShop automation log review — submission
 
-Twenty execution snapshots under `ta-*.log` (2026-05-13) show heavy churn between **PASS**, **FAIL**, and **FLAKY_PASS**, with the same failure messages recurring across e2e, component, and API suites. That pattern points to **test-layer fragility and environment coupling** rather than isolated product regressions. The table below prioritizes actions that will stabilize the signal fastest.
+## Log facts (manual skim + aggregation)
+
+- **20** snapshot files: `ta-20260513*.log` (08:00–11:32 UTC on 2026-05-13).
+- **Line format (fact):** `spec::case | STATUS | ISO timestamp | message` — statuses include `PASS`, `FAIL`, `FLAKY_PASS`, `SKIP`.
+- **Volume (fact, all lines):** ~1,984 `FAIL`, ~984 `PASS`, ~770 `FLAKY_PASS`, ~250 `SKIP` (~3,988 lines total).
+- **Inference:** The same failure text appears across unrelated specs (e2e, component, API, unit), and many cases flip `PASS` ↔ `FAIL` ↔ `FLAKY_PASS` within one run — strong signal of **test-layer instability and shared brittle patterns**, not twenty independent product bugs.
+
+---
+
+## Prompt A (structured test-quality audit)
+
+*Provider/style: analytical, table-first; excerpts were top recurring `FAIL` lines plus one full run sample (`ta-20260513082400.log`, first 40 lines).*
+
+```
+You are a senior test engineer reviewing ToolShop Playwright/Jest pipeline logs.
+Do NOT assume the application is broken. Focus on test-suite quality: locators, waits, data, isolation, diagnostics, and CI strategy.
+
+Context: ToolShop e-commerce staging. Log line format:
+  path::testName | STATUS | timestamp | message
+
+Attached excerpts show recurring failures, e.g.:
+- getByTestId('mini-cart-toggle') not found — attribute renamed to data-qa='mini-cart'
+- waiting for locator('.product-grid .tile:nth-child(1) .price') failed: DOM order unstable
+- Locator 'text=Proceed to checkout' strict mode: matched banner CTA and drawer CTA
+- Intermittent: race — networkidle fired before hydration; element reflowed
+- FLAKY_PASS: Passed after retry; first attempt: ...
+
+Tasks:
+1) Cluster failure messages into themes (locator contract, timing, test data, environment, API contract, pipeline).
+2) For each theme, state what is FACT vs INFERENCE.
+3) Output a markdown table with columns: Priority (P1–P4), Observation, Suspected test-layer cause, Concrete next step.
+4) End with a 3-item sprint sequencing recommendation.
+
+Rules: No product bug triage unless the log explicitly proves it. Prefer one shared fix over per-spec band-aids when the same message hits many files.
+```
+
+---
+
+## Prompt B (alternate model/style — failure taxonomy + blast radius)
+
+*Provider/style: concise checklist, rank by cross-file frequency; no long prompt reuse.*
+
+```
+ToolShop CI logs — classify ONLY test-harness problems.
+
+Input: grep-style counts from 20 runs (FAIL lines):
+- 154× page.goto timeout (staging catalog)
+- 151× aria-label Search products → 0 nodes
+- 145× spinner wait 45s
+- 137× waitForResponse POST /api/cart/merge
+- 125× btn-add-cart-legacy missing
+- 118× nth-child(1) price DOM unstable
+- 115× mini-cart-toggle → data-qa rename
+- 770× FLAKY_PASS rows in same period
+
+Return:
+A) Top 5 "blast radius" issues (most files affected)
+B) For each: one-line fix, owner hint (e2e / api / platform), effort S/M/L
+C) False-positive risks if we misread these as app defects
+D) One pipeline policy change (retries, shards, flags)
+
+Format: numbered list, max 400 words.
+```
+
+---
+
+## Consolidated improvement backlog (sprint-ready)
 
 | Priority | Observation (from logs) | Suspected root cause (test layer) | Concrete next step |
 |----------|---------------------------|-----------------------------------|---------------------|
-| P1 | Repeated `getByTestId('mini-cart-toggle') not found — attribute renamed to data-qa='mini-cart'` across many specs | Tests hard-coded an old contract for stable IDs; no shared locator map or contract test for selectors | Introduce a single **page object / locator module** (e.g. `miniCartToggle`) that reads `data-qa`; add a **smoke contract check** that required `data-qa` attributes exist before the main suite runs |
-| P1 | Widespread `waiting for locator('.product-grid .tile:nth-child(1) .price') failed: DOM order unstable` | Assertions depend on **visual grid sort order** instead of identity (SKU, slug, or stable `data-testid` on the tile) | Refactor to **pick product by slug/SKU** or `getByRole`/`getByTestId` on the card; seed a known fixture product and assert its price, not “first tile” |
-| P1 | Many failures: `Locator 'text=Proceed to checkout' strict mode: matched banner CTA and drawer CTA` and `Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })` | **Ambiguous text/role locators** when duplicate CTAs exist (drawer vs banner) | Scope locators with **`.or()` + parent region** (e.g. mini-cart drawer vs sticky banner) or use **unique `data-qa` per surface**; prefer `getByRole('button', { name: /…/ }).filter({ has: page.locator('…') })` |
-| P2 | `Timeout waiting for selector '[data-testid="btn-add-cart-legacy"]'` and `#old-checkout-submit` “selector replaced in US-Checkout refresh” | Tests tied to **deprecated UI** branches instead of feature-flag–aware flows | Align selectors with **checkout_v2** (or gate tests with the same flag the app uses); remove legacy-only paths or maintain **parallel locators** behind a version helper |
-| P2 | Frequent `waitForResponse: Timeout waiting for POST /api/cart/merge matching predicate` | **Brittle URL/status predicate** or merge not always fired on the path under test | Tighten `waitForResponse` to **method + pathname** (and optional request post-condition), or assert **cart state via UI/API** after a deterministic action instead of assuming merge timing |
-| P2 | Many `FLAKY_PASS` / `Intermittent: race — networkidle fired before hydration; element reflowed` and `Target closed (page navigated during action)` | Using **`networkidle`** or clicking before **hydration/layout stable** | Replace `networkidle` with **`waitForLoadState('domcontentloaded')` + explicit condition** (e.g. main landmark visible, skeleton gone); use **auto-waiting locators** and `expect(locator).toBeVisible()` before click |
-| P2 | `Element is not attached to the DOM (detached node) after click on category chip` | Action on a **node that list re-render** replaces | **Re-resolve locator** after navigation/filter change; use `locator.click({ trial: true })` patterns sparingly—prefer waiting for the **next stable selector** post-navigation |
-| P3 | `Playwright: locator('[aria-label="Search products"]') resolved to 0 — icon-only button markup changed` | **Accessibility label** used as sole hook; markup changed | Add **`data-qa="search-open"`** (or equivalent) and use it in tests; keep **optional** `getByRole` fallback where a visible label exists |
-| P3 | `expect(locator).toBeVisible() failed — lazy image never intersected viewport` | Assertions require **images in viewport** though behavior does not | Assert **alt text, `loading=lazy` container, or network** for the asset; use `scrollIntoViewIfNeeded()` only where the AC explicitly requires visibility |
-| P3 | `locator.waitFor: Timeout — spinner never cleared on slow CDN` and `page.goto: Timeout 60000ms exceeded for https://toolshop-staging.example/catalog` | **Environment performance / SLA** mixed into functional tests without thresholds | Split **smoke (staging)** from **perf-tagged** jobs; increase timeouts only for perf project; add **retry with backoff** at pipeline level for infra, not per-assertion blind waits |
-| P3 | `ValidationError: coupon 'SPRING2024' not present in promo seed` and `Expected SKU 'TS-HAMMER-001' in stock; catalog seed missing row for warehouse EU-CENTRAL` | **Staging DB/seed drift** vs hard-coded promo/SKU expectations | Move promos/SKUs to **idempotent test fixtures** loaded per suite (or dedicated test tenant); document **required seed** in pipeline pre-step |
-| P3 | `401 Unauthorized: test user 'toolshop_ci_expired@example.com' token invalid` | **Rotated/expired CI secrets** still referenced in fixtures | Rotate credentials in the vault; add a **pre-flight auth check** that fails fast with a clear message |
-| P3 | `AssertionError: expected basket currency 'EUR' but UI shows 'CZK' (fixture user_region mismatch)` and `Expected shipping 9.90; test address ZIP maps to remote island surcharge not in baseline` | **Test data** does not match **shipping/geo rules** in staging | Centralize **addresses + expected quotes** per region; use **factory** aligned with staging tariff tables or mock shipping API in API-level tests |
-| P4 | `API 404: POST /orders used legacy endpoint '/v1/order' — contract updated to '/v2/orders'` | API tests not updated after **contract migration** | Update client under test to **`/v2/orders`**; add **OpenAPI/contract test** in CI so drift is caught in one place |
-| P4 | `Flaky: assertion passed on worker retry only (shard 3/4)` and many `Skipped: feature flag checkout_v2 disabled on this shard` | **Sharding + flags** leave uneven coverage and flaky retries masking instability | Use **flag-aware test groups** (run checkout suite only on shards where the flag is on) or **isolate flag matrix** in a dedicated job; treat **retry-only pass** as failure in merge queue |
+| P1 | **115×** `getByTestId('mini-cart-toggle')` → `data-qa='mini-cart'` across checkout, cart, shipping, API-adjacent specs | Hard-coded `data-testid` contract; no shared locator map | Add `locators/miniCart.ts` using `data-qa`; replace direct `getByTestId` calls; add 1-line smoke asserting required `data-qa` on staging |
+| P1 | **118×** `.product-grid .tile:nth-child(1) .price` — DOM order unstable | Assertion tied to **sort order**, not product identity | Select tile by **slug/SKU** or `data-qa` on card; seed fixture product `TS-HAMMER-001` and assert its price |
+| P1 | **123×** strict mode on `text=Proceed to checkout` + **41×** duplicate `Add to cart` role | Ambiguous text/role locators across banner vs drawer | Scope with region (`getByTestId('mini-cart-drawer')`) or unique `data-qa` per CTA; use `.filter({ hasNot: … })` where needed |
+| P2 | **125×** `btn-add-cart-legacy` + **124×** `#old-checkout-submit` after US-Checkout refresh | Tests on **deprecated checkout** branch | Gate with `checkout_v2` flag helper; delete legacy selectors or maintain versioned locator factory |
+| P2 | **137×** `waitForResponse` POST `/api/cart/merge` timeout | Brittle predicate or merge not on path under test | Match **method + pathname** only; or assert cart state via API/UI after known user action |
+| P2 | **47×** `networkidle` before hydration + **41×** `Target closed (page navigated)` + **770** `FLAKY_PASS` rows | Racey sync; retries mask instability | Drop `networkidle`; wait for skeleton gone / landmark visible; **fail build on retry-only pass** |
+| P2 | **56×** detached DOM after category chip click | Stale locator after list re-render | Re-query after filter; `await expect(chip).toBeHidden()` then click new locator |
+| P3 | **151×** `[aria-label="Search products"]` → 0 nodes | Icon-only search; label removed | Standardize `data-qa="search-open"`; tests use QA hook first, role second |
+| P3 | **144×** lazy image not in viewport | Visibility assert on decorative lazy load | Assert product title/stock badge, or `scrollIntoViewIfNeeded()` only if AC requires in-view image |
+| P3 | **145×** spinner 45s + **154×** `page.goto` 60s on staging catalog | Infra slowness folded into functional suite | Tag `@slow` / separate job; pre-flight staging health; don’t raise all timeouts globally |
+| P3 | Promo/SKU/region messages (`SPRING2024`, `EU-CENTRAL`, EUR vs CZK, ZIP surcharge) | **Fixture drift** vs staging rules | Idempotent seed step in pipeline; central `testData/shipping.ts` aligned with tariff tables |
+| P3 | **38×** `toolshop_ci_expired@example.com` 401 | Expired CI credential in fixtures | Rotate secret; add auth preflight job that fails with actionable message |
+| P4 | **49×** POST `/v1/order` vs `/v2/orders` | API client not migrated in tests | Update clients; single OpenAPI contract test in CI |
+| P4 | **250×** `SKIP` — `checkout_v2 disabled on this shard` + **40×** retry-only pass on shard 3/4 | Uneven coverage; shards hide flakiness | Flag-matrix job: run checkout_v2 suite only where flag enabled; treat shard retry pass as failure in merge queue |
 
-**Suggested sequencing:** address P1 locator and nth-child issues first (largest cross-cutting volume in the logs), then P2 timing and checkout alignment, then P3 environment and data contracts, then P4 pipeline/strategy.
+**Suggested sequencing:** P1 locator contract and nth-child (largest cross-cutting volume) → P2 timing/checkout/API waits → P3 data and environment → P4 pipeline policy.
+
+---
+
+## Reflection (Prompt A vs Prompt B)
+
+| Dimension | Prompt A (structured audit) | Prompt B (taxonomy + blast radius) |
+|-----------|----------------------------|-------------------------------------|
+| **Depth** | Deeper on *why* (themes, fact vs inference, per-row remediation) | Faster on *what hurts most* (frequency-ranked) |
+| **False positives** | Lower risk of blaming the app; explicitly scoped to test layer | Counts alone could over-prioritize infra timeouts unless reader remembers staging context |
+| **Actionability** | Best for backlog rows developers can pick up | Best for sprint planning and owner assignment (e2e vs platform) |
+| **Format** | Table ready for Jira/Linear import | Short narrative; needs manual merge into backlog |
+
+**Next time:** Run **B first** for priority order, then **A** on the top three themes only (with 30-line excerpts, not whole files). Ask both prompts to cite **message substring + approximate count** to keep outputs tied to log evidence. I would also add an explicit rule: “treat `FLAKY_PASS` as failed for reliability metrics.”
