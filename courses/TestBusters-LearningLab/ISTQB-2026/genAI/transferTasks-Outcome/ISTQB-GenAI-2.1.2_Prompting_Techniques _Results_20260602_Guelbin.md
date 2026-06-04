@@ -205,3 +205,4 @@ Thema: Social Login mit Google im ToolShop-System.
 | TC-SL-013 | Google Login Fehlerseite vermeiden | Bei einem Fehler im Google Login wird keine technische Fehlerseite angezeigt, sondern eine benutzerfreundliche Meldung. |
 | TC-SL-014 | Google Login Datenschutzprüfung | Das System speichert nur die notwendigen Benutzerdaten aus dem Google-Konto. |
 | TC-SL-015 | Google Login Button sichtbar | Der Google-Login-Button ist auf der Login- oder Registrierungsseite sichtbar und eindeutig beschriftet. |
+
