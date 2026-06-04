@@ -6,9 +6,18 @@ ISTQB FL – 1.4.1 Test Activities and Tasks
 
 ## Link to the Transfer Task File
 
-https://github.com/testsmith-io/practice-software-testing
+https://github.com/JulietaTz/RBI-AgileEngineeringFoundation/blob/main/courses/TestBusters-LearningLab/ISTQB-2026/foundationLevel/transferTasks/ISTQB-FL-1.4.1_Test_Activities_and_Tasks_20260405.md
+
 
 ## Outcome
+
+### Artifact Type
+
+Test Case Execution Report
+
+### Artifact Purpose
+
+This artifact documents the execution of a test case for the Toolshop Product Detail Page and demonstrates the application of ISTQB FL 1.4.1 Test Activities and Tasks.
 
 ### Selected Feature Flow
 
