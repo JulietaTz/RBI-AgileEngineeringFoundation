@@ -306,10 +306,6 @@ The strategy prioritizes test isolation to reduce flaky tests and improve execut
 
 ## 8. Test Automation Tools
 
-List tools used.
-
-## 8. Test Automation Tools
-
 | Area | Tool | Purpose |
 |------|------|---------|
 | UI Automation | Playwright | Browser-based automation of customer workflows |
@@ -319,29 +315,56 @@ List tools used.
 | Logging & Diagnostics | Playwright Trace Viewer | Failure analysis, tracing, and debugging |
 | Configuration Management | Playwright Configuration Files | Environment-specific configuration management |
 | CI/CD Integration | GitHub Actions (future) | Automated execution within pipelines |
-| Version Control | :contentReference[oaicite:0]{index=0} | Source code and test automation management |
 
 ---
 
 ## 9. KPIs and Metrics
 
-Define how success is measured.
-
 | KPI | Target | Measurement |
-|-----|--------|------------|
-| Automation Coverage | 80% | Test cases automated |
-| Execution Time | < 30 min | CI pipeline |
-| Flaky Tests | < 2% | Failure analysis |
+|------|--------|------------|
+| Automation Coverage | Automate all selected high-value workflows | Percentage of planned workflows automated |
+| Execution Time | < 15 minutes | Full regression suite execution time |
+| Flaky Tests | < 5% | Percentage of unstable test executions |
 
 ---
 
 ## 10. Risks and Mitigation
 
+### 10.1 Risk Overview
+
 | Risk | Impact | Mitigation |
 |------|--------|-----------|
-| Flaky tests | Low trust | Stabilize selectors |
-| Test data issues | Failures | API-based data |
-| Tool limitations | Blockers | Evaluate alternatives |
+| Flaky tests caused by unstable UI locators | Reduced trust in automation results and increased maintenance effort | Use stable locators and regularly review failing tests |
+| Changes in application functionality or UI | Automated tests may fail after application updates | Maintain reusable test components and update tests regularly |
+| Long execution times as the test suite grows | Slower feedback and reduced execution efficiency | Use parallel execution, prioritize high-value test scenarios, and prepare test preconditions through APIs where appropriate |
+
+### 10.2 Key Capability Gaps
+
+#### 10.2.1 Test Data Management Gap
+
+Current State:
+- Product test data handling has not yet been implemented.
+
+Impact:
+- Automated tests may become unreliable if required test data is unavailable or inconsistent.
+- Test execution may depend on existing application data instead of controlled test data.
+
+Improvement:
+- Implement API-based test data creation and management before automated test execution.
+- Use isolated and predictable test data for automated workflows.
+
+#### 10.2.2 Reporting and Diagnostics Gap
+
+Current State:
+- No reporting and diagnostics solution has been implemented yet.
+
+Impact:
+- Failures may be difficult to analyze, increasing maintenance effort.
+- Lack of diagnostic information may reduce confidence in automation results.
+
+Improvement:
+- Introduce Playwright HTML Reports, screenshots, traces, and log collection from the beginning of the automation project.
+- Establish reporting and diagnostics as first-class capabilities within the test automation architecture.
 
 ---
 
@@ -349,23 +372,29 @@ Define how success is measured.
 
 | Activity | Responsible |
 |---------|------------|
-| Develop tests | TAE |
-| Maintain tests | TAE |
-| Define strategy | QA Lead |
-| Manage test data | Team |
+| Define test automation strategy | QA Lead |
+| Design automated test cases | TAE |
+| Develop and maintain automated tests | TAE |
+| Manage test data and test environments | TAE |
+| Review automated test results | Team |
+| Maintain CI/CD integration | TAE |
+| Analyze automation failures | TAE |
+| Prioritize automation scope | QA Lead |
 
 ---
 
 ## 12. Test Automation Principles
 
-Define guiding principles.
-
-Examples:
-- Tests are independent
-- Tests are repeatable
-- Tests are maintainable
-- Test code = production code quality
-- Automate for value, not coverage
+- Tests are independent and can be executed in any order
+- Tests are repeatable and produce consistent results
+- Test data should be controlled and managed automatically where possible
+- Automated tests should focus on high-value and repeatable business workflows
+- APIs should be used for test data setup and preconditions where appropriate
+- Test automation code should follow the same quality standards as production code
+- Reusable components should be preferred over duplicated test logic
+- Reporting and diagnostics are first-class capabilities of the automation solution
+- Automated tests should provide fast and reliable feedback
+- Automation should be implemented for value, not for maximum coverage
 
 ---
 
@@ -385,7 +414,41 @@ Examples:
 
 ## 14. Appendix
 
-Optional:
-- Diagrams
-- Links to repositories
-- Example test cases
+### 14.1 Test Automation Architecture Diagram
+
+The following diagram illustrates the high-level Test Automation Framework (TAF) structure and its interaction with the Toolshop application.
+
+```text
++----------------------+
+|     Test Scripts     |
+|   Automated Tests    |
++----------------------+
+           |
+           v
++----------------------+
+|    Business Logic    |
+|    Page Objects      |
+| Reusable Workflows   |
++----------------------+
+           |
+           v
++----------------------+
+|    Core Libraries    |
+| Reporting & Logging  |
+| Configuration        |
+| API Utilities        |
++----------------------+
+           |
+     +-----+-----+
+     |           |
+     v           v
++---------+  +---------+
+|   UI    |  | REST API|
++---------+  +---------+
+      \         /
+       \       /
+        v     v
+    +-----------+
+    | Toolshop  |
+    |    SUT    |
+    +-----------+
