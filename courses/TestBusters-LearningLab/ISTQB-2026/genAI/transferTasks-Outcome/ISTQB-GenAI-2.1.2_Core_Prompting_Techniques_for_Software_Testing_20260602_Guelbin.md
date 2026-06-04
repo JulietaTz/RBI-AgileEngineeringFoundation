@@ -6,7 +6,10 @@ ISTQB GenAI – 2.1.2 Core Prompting Techniques for Software Testing
 
 ## Link to the Transfer Task File
 
-`courses/TestBusters-LearningLab/ISTQB-2026/genAI/transferTasks/ISTQB-GenAI-2.1.2_Core_Prompting_Techniques_for_Software_Testing_20260405.md`
+## Link to the Transfer Task File
+
+[Transfer Task](https://github.com/guelbin/RBI-AgileEngineeringFoundation/blob/main/courses/TestBusters-LearningLab/ISTQB-2026/genAI/transferTasks/ISTQB-GenAI-2.1.2_Core_Prompting_Techniques_for_Software_Testing_20260405.md)
+
 
 ## Outcome
 
@@ -76,11 +79,14 @@ Testfall-ID, Testfallname und Beschreibung aus.
 Thema: Social Login mit Google im ToolShop-System.
 ```
 
+
+
 ## Prompt Execution Results
 
 Die vollständigen Ergebnisse aller Prompt-Ausführungen wurden in einer separaten Datei dokumentiert:
 
-[Prompt Execution Results](./ISTQB-GenAI-2.1.2_Prompting_Techniques _Results_20260602_Guelbin.md)
+[Prompt Execution Results](./ISTQB-GenAI-2.1.2_Prompting_Techniques_Results_20260602_Guelbin.md)
+
 
 ## Bewertung der Ergebnisse
 
