@@ -85,7 +85,7 @@ Thema: Social Login mit Google im ToolShop-System.
 
 Die vollständigen Ergebnisse aller Prompt-Ausführungen wurden in einer separaten Datei dokumentiert:
 
-[Prompt Execution Results](./ISTQB-GenAI-2.1.2_Prompting_Techniques_Results_20260602_Guelbin.md)
+[Prompt Execution Results](https://github.com/guelbin/RBI-AgileEngineeringFoundation/blob/feature/g111-core-prompting-techniques/courses/TestBusters-LearningLab/ISTQB-2026/genAI/transferTasks-Outcome/ISTQB-GenAI-2.1.2_Prompting_Techniques%20_Results_20260602_Guelbin.md)
 
 
 ## Bewertung der Ergebnisse
