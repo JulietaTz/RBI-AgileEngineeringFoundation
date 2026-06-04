@@ -1,17 +1,19 @@
-# RBI Agile Engineering Foundation Program
+# TestBusters-LearningLab (TBLL) - Agile Engineering Foundation Program
 
-Learning content repository for the **RBI Agile Engineering Foundation Program** and related courses at [42 Vienna](https://42vienna.com/) and RBI facilities. This repo holds course materials, transfer tasks (TRATAS), AI agent configurations, and practice scenarios — not deployable application code.
+Learning content repository for the **Agile Engineering Programs** and related courses at the TestBusters-LearningLab,  [42 Vienna](https://42vienna.com/) and RBI trainings. This repo holds course materials, transfer tasks (TRATAS), AI agent configurations, and practice scenarios — not deployable application code.
 
-## Repository overview
+## Repository overview 
 
-| Area | Purpose |
-|------|---------|
-| `courses/` | Program and workshop materials (GO-IT Academy, TestBusters Learning Lab) |
+
+| Area                | Purpose                                                                  |
+| ------------------- | ------------------------------------------------------------------------ |
+| `courses/`          | Program and workshop materials (GO-IT Academy, TestBusters Learning Lab) |
 | `systemsUnderTest/` | Backlog and scenarios for practice applications (primarily **ToolShop**) |
-| `templates/` | TRATAS and prompt templates for authors |
-| `.cursor/` | Cursor IDE agents, rules, and skills |
-| `.github/agents/` | GitHub Copilot agent definitions |
-| `generated/` | Generated prompts and artifacts |
+| `templates/`        | TRATAS and prompt templates for authors                                  |
+| `.cursor/`          | Cursor IDE agents, rules, and skills                                     |
+| `.github/agents/`   | GitHub Copilot agent definitions                                         |
+| `generated/`        | Generated prompts and artifacts                                          |
+
 
 There is no build system or test runner in this repository. Learners work against external systems (e.g. [Practice Software Testing](https://practicesoftwaretesting.com/)) and submit outcomes under `transferTasks-Outcome/` folders.
 
@@ -43,7 +45,7 @@ generated/prompts/
   - `foundationLevel/` — CTFL syllabus transfer tasks (~90 tasks)
   - `genAI/` — Generative AI for software testing (~40 tasks)
   - `testAutomationEngineer/` — CTAL-TAE syllabus (~35 tasks)
-- **Holistic Testing with GenAI** — workshop artifacts under `HolisticTestingWithGenAI-*`
+- **Holistic Testing with GenAI** — workshop artifacts under `HolisticTestingWithGenAI-`*
 - **Test Data Management** — masking concepts and SAP HR examples under `TestDataManagement-2026/`
 - **BMAD ToolShop** — PRD, architecture, epics, and story specs under `BMAD-ToolShop-2026/_bmad-output/`
 
@@ -51,9 +53,9 @@ generated/prompts/
 
 Most testing transfer tasks use the **ToolShop** practice app ([Practice Software Testing](https://practicesoftwaretesting.com/)):
 
-- Application: https://practicesoftwaretesting.com/
-- Documentation: https://github.com/testsmith-io/practice-software-testing/tree/main/docs
-- Sprint 5 reference: https://github.com/testsmith-io/practice-software-testing/tree/main/sprint5
+- Application: [https://practicesoftwaretesting.com/](https://practicesoftwaretesting.com/)
+- Documentation: [https://github.com/testsmith-io/practice-software-testing/tree/main/docs](https://github.com/testsmith-io/practice-software-testing/tree/main/docs)
+- Sprint 5 reference: [https://github.com/testsmith-io/practice-software-testing/tree/main/sprint5](https://github.com/testsmith-io/practice-software-testing/tree/main/sprint5)
 
 Extended backlog and teaching scenarios live in `systemsUnderTest/toolShop/backlog/` (features F1–F5, ESG, defects, general stories).
 
@@ -96,12 +98,14 @@ The program consists of learning blocks (“Lerneinheiten”). Materials for **L
 
 Fundamental agile topics (K1–K2, Bloom: remembering and understanding). Four 90-minute lectures without practical activities.
 
-| Module | Topic |
-|--------|--------|
-| LE001.1 | Agile SDLC (Agile, Scrum, Extreme Programming) |
-| LE001.2 | Agile Requirements Engineering (epics, features, user stories) |
+
+| Module  | Topic                                                                                       |
+| ------- | ------------------------------------------------------------------------------------------- |
+| LE001.1 | Agile SDLC (Agile, Scrum, Extreme Programming)                                              |
+| LE001.2 | Agile Requirements Engineering (epics, features, user stories)                              |
 | LE001.3 | Agile Testing (exploratory testing, session-based testing, tours, specification by example) |
-| LE001.4 | DevOps (CI/CD/CD) |
+| LE001.4 | DevOps (CI/CD/CD)                                                                           |
+
 
 **Outcomes:** Solid understanding of agile methodologies, requirements engineering, testing in agile, and DevOps integration.
 
@@ -164,3 +168,4 @@ Simulation materials for a 42 Vienna cohort: `courses/GO-IT-Academy/agile-engine
 - Authoring guidance for AI assistants: see [CLAUDE.md](./CLAUDE.md)
 - Cursor rules for instructional design: `.cursor/rules/instructional-designer.mdc`
 - Do not commit learner-specific secrets; `.gitignore` excludes `.DS_Store` only
+
