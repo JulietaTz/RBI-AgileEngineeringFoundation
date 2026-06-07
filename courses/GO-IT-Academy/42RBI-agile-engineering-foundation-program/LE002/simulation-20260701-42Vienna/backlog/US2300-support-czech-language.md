@@ -1,5 +1,7 @@
 # US2300-Czech Language Support 
 
+## Estimated: 
+
 ## Add Czech Language Support to the Webshop
 
 As a customer from the Czech Republic

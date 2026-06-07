@@ -1,5 +1,7 @@
 # US1003 - How to Angular
 
+## Estimated: 
+
 ## User Story: 
 As a member of Seal Team 42, I want to familiarize myself with the key concepts of Angular development, so that I can effectively apply changes to the user interface of the existing e-commerce platform.
 

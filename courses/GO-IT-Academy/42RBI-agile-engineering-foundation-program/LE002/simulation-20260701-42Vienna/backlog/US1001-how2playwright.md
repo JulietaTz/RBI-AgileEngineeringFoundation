@@ -1,5 +1,7 @@
 # US1001 - How to use Playwright
 
+## Estimated: 
+
 ## User Story:
 As a member of Seal Team 42, I want to learn how to create basic automated tests using Playwright, so that I can contribute to the implementation of automated tests for the e-commerce platform.
 

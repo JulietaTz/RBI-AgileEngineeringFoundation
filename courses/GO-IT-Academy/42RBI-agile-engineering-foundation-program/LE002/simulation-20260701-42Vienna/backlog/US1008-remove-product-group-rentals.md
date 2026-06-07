@@ -1,5 +1,7 @@
 # US1008 - Remove Rentals
 
+## Estimated: 
+
 ## User Story
 As the CSO, I want to remove the "Rentals" product group from the web-shop to streamline the product offerings and focus on core merchandise.
 

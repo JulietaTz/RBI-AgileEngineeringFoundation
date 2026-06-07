@@ -1,5 +1,7 @@
 # User Story: Add Czech Product Content to the Webshop
 
+## Estimated: 
+
 ## US2350-Provide Product Articles in Czech Language
 
 As a customer from the Czech Republic

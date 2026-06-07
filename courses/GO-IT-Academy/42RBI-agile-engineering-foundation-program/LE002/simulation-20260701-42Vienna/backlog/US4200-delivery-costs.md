@@ -1,5 +1,7 @@
 # US4200 - Additional Delivery options 
 
+## Estimated: 
+
 ## Background
 In the current version following deliver options and pricing are implemented:
 | Option (`delivery_method`) | USD (billing country ≠ CZ) | CZK (billing country = CZ) |
@@ -40,7 +42,6 @@ Delivery cost depends on the **total order weight** (sum of all cart line items)
 | DACH    | Germany, Austria, Switzerland |
 | EU      | European Union member states except CZ |
 | US      | United States      |
-| Others  | All countries not listed above |
 
 **Rules**
 - `standard` is offered for every shipping destination (mapped to one of the four regions).

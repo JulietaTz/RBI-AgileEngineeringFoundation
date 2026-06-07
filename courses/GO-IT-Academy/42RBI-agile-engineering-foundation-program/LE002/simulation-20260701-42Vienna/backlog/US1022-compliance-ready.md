@@ -1,5 +1,7 @@
 # US1022 - Compliance Ready
 
+## Estimated: 
+
 ## User Story:
 As a Product Owner,
 I want ToolShop to meet applicable legal, regulatory, and internal policy requirements,
