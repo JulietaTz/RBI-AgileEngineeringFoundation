@@ -3,13 +3,9 @@
 ## Estimated: 
 
 ## Background
-In the current version following deliver options and pricing are implemented:
-| Option (`delivery_method`) | USD (billing country ≠ CZ) | CZK (billing country = CZ) |
-|----------------------------|----------------------------|----------------------------|
-| `standard`                 | $4.99                      | 99 Kč                      |
-| `zasilkova`                | $1.99                      | 49 Kč                      |
+In the current version a flat delivery costs (7,90 Euro) are implemented.
 
-Pricing is flat and does not consider shipping region or order weight.
+Pricing is flat and does not consider shipping region, order weight or other parameters..
 
 ## User story
 
