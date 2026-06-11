@@ -77,7 +77,7 @@ Verwende eine einheitliche und strukturierte Ausgabestruktur mit klaren Übersch
 
 Die detaillierten Ergebnisse der Prompt-Ausführung wurden aus Gründen der Übersichtlichkeit in einer separaten Markdown-Datei dokumentiert.
 
-- [Prompt Execution Results](./ISTQB-GenAI-2.1.3_System_Prompt_Execution_Results_20260611_Guelbin.md)
+- [Prompt Execution Results](https://github.com/guelbin/RBI-AgileEngineeringFoundation/blob/feature/G112-system-user-prompts/courses/TestBusters-LearningLab/ISTQB-2026/genAI/transferTasks-Outcome/ISTQB-GenAI-2.1.3_System_Prompt_Execution_Results_20260605_Guelbin.md)
 
 ## Comparison: System Prompt v1 vs. System Prompt v2
 
