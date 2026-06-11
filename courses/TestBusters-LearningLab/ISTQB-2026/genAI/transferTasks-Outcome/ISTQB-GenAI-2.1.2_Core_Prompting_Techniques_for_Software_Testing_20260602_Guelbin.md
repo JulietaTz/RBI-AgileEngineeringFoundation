@@ -1,10 +1,8 @@
-# Vergleich von Core Prompting Techniques anhand eines QA-Problems
+# Vergleich von Core Prompting Techniques
 
 ## Reference to ISTQB Syllabus Chapter
 
 ISTQB GenAI – 2.1.2 Core Prompting Techniques for Software Testing
-
-## Link to the Transfer Task File
 
 ## Link to the Transfer Task File
 
