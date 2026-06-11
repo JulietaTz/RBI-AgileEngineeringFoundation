@@ -29,7 +29,7 @@ The application is designed as a demo e-commerce platform for software testing p
 
 The following diagram shows the high-level architecture of the Toolshop application. The highlighted layers represent the main architectural layers that are relevant from a Test Automation perspective and serve as the basis for defining the Test Automation Architecture and tool mapping.
 
-![Test Adaptation Layers](TAE-3.1.1_ta_strategy_layers_diagram.jpeg)
+![Test Adaptation Layers](testAutomationStrategy-LayersDiagram.jpeg)
 
 Based on the publicly available project structure and observed application behavior, the application consists of the following layers:
 
