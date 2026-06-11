@@ -2,7 +2,7 @@
 
 ## Referenz zum ISTQB Syllabus Kapitel
 
-ISTQB GenAI – 2.1.2 Core Prompting Techniques for Software Testing
+ISTQB GenAI –  2.1.2 Core Prompting Techniques for Software Testing
 
 ## Link zur Transfer Task Datei
 

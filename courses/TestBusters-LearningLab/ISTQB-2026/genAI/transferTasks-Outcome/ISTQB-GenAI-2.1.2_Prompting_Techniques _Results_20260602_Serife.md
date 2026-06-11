@@ -2,7 +2,7 @@
 
 ## Referenz zum ISTQB Syllabus Kapitel
 
-ISTQB GenAI – 2.1.1 Prompt Engineering und LLM-basierte Testanwendungen
+ISTQB GenAI –  2.1.1 Prompt Engineering und LLM-basierte Testanwendungen
 
 ## Link zur Transfer Task Datei
 
