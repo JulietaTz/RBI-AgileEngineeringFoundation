@@ -1,4 +1,5 @@
-# Project Assignment According to PMI  
+# Project Assignment 
+
 ## Project: **ToolShop AI-Ready — Testing the ToolShop**
 
 ## 1. Project Purpose
@@ -9,13 +10,13 @@ The project focuses on the main objective:
 
 > **Testing the ToolShop to support product quality, market readiness, AI readiness, and release confidence.**
 
-This assignment is defined from a **project management perspective** and follows a PMI-oriented structure.
+This assignment is defined from a **project management perspective**.
 
 ---
 
 ## 2. Project Background
 
-ToolShop is an e-commerce platform that will be further developed in an Agile SDLC. The product will be enhanced in several phases to support new markets and future AI capabilities.
+ToolShop is an open-source (https://github.com/testsmith-io/practice-software-testing) e-commerce platform that will be further developed in an Agile SDLC. The product will be enhanced in several iterations to support new markets and future AI capabilities.
 
 The testing project is executed as part of a learning journey with students acting in defined roles. The test engineering students are integrated into the Agile product team and collaborate with developers, product ownership, and quality coaching support.
 
@@ -34,7 +35,7 @@ The project shall provide:
 - A clear test management structure
 - Product-level test planning
 - Sprint-level test planning
-- Coordination of test activities
+- Coordination of test activities and their testware
 - Risk-based quality reporting
 - Release readiness recommendations
 - Evidence for decision-making
@@ -43,14 +44,14 @@ The project shall provide:
 
 ## 4. Project Phases
 
-The project is organized into four major phases.
+The project is organized into four major iterations.
 
 | Phase | Focus | Management Objective |
 |---|---|---|
-| Phase 1 | Ready for Czech Market | Coordinate testing for Czech market readiness |
-| Phase 2 | AI Ready | Coordinate testing for AI readiness and related quality risks |
-| Phase 3 | Ready for US West Coast | Coordinate testing for US West Coast market readiness |
-| Phase 4 | Ready for Japan | Coordinate testing for Japanese market readiness |
+| Iteration 1 | Ready for Czech Market | Coordinate testing for Czech market readiness |
+| Iteration 2 | AI Ready | Coordinate testing for AI readiness and related quality risks |
+| Iteration 3 | Ready for US West Coast | Coordinate testing for US West Coast market readiness |
+| Iteration 4 | Ready for Japan | Coordinate testing for Japanese market readiness |
 
 ---
 
@@ -58,7 +59,7 @@ The project is organized into four major phases.
 
 ### In Scope
 
-The project includes the management and coordination of testing activities for ToolShop.
+The project includes the management and coordination of testing activities (aka Test Project) for ToolShop.
 
 This includes:
 
@@ -96,11 +97,12 @@ The project team shall produce the following management-related deliverables:
 
 | Deliverable | Description |
 |---|---|
-| Project Test Charter | High-level agreement on testing mission, objectives, roles, and responsibilities |
+| Project Test Policyr | High-level agreement on testing mission, objectives, roles, and responsibilities |
 | Product Test Plan | Overall plan for testing ToolShop across all phases |
 | Sprint Test Plans | Test planning documents for each Agile sprint |
 | Test Schedule | Timeline of planned test activities and milestones |
 | Risk Register | Overview of quality, schedule, resource, and compliance risks |
+| Test Spec | Test Specification - How the product will be tested |
 | Test Status Reports | Regular reports on progress, issues, risks, and test results |
 | Defect Summary Reports | Management overview of known defects and their impact |
 | Phase Readiness Reports | Quality assessment at the end of each phase |
@@ -113,29 +115,28 @@ The project team shall produce the following management-related deliverables:
 | Stakeholder | Role / Interest |
 |---|---|
 | Product Owner | Defines product priorities and acceptance expectations |
-| Developers from 42-Vienna | Implement product functionality and support defect resolution |
+| Developers | Implement product functionality and support defect resolution |
 | QualityQuest Consulting | Fictive student testing group responsible for test planning and coordination |
 | TestBusters-LearningLab Quality Engineering Coach | Provides coaching and quality engineering guidance |
 | Customers / Customer Representatives | Support customer acceptance testing |
-| RBI Agile Engineering Foundation Initiative | Supports the broader learning and engineering development context |
 | Project Participants | Learn and apply modern Agile quality engineering practices |
 
 ---
 
 ## 8. Roles and Responsibilities
 
-### QualityQuest Consulting
+### QualityQuest Consulting (Gülbin Deniz, Dilek Firat, Serife Cicek, Julieta Tzouridis, Ângela Simões Krainer, Jane Doe)
 
 Responsible for:
 
 - Planning the overall testing approach
 - Creating product and sprint test plans
-- Coordinating test activities
+- Plan, coordinate, execute test activities
 - Tracking test progress
 - Reporting risks and quality status
 - Supporting release readiness decisions
 
-### Product Owner
+### Product Owner (Rudolf Grötz)
 
 Responsible for:
 
@@ -144,7 +145,7 @@ Responsible for:
 - Defining acceptance criteria
 - Supporting go/no-go discussions
 
-### Development Team
+### Development Team (Open Source Contributer)
 
 Responsible for:
 
@@ -153,7 +154,7 @@ Responsible for:
 - Fixing defects
 - Supporting root cause analysis
 
-### Quality Engineering Coach
+### Quality Engineering Coach (Rudolf Grötz)
 
 Responsible for:
 
@@ -167,17 +168,6 @@ Responsible for:
 ## 9. Project Governance
 
 The project follows an Agile delivery model with PMI-oriented project control elements.
-
-### Governance Elements
-
-- Sprint planning participation
-- Regular test progress tracking
-- Risk reviews
-- Defect triage sessions
-- Sprint reviews
-- Sprint retrospectives
-- Phase readiness reviews
-- Final project review
 
 ### Reporting Rhythm
 
@@ -222,36 +212,7 @@ The project must consider the following constraints:
 
 ---
 
-## 12. Project Assumptions
-
-The project assumes that:
-
-- The Agile team provides access to relevant product information
-- User stories and acceptance criteria are available before or during sprint planning
-- Test environments are made available in time
-- Defects can be reported and tracked transparently
-- Stakeholders are available for clarification and feedback
-- Customer acceptance testing can be organized with real or representative users
-- The team supports the whole-team quality approach
-
----
-
-## 13. High-Level Risks
-
-| Risk | Potential Impact |
-|---|---|
-| Unclear requirements | Incomplete or incorrect test coverage |
-| Limited test environment availability | Delayed test execution |
-| Insufficient test data | Reduced test reliability |
-| Late defect fixing | Release readiness risk |
-| Limited customer availability | Delayed acceptance testing |
-| Compliance expectations unclear | Risk of missing important checks |
-| AI readiness not clearly defined | Unclear test scope for Phase 2 |
-| Time constraints | Reduced depth of testing |
-
----
-
-## 14. Milestones
+## 12. Milestones
 
 | Milestone | Expected Outcome |
 |---|---|
@@ -265,7 +226,7 @@ The project assumes that:
 
 ---
 
-## 15. Communication Management
+## 13. Communication Management
 
 The project team shall ensure transparent communication.
 
@@ -285,26 +246,12 @@ The project team shall ensure transparent communication.
 - Report facts, not opinions
 - Focus on product value
 - Support shared ownership of quality
-
+- 
 ---
 
-## 16. Final Project Outcome
+## 14. Project Assignment Summary
 
-At the end of the project, the team shall deliver a management-level quality overview answering:
-
-- What was tested?
-- What was not tested?
-- What are the main quality risks?
-- What is the defect status?
-- Are the phase objectives fulfilled?
-- Is ToolShop ready for the next project phase?
-- What is the final quality recommendation?
-
----
-
-## 17. Project Assignment Summary
-
-The assignment for the project team is to manage and coordinate the testing of **ToolShop** across all defined project phases.
+The assignment for the project team is to manage and coordinate the testing of **ToolShop** across all defined iterations.
 
 The project combines Agile collaboration with structured project management practices. The focus is not only on executing tests, but also on planning, monitoring, reporting, managing risks, and supporting informed release decisions.
 
