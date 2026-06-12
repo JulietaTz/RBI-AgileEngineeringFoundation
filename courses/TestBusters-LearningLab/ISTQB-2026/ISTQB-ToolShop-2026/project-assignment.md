@@ -2,6 +2,10 @@
 
 ## Project: **ToolShop AI-Ready — Testing the ToolShop**
 
+### Project Name ###
+
+Test The ToolShop 46 (**TTT46**)
+
 ## 1. Project Purpose
 
 The purpose of this project is to plan, manage, coordinate, and deliver the testing activities for the **ToolShop e-commerce platform** as it evolves from its current version toward a market-ready and AI-ready product.
