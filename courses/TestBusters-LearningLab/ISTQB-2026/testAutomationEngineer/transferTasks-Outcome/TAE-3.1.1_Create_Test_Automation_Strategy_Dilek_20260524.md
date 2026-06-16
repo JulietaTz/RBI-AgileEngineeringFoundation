@@ -2,10 +2,10 @@
 
 ---
 ## Change Log 
-Author: Dilek Firat
-Status: Approved
-Approver: Rudolf Groetz & Jane Doe
-Approval Date: 2026-06-15
+Author: Dilek Firat  
+Status: Approved  
+Approver: Rudolf Groetz & Jane Doe  
+Approval Date: 2026-06-15  
 
 ## 1. Introduction
 
@@ -166,7 +166,26 @@ Examples:
 
 #### 2.4.3 Keyword-Driven Testing (KDT)
 
-TBD
+The Keyword-Driven Testing (KDT) pattern will be used to improve the readability, maintainability, and reusability of automated tests.
+
+Keywords represent reusable actions that encapsulate interactions with the application under test. These actions can be combined to create higher-level business workflows.
+
+Examples of keywords include:
+
+* `enterEmail()`
+* `enterPassword()`
+* `clickLogin()`
+* `searchProduct()`
+* `addProductToCart()`
+
+Benefits:
+
+* Improved readability of automated tests
+* Increased reusability of common actions
+* Reduced duplication of automation code
+* Easier maintenance of automated test suites
+
+Within the Toolshop project, keywords will be implemented as reusable automation methods within Page Objects and workflow components. The Keyword-Driven approach complements the Page Object Model by providing reusable actions that can be combined to automate end-to-end user workflows.
 
 ---
 
