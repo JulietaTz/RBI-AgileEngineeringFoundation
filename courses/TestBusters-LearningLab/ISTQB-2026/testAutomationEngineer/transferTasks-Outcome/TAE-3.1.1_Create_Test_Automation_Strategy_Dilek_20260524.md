@@ -1,6 +1,11 @@
 # Test Automation Strategy 
 
 ---
+## Change Log 
+Author: Dilek Firat
+Status: Approved
+Approver: Rudolf Groetz & Jane Doe
+Approval Date: 2026-06-15
 
 ## 1. Introduction
 
@@ -11,7 +16,7 @@ The goals of this Test Automation Strategy are to:
 
 **G1:** Enable reliable automated regression testing  
 **G2:** Provide fast feedback within the CI/CD pipeline  
-**G3:** Reduce manual testing effort  
+**G3:** Reduce manual regression testing effort  
 **G4:** Improve software quality and release confidence  
 **G5:** Support maintainable and reusable automated test solutions  
 **G6:** Establish clear responsibilities, tooling, and execution processes  
@@ -21,13 +26,13 @@ The goals of this Test Automation Strategy are to:
 
 ## 2. System Under Test (SUT) Overview
 
-### 2.1 Architecture Overview
+### 2.1 Test Architecture Overview
 
 The System Under Test (SUT) is the public Practice Software Testing Toolshop application.
 
 The application is designed as a demo e-commerce platform for software testing practice and automation training. The platform supports customer workflows such as product browsing, user registration, login, shopping cart management, and checkout processes.
 
-The following diagram shows the high-level architecture of the Toolshop application. The highlighted layers represent the main architectural layers that are relevant from a Test Automation perspective and serve as the basis for defining the Test Automation Architecture and tool mapping.
+The following diagram shows the test architecture (adaptation layer based on the generic Test Automation Architecture from ISTQB) of the Toolshop application. The red marked layers represent the test automation layers that are relevant from a Test Automation perspective and serve as the basis for defining the Test Automation Architecture and tool mapping.
 
 ![Test Adaptation Layers](TAE-3.1.1_ta_strategy_layers_diagram.jpeg)
 
@@ -104,7 +109,7 @@ The test automation scope defines the boundaries of what will be automated.
 | Database Layer      | Implicit via UI | Validated indirectly through UI and application behavior |
 | REST Services Layer | Implicit via UI | Validated indirectly through API and UI interactions     |
 
-### 2.3.1 Tool Mapping Overview
+### 2.3.1 Tool Mapping Overview (generic Test Automation Architecture)
 
 The following diagram illustrates the mapping of tools, technologies, and automation components to the Generic Test Automation Architecture (gTAA) layers. It provides an overview of how the Toolshop Test Automation Solution is structured and which tools are used in each layer.
 
@@ -169,12 +174,25 @@ TBD
 
 | Activity | Responsible |
 |-----------|------------|
-| Develop automated test cases | TAE |
+| Test Automation Analyse / Design | Test Engineer |
 | Prioritize automated test cases | Product Owner (PO) |
-| Maintain automated tests | TAE |
+| Develop / Maintain automated test cases | TAE |
 | Update and maintain test automation tools | TAE |
 
-## 4. Test Automation Principles
+
+## 4. Test Data Management
+
+Test data should support reliable, repeatable, and independent automated test execution.
+
+The following principles apply:
+
+- Unique user credentials are generated for automated registration workflows
+- Automated tests should not rely on shared user accounts
+- Test cases should be independent and executable in any order
+- Product test data should be created through APIs before test execution where appropriate
+- Test data creation should be automated to reduce manual preparation effort
+
+## 5. Test Automation Principles
 
 - We automate to detect regression
 - We automate to provide fast feedback
@@ -190,30 +208,4 @@ TBD
 - Execution of one test should not affect another
 - Tests run in dedicated testing environments
 - UI tests ensure the whole system works as per some common user scenarios and use cases
-
-## 5. Test Data Management
-
-Test data should support reliable, repeatable, and independent automated test execution.
-
-The following principles apply:
-
-- Unique user credentials are generated for automated registration workflows
-- Automated tests should not rely on shared user accounts
-- Test cases should be independent and executable in any order
-- Product test data should be created through APIs before test execution where appropriate
-- Test data creation should be automated to reduce manual preparation effort
-- No automated cleanup is required because the Toolshop environment is periodically reset
-
-Test data categories include:
-
-| Data Type | Usage |
-|------------|--------|
-| Registration Data | New customer account creation |
-| Product Data | Product search, cart, and checkout workflows |
-| Checkout Data | Address and payment information required during checkout |
-| Authentication Data | Login validation and session handling |
-
-API-based test data setup is preferred for creating and managing product data, while customer accounts are created through the automated registration workflow.
-
-The strategy prioritizes test isolation to reduce flaky tests and improve execution reliability.
 
