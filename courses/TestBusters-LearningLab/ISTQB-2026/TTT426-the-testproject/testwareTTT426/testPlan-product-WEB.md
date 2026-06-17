@@ -10,9 +10,21 @@
 **QA Lead / Test Policy Owner:** Julieta Tzouridis  
 **Reviewer / Mentor:** Rudolf Grötz  
 
-**Date:** March 2026  
 
-## Dokumentensteuerung / Changlog aufnehmen als Tabelle
+**Version:** v2  
+
+**Document Status:** Working Draft
+
+**Date:** 2026-06-11
+
+
+## Document Control 
+### Version History 
+| Version | Date | Description | Author | 
+|----------|------------|-------------|-------------| 
+| v1 | 2026-03 | Initial version | Gülbin Deniz | 
+| v2 | 2026-06-11 | Document structure updated and prepared for future enhancements. | Gülbin Deniz | 
+
 
 ---
 
@@ -22,12 +34,23 @@ This Product Test Plan describes the test strategy, test scope, and planned test
 
 The test plan is derived from the overarching Test Policy and defines how testing activities are implemented at the product level.  
 
-The objective of this test plan is to ensure that the  application ist tested in a systematic, structured, and traceable manner.  
+The objective of this test plan is to ensure that the  application is tested in a systematic, structured, and traceable manner.  
 
 The focus is on business-critical and supporting e-commerce use cases as defined in the test scope.
 
-## schedule / milestones 
-(in table)
+
+### 1.1 Timeline
+
+| Milestone | Date | Comment |
+|-----------|------------|---------|
+| Project Kick-off | 2026-06-19 | Shared understanding of objectives, roles, and scope |
+| Product Test Plan Approved | 2026-06-26 | Overall test direction agreed |
+| Phase 1 Readiness Review | 2026-07-24 | Czech market readiness assessed |
+| Phase 2 Readiness Review | 2026-09-04 | AI readiness assessed |
+| Phase 3 Readiness Review | 2026-10-16 | US West Coast readiness assessed |
+| Phase 4 Readiness Review | 2026-11-27 | Japan readiness assessed |
+| Final Project Review | TBD | Overall quality status and recommendation delivered |
+| Investor Presentation | 2027-01-02 | Final project presentation |
 
 ---
 
@@ -44,7 +67,7 @@ The main objectives of this test plan are:
 
 ## 3. Test Scope
 
-### 3.1 In Scope (biitte als tabell darstelln)
+### 3.1 In Scope
 
 The test scope is derived from the defined use cases and focuses on business-critical (**MUST**) and supporting (**SHOULD**) functionalities.
 
@@ -53,10 +76,12 @@ The following use cases are covered by this test plan:
 ### MUST  
 *(business-critical core functionalities required for the main e-commerce workflow)*
 
-- User authentication (login, registration, password management)  
-- Checkout process (cart, payment, address handling)  
-- Customer account management  
-- Product catalog (product overview, detail, category)  
+- Authentication
+- Checkout Flow
+- Customer Account
+- Product Category
+- Product Detail
+- Product Overview
 
 These use cases are considered business-critical as they are essential for completing a purchase.
 
@@ -65,14 +90,8 @@ These use cases are considered business-critical as they are essential for compl
 ### SHOULD  
 *(supporting and non-critical functionalities)*
 
-- Product search and filtering  
-- Contact forms (basic and advanced)  
-- Discounts and pricing features  
-- Analytics and tracking  
-- Multi-language support
-- Accessibility features (e.g. keyboard navigation, screen reader support)  
-- Legal information (privacy policy)  
-- Additional supporting features from the product backlog  
+- Contact Form
+- Rentals  
 
 ---
 
@@ -84,22 +103,21 @@ A detailed mapping of all relevant features is provided in the **Feature Classif
 
 ## Feature Classification Table
 
-| Feature           | Description                                                                 | Business Critical (YES/NO) |
-|------------------|-----------------------------------------------------------------------------|---------------------------|
-| Admin Account    | CRUD, Reporting                                                             | NO                        |
-| Authentication   | Login, Register, Forgot Password, Lock account after failed attempts, Social Login, Two-Factor Authentication | YES |
-| Chat Widget      | Chat support                                                                | NO                        |
-| Checkout Flow    | Increase/decrease quantity, Delete item, Address details, Payment options (basic & advanced) | YES |
-| Contact Form     | Basic and advanced contact form, including file upload                      | NO                        |
-| Customer Account | Update profile, change password, invoice overview, invoice details (including PDF), favorites, contact messages | YES |
-| Discount         | Pricing, promotions                                                         | NO                        |
-| Google Analytics | User tracking                                                               | NO                        |
-| Multi-Language   | Language support                                                            | NO                        |
-| Privacy Policy   | Legal information                                                           | NO                        |
-| Product Catalog  | Product overview, detail, category, including ESG-related information (e.g. CO2 rating, sustainability badges)                                          | YES                       |
-| Search & Filter  | Search, sorting, filtering                                                  | NO                        |
-| Rentals          | Rental functionality                                                        | NO                        |
-| Accessibility    | Accessible UI, keyboard navigation, screen reader support, contrast and usability improvements   | NO |
+| Feature | Description | Business Critical (YES/NO) |
+|----------|-------------|----------------------------|
+| Authentication | Login, Register, Forgot Password | YES |
+| Checkout Flow | Increase/Decrease Quantity, Delete Item, Address Details, Payment Options (Basic) | YES |
+| Contact Form | Basic | NO |
+| Customer Account | Update Profile, Change Password, Invoices Overview, Invoice Detail, Favorites, Contact Messages | YES |
+| Product Category | Product categorization and navigation | YES |
+| Product Detail | Product details | YES |
+| Product Overview | Product listing, Pagination, Search, Filter, Sorting | YES |
+| Rentals | Rental functionality | NO |
+| REST API | REST API endpoints | YES |
+| REST API Documentation (Swagger) | API documentation and testing interface | NO |
+| GraphQL API | GraphQL endpoints | YES |
+| GraphQL Playground (GraphiQL) | GraphQL query and testing interface | NO |  
+
 
 ---
 
@@ -111,7 +129,7 @@ The following areas are not part of this test plan:
 
 - Performance testing (e.g. load and stress testing)  
 - Mobile applications (focus is on web application only)  
-- API testing (separate test level, not part of this plan)  
+- API testing (Detailed API testing is covered separately in the Test Automation Strategy and is therefore not a primary focus of this Product Test Plan)  
 - Security testing (e.g. penetration testing)  
 - Infrastructure and backend components outside the UI  
 - Third-party integrations (if applicable)  
@@ -135,35 +153,30 @@ Interactions with backend services (REST API) are tested indirectly through UI-b
 
 ## 5. Test Strategy
 
-### 5.1 Test Levels (bitte als tabelle)
+### 5.1 Test Levels
 
-Testing is performed on different levels:
 
-- System Testing (main focus of this test plan)  
-- System Integration Testing (covered indirectly via UI interactions)  
-- User Acceptance Testing (UAT)  
+| Level | Description | Comment |
+|---------|-------------|---------|
+| Component Testing | Verification of individual software components in isolation. | Performed by developers |
+| System Testing | Validation of the complete integrated system against specified requirements. | Performed by testers |
+| System Integration Testing | Validation of interactions between integrated system components through end-to-end user scenarios. | Performed by Test Engineer |
+| User Acceptance Testing (UAT) | Validation of predefined acceptance criteria from a user perspective. | Performed by Test Engineer |  
 
-System testing implicitly covers interactions between components from a user perspective.  
 
-System integration aspects are therefore tested indirectly via end-to-end user interactions through the UI.  
-
-Dedicated integration tests at API or service level are out of scope for this test plan.  
-
-User Acceptance Testing (UAT) is included as a test level, where predefined acceptance criteria are validated, even if executed by testers on behalf of business stakeholders.
 
 ---
  
-### 5.2 Test Approach (als tabelle darstellen)
+### 5.2 Test Approach
 
-The testing approach is based on:
-
-- Risk-based testing  
-- Requirements-based testing  
-- Use case-based testing  
-
-The focus is on validating user interactions and business-critical end-to-end processes of the web application.  
-
-Additionally, regression testing is performed after changes or bug fixes to ensure that existing functionality remains stable.
+| Test Approach | Description | Comment |
+|---------------|-------------|---------|
+| Risk-based testing | Testing activities are prioritized based on identified business and technical risks. | Focus on business-critical functionality |
+| Requirements-based testing | Tests are derived from requirements, user stories and acceptance criteria. | Ensures traceability between requirements and tests |
+| Use case-based testing | The focus is on validating user interactions and business-critical end-to-end processes of the web application. | Focus on end-to-end business workflows |
+| User Acceptance Testing (UAT) | Validation of predefined acceptance criteria from a user perspective. | Executed by Test Engineer |
+| CRUD & POISED for REST APIs | For REST API testing, CRUD and POISED are used to support the systematic validation of API functionality, data handling, error handling, and interface behavior. | Detailed API testing is covered in the Test Automation Strategy |
+| Regression testing | Regression testing is performed after changes or bug fixes to ensure that existing functionality remains stable. | Executed after bug fixes and releases |
 
 ---
 
@@ -250,33 +263,33 @@ Test data should be designed in a way that tests remain repeatable despite perio
 
 ---
 
-## x Test Automation (verweis auf Dileks TA STrategy)
+## 8 Test Automation
 
-## 8. Roles and Responsibilities (bitte als tabelle darstellen)
+Detailed test automation activities are described in the separate Test Automation Strategy document.
 
-### Tester (Product Level – Gülbin Deniz)
+REST API, REST API Documentation (Swagger), GraphQL API and GraphQL Playground (GraphiQL) are part of the product scope. Detailed API testing is covered separately in the Test Automation Strategy.
 
-- Creation of the test plan  
-- Creation of test cases (T1–T5)  
-- Execution of tests  
-- Documentation of test results  
+Reference:
+- [Test Automation Strategy](https://github.com/rgroetz2/TBLL-AgileEngineeringFoundation/blob/main/courses/TestBusters-LearningLab/ISTQB-2026/TTT426-the-testproject/testwareTTT426/testAutomationStrategy.md)
 
-### QA Lead / Test Policy Owner (Tribe Level – Julieta Tzouridis)
 
-- Definition and maintenance of the Test Policy  
-- Ensuring adherence to testing standards  
-- Support in strategic testing decisions  
+## 9. Roles and Responsibilities
 
-### Reviewer / Mentor (Rudolf Grötz)
-
-- Review of the test plan  
-- Feedback and quality assurance  
+| Role | Who | Responsibility |
+|------|------|------|
+| Test Project Lead | Gülbin Deniz | Coordination of test planning activities, project communication and maintenance of the Product Test Plan |
+| QA Lead / Test Policy Owner | Julieta Tzouridis | Definition, maintenance and review of the Test Policy |
+| Test Automation Lead | Dilek Firat | Definition and maintenance of the Test Automation Strategy and automation-related activities |
+| Test Designer / Analyst | Ângela Simões Krainer | Test analysis, test design and support of test execution activities |
+| Test Designer / Analyst | Serife Cicek | Test analysis, test design and support of test execution activities |
+| Test Designer / Analyst | Viktoria Zelenak | Test analysis, test design and support of test execution activities |
+| QE Specialist / Mentor / Reviewer | Rudolf Grötz | Mentoring, review activities and quality assurance guidance |
 
 ---
 
-## 9. Entry and Exit Criteria
+## 10. Entry and Exit Criteria
 
-### 9.1 Entry Criteria
+### 10.1 Entry Criteria
 
 The test process starts when:
 
@@ -287,7 +300,7 @@ The test process starts when:
 
 ---
 
-### 9.2 Exit Criteria
+### 10.2 Exit Criteria
 
 The test process is considered complete when:
 
@@ -298,7 +311,7 @@ The test process is considered complete when:
 
 ---
 
-## 10. Risks and Assumptions
+## 11. Risks and Assumptions
 
 ### Risks
 
@@ -319,14 +332,14 @@ The test process is considered complete when:
 
 ---
 
-## 11. Test Deliverables (bitte als tabelle und mit ablage ort)
+## 12. Test Deliverables 
 
-The following test artifacts are created:
-
-- Product Test Plan  
-- Test cases (T1–T5)  
-- Test execution reports  
-- Defect reports (e.g. via GitHub Issues)  
-- Test summary report  
-
-These artifacts support transparency, traceability, and quality assurance throughout the testing process.
+| Deliverable              | Description                                          | Storage Location                           |
+| ------------------------ | ---------------------------------------------------- | ------------------------------------------ |
+| Product Test Plan        | Product-level test planning document                 | `testwareTTT426/testPlan-product-WEB.md`   |
+| Test Policy              | Project-wide testing principles and governance       | `testwareTTT426/testPolicy-ToolShop.md`    |
+| Test Automation Strategy | Test automation approach and implementation details  | `testwareTTT426/testAutomationStrategy.md` |
+| Test Design (T1–T5)      | Test case design based on the T1–T5 model            | `testwareTTT426/testDesign-T1T5.md`        |
+| Test Design (POISED)     | API-oriented test design using POISED                | `testwareTTT426/testDesign-POISED.md`      |
+| Defect Reports           | Defect tracking and issue management                 | GitHub Issues                              |
+| Test Summary Report      | Summary of test execution results and quality status | `testwareTTT426/` (to be created)          |
