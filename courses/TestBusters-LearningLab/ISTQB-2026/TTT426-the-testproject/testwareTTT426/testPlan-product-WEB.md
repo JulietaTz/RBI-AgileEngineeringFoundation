@@ -36,7 +36,7 @@ The test plan is derived from the overarching Test Policy and defines how testin
 
 The objective of this test plan is to ensure that the  application is tested in a systematic, structured, and traceable manner.  
 
-The focus is on business-critical and supporting e-commerce use cases as defined in the test scope.
+The main focus is on business-critical and supporting e-commerce use cases as defined in the test scope.
 
 
 ### 1.1 Timeline
@@ -82,6 +82,7 @@ The following use cases are covered by this test plan:
 - Product Category
 - Product Detail
 - Product Overview
+- API Functionality (REST API, GraphQL API)  
 
 These use cases are considered business-critical as they are essential for completing a purchase.
 
@@ -128,8 +129,7 @@ The focus of this test plan is exclusively on functional testing of the web inte
 The following areas are not part of this test plan:
 
 - Performance testing (e.g. load and stress testing)  
-- Mobile applications (focus is on web application only)  
-- API testing (Detailed API testing is covered separately in the Test Automation Strategy and is therefore not a primary focus of this Product Test Plan)  
+- Mobile applications (focus is on web application only)    
 - Security testing (e.g. penetration testing)  
 - Infrastructure and backend components outside the UI  
 - Third-party integrations (if applicable)  
@@ -138,16 +138,7 @@ The following areas are not part of this test plan:
 
 ## 4. Test Items
 
-The test scope focuses on the presentation layer (WEBUI) of the system.
-
-Covered components include:
-
-- Angular-based web frontend  
-- UI elements and user interactions  
-- Client-side validation and input handling  
-- UI-driven business logic (e.g. cart and pricing behavior)  
-
-Interactions with backend services (REST API) are tested indirectly through UI-based scenarios but are not the primary focus of this test plan.
+The test scope focuses on the presentation layer (WEBUI) of the system, including APIs and services.
 
 ---
 
@@ -202,6 +193,7 @@ The following test design techniques are applied:
 - State Transition Testing  
 - Scenario-based testing  
 - Exploratory testing  
+- Use-Case based (T1T5)
 
 ---
 
