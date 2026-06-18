@@ -3,12 +3,7 @@
 **Test Plan Level:** Product Level  
 **Tribe:** E-Commerce  
 **Product:** ToolShop WEB  
-**Application Under Test:** Practice Software Testing Web Application  
-**Standard:** ISO/IEC/IEEE 29119  
-
-**Tester:** Gülbin Deniz  
-**QA Lead / Test Policy Owner:** Julieta Tzouridis  
-**Reviewer / Mentor:** Rudolf Grötz  
+**Application Under Test:** Practice Software Testing Web Application   
 
 
 **Version:** v2  
@@ -20,13 +15,12 @@
 
 ## Document Control 
 ### Version History 
-| Version | Date | Description | Author | 
-|----------|------------|-------------|-------------| 
-| v1 | 2026-03 | Initial version | Gülbin Deniz | 
-| v2 | 2026-06-11 | Document structure updated and prepared for future enhancements. | Gülbin Deniz | 
+| Version | State | Date | Description | Author | 
+|----------|-----|------------|-------------|-------------| 
+| v1 | 2026-06-18 | Released | Document structure updated and prepared for future enhancements. | Gülbin Deniz | 
 
 
----
+
 
 ## 1. Introduction
 
@@ -52,7 +46,7 @@ The main focus is on business-critical and supporting e-commerce use cases as de
 | Final Project Review | TBD | Overall quality status and recommendation delivered |
 | Investor Presentation | 2027-01-02 | Final project presentation |
 
----
+
 
 ## 2. Test Objectives
 
@@ -63,7 +57,7 @@ The main objectives of this test plan are:
 - Early detection of critical defects  
 - Reduction of risks in key business processes (e.g. registration and checkout)  
 
----
+
 
 ## 3. Test Scope
 
@@ -86,7 +80,7 @@ The following use cases are covered by this test plan:
 
 These use cases are considered business-critical as they are essential for completing a purchase.
 
----
+
 
 ### SHOULD  
 *(supporting and non-critical functionalities)*
@@ -94,13 +88,13 @@ These use cases are considered business-critical as they are essential for compl
 - Contact Form
 - Rentals  
 
----
+
 
 The classification of business-critical (**MUST**) and supporting (**SHOULD**) use cases is based on the project requirements and scope definition.
 
 A detailed mapping of all relevant features is provided in the **Feature Classification Table** below.
 
----
+
 
 ## Feature Classification Table
 
@@ -120,7 +114,7 @@ A detailed mapping of all relevant features is provided in the **Feature Classif
 | GraphQL Playground (GraphiQL) | GraphQL query and testing interface | NO |  
 
 
----
+
 
 ### 3.2 Out of Scope
 
@@ -134,13 +128,13 @@ The following areas are not part of this test plan:
 - Infrastructure and backend components outside the UI  
 - Third-party integrations (if applicable)  
 
----
+
 
 ## 4. Test Items
 
 The test scope focuses on the presentation layer (WEBUI) of the system, including APIs and services.
 
----
+
 
 ## 5. Test Strategy
 
@@ -156,7 +150,7 @@ The test scope focuses on the presentation layer (WEBUI) of the system, includin
 
 
 
----
+
  
 ### 5.2 Test Approach
 
@@ -169,7 +163,7 @@ The test scope focuses on the presentation layer (WEBUI) of the system, includin
 | CRUD & POISED for REST APIs | For REST API testing, CRUD and POISED are used to support the systematic validation of API functionality, data handling, error handling, and interface behavior. | Detailed API testing is covered in the Test Automation Strategy |
 | Regression testing | Regression testing is performed after changes or bug fixes to ensure that existing functionality remains stable. | Executed after bug fixes and releases |
 
----
+
 
 ### 5.3 Test Design Approach (T1–T5)
 
@@ -181,7 +175,7 @@ The test scope focuses on the presentation layer (WEBUI) of the system, includin
 | T4 | Negative Testing | MUST |
 | T5 | Misuse Scenarios | When robustness or misuse risks exist |
 
----
+
 
 ### 5.4 Test Design Techniques
 
@@ -195,13 +189,13 @@ The following test design techniques are applied:
 - Exploratory testing  
 - Use-Case based (T1T5)
 
----
+
 
 ### 5.5 Traceability
 
 Test cases are linked to corresponding user stories and acceptance criteria to ensure traceability.
 
----
+
 
 ### 5.6 Test Reporting and Defect Management
 
@@ -219,7 +213,7 @@ Defects include:
 - Actual results  
 - Severity level  
 
----
+
 
 ## 6. Test Environment
 
@@ -232,7 +226,7 @@ Tests are performed in the following environment:
 
 **URL:** https://practicesoftwaretesting.com  
 
----
+
 
 ## 7. Test Data
 
@@ -245,7 +239,7 @@ Typical test data is used to cover different application scenarios:
 
 Test data should be designed in a way that tests remain repeatable despite periodic database resets.
 
----
+
 
 ## 8 Test Automation
 
@@ -266,10 +260,10 @@ Reference:
 | Test Automation Lead | Dilek Firat | Definition and maintenance of the Test Automation Strategy and automation-related activities |
 | Test Designer / Analyst | Ângela Simões Krainer | Test analysis, test design and support of test execution activities |
 | Test Designer / Analyst | Serife Cicek | Test analysis, test design and support of test execution activities |
-| Test Designer / Analyst | Viktoria Zelenak | Test analysis, test design and support of test execution activities |
+| Test Designer / Analyst | Jane Doe | Test analysis, test design and support of test execution activities |
 | QE Specialist / Mentor / Reviewer | Rudolf Grötz | Mentoring, review activities and quality assurance guidance |
 
----
+
 
 ## 10. Entry and Exit Criteria
 
@@ -282,7 +276,7 @@ The test process starts when:
 - The test environment is ready and accessible  
 - Required test data is available  
 
----
+
 
 ### 10.2 Exit Criteria
 
@@ -293,7 +287,7 @@ The test process is considered complete when:
 - Test results are fully documented  
 - A test summary report has been created  
 
----
+
 
 ## 11. Risks and Assumptions
 
@@ -306,7 +300,7 @@ The test process is considered complete when:
 | R3 | Invalid validation may cause security issues | High | Medium | Negative testing |
 | R4 | Pricing/tax errors may cause inconsistencies | High | Medium | Boundary testing |
 
----
+
 
 ### Assumptions
 
@@ -314,7 +308,7 @@ The test process is considered complete when:
 - Requirements and user stories are correctly defined  
 - External dependencies (e.g. services or APIs) function as expected  
 
----
+
 
 ## 12. Test Deliverables 
 
