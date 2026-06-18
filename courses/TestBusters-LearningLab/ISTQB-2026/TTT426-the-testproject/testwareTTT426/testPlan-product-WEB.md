@@ -14,7 +14,6 @@
 
 
 ## Document Control 
-### Version History 
 | Version | State | Date | Description | Author | 
 |----------|-----|------------|-------------|-------------| 
 | v1 | 2026-06-18 | Released | Document structure updated and prepared for future enhancements. | Gülbin Deniz | 
