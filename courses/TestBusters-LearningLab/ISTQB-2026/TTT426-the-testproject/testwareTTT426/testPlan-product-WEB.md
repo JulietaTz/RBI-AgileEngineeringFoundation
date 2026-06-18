@@ -8,9 +8,9 @@
 
 **Document Control**
 
-| Version | State | Date | Description | Author | 
-|----------|-----|------------|-------------|-------------| 
-| v1 | 2026-06-18 | Released | Document structure updated and prepared for future enhancements. | Gülbin Deniz | 
+| Version | State | Date | Description | Author | Reviewed |
+|----------|-----|------------|-------------|-------------|------------|
+| v1 | 2026-06-18 | Released | Document structure updated and prepared for future enhancements. | Gülbin Deniz | R. Grötz |
 
 
 
