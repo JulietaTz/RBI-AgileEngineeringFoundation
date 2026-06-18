@@ -6,14 +6,8 @@
 **Application Under Test:** Practice Software Testing Web Application   
 
 
-**Version:** v2  
+**Document Control**
 
-**Document Status:** Working Draft
-
-**Date:** 2026-06-11
-
-
-## Document Control 
 | Version | State | Date | Description | Author | 
 |----------|-----|------------|-------------|-------------| 
 | v1 | 2026-06-18 | Released | Document structure updated and prepared for future enhancements. | Gülbin Deniz | 
