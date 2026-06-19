@@ -6,10 +6,7 @@ For Test Design always use the T1T5-Test-Design-Technique as defined in:
 
 ## Repository Context
 
-Use the following documents as the source of truth:
-
-* `/testwareTTT426/testPlan-product-WEB.md`
-* `/testwareTTT426/testDesign-T1T5.md`
+Use the following document as the source of truth:
 
 * `/testwareTTT426/testDesign-T1T5.md`
 
