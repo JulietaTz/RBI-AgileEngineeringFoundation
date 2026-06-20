@@ -1,0 +1,104 @@
+# Preparation
+
+- Docker
+- Playwright
+- Angular
+- Repo
+- Infrastructure
+  - ToolShop is running local on each team members workstation
+  - Playwright is installed on each team members workstation
+
+# Agenda 20260701
+
+## Introduction - (09:00-10:00) (READY)
+
+- Welcome to the RBI/42 Agile Engineering Combine
+- Introduction 
+- The Coaches & other participants
+- Who is Seal-Team-42
+- Product Vision (Explain the Product)
+- The Github Repo
+- Team Agreements
+  - Every User Story when selected into the sprint will be divided into sub-tasks on the board
+  - We are working in pairs to share knowle
+
+---
+
+## Sprint 6.ZERO - Logo/GDPR Ready - (10:00-13:00)
+
+- Sprint Planning
+- Sprint Excution
+  - Backlog Grooming
+  - Story Workshops
+  - Story Implementation
+  - Prepare Backlog for next Sprint
+- Sprint Review
+- Sprint Retro
+- Sprint Details
+  - Infrastructure
+  - ToolShop is running local on each team members workstation
+  - Playwright is installed on each team members workstation
+  - Organizational
+  - Team Members know their main responsibility (PO, BA, DEV, TE)
+  - Physical Scrum Board is available and ready for sprint 6.1
+  - Sprint Backlog 6.1 is ready
+  - Team Agreements
+    - Sprint demo per user story on the dev notebook
+    - Definition of Ready
+      - 3-Amigos / estimated in 30min packages / OK from PO
+    - Definition of Done
+  - General
+    - US1001-Playwright                          OK
+    - US1003-Angular                             OK
+  - ToolShop
+    - US1007-New Logo                            Logo missing
+    - US1008-Remove Rentals                      OK
+    - US1022-Compliance-ready                    ACC missing
+  - Next Sprint
+    - Prep Sprint 6.1
+
+---
+
+## Sprint 6.1 - CZ Ready - (13:45-15:00)
+
+- Sprint Planning
+- Sprint Excution
+  - Backlog Grooming
+  - Story Workshops
+  - Story Implementation
+  - Prepare Backlog for next Sprint
+- Sprint Review
+- Sprint Retro
+- Sprint Details
+  - General 
+    - US4510-Automated-RegressionTests          ACC missing
+  - ToolShop
+    - US2300-Czech Language                      OK
+    - US2350-Czech Products                      Product names missing
+    - US3100-New Payment PayU                    OK
+    - US4350-Version Number                      OK
+  - Next Sprint
+    - Prep Sprint 6.2
+    - AI-Features stories                       User stories missing
+
+---
+
+## Sprint 6.2 - AI Ready or TTT426 User Acceptance Tests - (15:15-16:30)
+
+- Sprint Planning
+- Sprint Exceution
+  - Backlog Grooming
+  - Story Workshops
+  - Story Implementation
+  - Prepare Backlog for next Sprint
+- Sprint Review
+- Sprint Retro
+- Sprint Details
+  - General
+    - Bugfixxing
+  - ToolShop
+    - US4510-register-with-google                OK
+    - US4200-Delivery-costs                      OK
+    - AI Support My Products (see features.md)
+  - Next Sprint
+
