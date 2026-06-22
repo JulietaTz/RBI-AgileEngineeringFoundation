@@ -19,6 +19,7 @@ toolshop-automation/
 │
 ├── tests/
 ├── pages/
+├── api/
 ├── test-data/
 ├── utils/
 ├── config/
