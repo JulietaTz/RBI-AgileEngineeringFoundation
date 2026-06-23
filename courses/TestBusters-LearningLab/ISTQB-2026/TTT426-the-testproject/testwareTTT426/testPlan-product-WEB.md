@@ -133,7 +133,6 @@ The test scope focuses on the presentation layer (WEBUI) of the system, includin
 
 ### 5.1 Test Levels
 
-
 | Level | Description | Comment |
 |---------|-------------|---------|
 | Component Testing | Verification of individual software components in isolation. | Performed by developers |
@@ -142,10 +141,28 @@ The test scope focuses on the presentation layer (WEBUI) of the system, includin
 | User Acceptance Testing (UAT) | Validation of predefined acceptance criteria from a user perspective. | Performed by Test Engineer |  
 
 
+### 5.2 Quality Criteria Coverage (ISO 9126)
+
+The following quality characteristics are considered within the testing activities for ToolShop WEB.
+
+| Attribute     | Sub-Attribute     | Explanation                                                                       | Validation Needed |
+| ------------- | ----------------- | --------------------------------------------------------------------------------- | ----------------- |
+| Functionality | Suitability       | Can software perform the tasks required?                                          | MUST              |
+|                | Accuracy          | Is the result as expected?                                                        | MUST              |
+|                | Interoperability  | Can the system interact with another system?                                      | MUST              |
+|                | Compliance        | Does the system comply with applicable standards, regulations and business rules? | SHOULD            |
+|                | Security          | Does the system prevent unauthorized access?                                      | SHOULD            |
+| Usability     | Understandability | Can users understand how the system works?                                        | SHOULD            |
+|                    | Learnability      | Can users learn how to use the system efficiently?                                | SHOULD            |
+|                        | Operability       | Can users perform their tasks effectively?                                        | MUST              |
+| Reliability   | Maturity          | Does the system operate consistently without failures?                            | MUST              |
+|                  | Fault Tolerance   | Can the system continue to operate when faults occur?                             | SHOULD            |
+|                  | Recoverability    | Can the system recover after a failure?                                           | SHOULD            |
 
 
- 
-### 5.2 Test Approach
+The selected quality characteristics are aligned with ISO 9126 and support the evaluation of the overall product quality.
+
+### 5.3 Test Approach
 
 | Test Approach | Description | Comment |
 |---------------|-------------|---------|
@@ -158,7 +175,7 @@ The test scope focuses on the presentation layer (WEBUI) of the system, includin
 
 
 
-### 5.3 Test Design Approach (T1–T5)
+### 5.4 Test Design Approach (T1–T5)
 
 | Category | Description | Minimum Coverage |
 |-----------|-------------|------------------|
@@ -170,7 +187,7 @@ The test scope focuses on the presentation layer (WEBUI) of the system, includin
 
 
 
-### 5.4 Test Design Techniques
+### 5.5 Test Design Techniques
 
 The following test design techniques are applied:
 
@@ -184,13 +201,13 @@ The following test design techniques are applied:
 
 
 
-### 5.5 Traceability
+### 5.6 Traceability
 
 Test cases are linked to corresponding user stories and acceptance criteria to ensure traceability.
 
 
 
-### 5.6 Test Reporting and Defect Management
+### 5.7 Test Reporting and Defect Management
 
 Test progress and results are continuously monitored and tracked using appropriate tools (e.g. GitHub Issues, Pull Requests, and Trello).
 
