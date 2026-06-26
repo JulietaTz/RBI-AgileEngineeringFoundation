@@ -11,6 +11,7 @@
 | Version | State | Date | Description | Author | Reviewed |
 |----------|-----|------------|-------------|-------------|------------|
 | v1 | 2026-06-18 | Released | Document structure updated and prepared for future enhancements. | Gülbin Deniz | R. Grötz |
+| v1.1 | 2026-06-24 | In Progress| Test Planning for the Test Sprint on July 1, 2026 at 42 Vienna  | Gülbin Deniz | R. Grötz |
 
 
 
@@ -23,7 +24,6 @@ The test plan is derived from the overarching Test Policy and defines how testin
 
 The objective of this test plan is to ensure that the  application is tested in a systematic, structured, and traceable manner.  
 
-The main focus is on business-critical and supporting e-commerce use cases as defined in the test scope.
 
 
 ### 1.1 Timeline
@@ -48,7 +48,7 @@ The main objectives of this test plan are:
 - Validation of the functional requirements of the web application  
 - Ensuring a stable and error-free user experience  
 - Early detection of critical defects  
-- Reduction of risks in key business processes (e.g. registration and checkout)  
+- Reduction of risks in key business processes and features 
 
 
 
@@ -56,82 +56,44 @@ The main objectives of this test plan are:
 
 ### 3.1 In Scope
 
-The test scope is derived from the defined use cases and focuses on business-critical (**MUST**) and supporting (**SHOULD**) functionalities.
-
-The following use cases are covered by this test plan:
-
-### MUST  
-*(business-critical core functionalities required for the main e-commerce workflow)*
-
-- Authentication
-- Checkout Flow
-- Customer Account
-- Product Category
-- Product Detail
-- Product Overview
-- API Functionality (REST API, GraphQL API)  
-
-These use cases are considered business-critical as they are essential for completing a purchase.
-
-
-
-### SHOULD  
-*(supporting and non-critical functionalities)*
-
-- Contact Form
-- Rentals  
-
-
-
-The classification of business-critical (**MUST**) and supporting (**SHOULD**) use cases is based on the project requirements and scope definition.
-
-A detailed mapping of all relevant features is provided in the **Feature Classification Table** below.
-
-
 
 ## Feature Classification Table
 
-| Feature | Description | Business Critical (YES/NO) |
-|----------|-------------|----------------------------|
-| Authentication | Login, Register, Forgot Password | YES |
-| Checkout Flow | Increase/Decrease Quantity, Delete Item, Address Details, Payment Options (Basic) | YES |
-| Contact Form | Basic | NO |
-| Customer Account | Update Profile, Change Password, Invoices Overview, Invoice Detail, Favorites, Contact Messages | YES |
-| Product Category | Product categorization and navigation | YES |
-| Product Detail | Product details | YES |
-| Product Overview | Product listing, Pagination, Search, Filter, Sorting | YES |
-| Rentals | Rental functionality | NO |
-| REST API | REST API endpoints | YES |
-| REST API Documentation (Swagger) | API documentation and testing interface | NO |
-| GraphQL API | GraphQL endpoints | YES |
-| GraphQL Playground (GraphiQL) | GraphQL query and testing interface | NO |  
-
-
+| Feature | Description | Business Critical (YES/NO) | Tested (MUST/SHOULD/WON’T)  
+|----------|-------------|----------------------------|--------------------------------------------------------------------|   
+| Admin Account | CRUD all entities, Reporting | NO | MUST|  
+| Authentication | Login, Two-Factor Authentication, Register, Forgot Password, Lock Account after Failed Attempts, Social Login (Google, GitHub) | YES | MUST|  
+| Chat Widget | Customer support chat functionality | NO | SHOULD |  
+| Checkout Flow | Increase/Decrease Quantity, Delete Item, Address Details, Payment Options (Advanced) | YES | MUST |  
+| Contact Form (advanced) | Advanced Contact Form, File Upload | NO | SHOULD |  
+| Customer Account | Update Profile, Change Password, Invoices Overview, Invoice Detail, Invoice PDF, Favorites, Contact Messages | YES | MUST |  
+| Discount | Geo-location, Combined Products | NO | WON’T |  
+| Google Analytics | Analytics integration | NO | WON’T |  
+| Multi-Language | Multi-language support | YES | MUST |   
+| Privacy Policy | Privacy policy information | NO | MUST |  
+| Product Category | Product categorization and navigation | YES | MUST |  
+| Product Comparison | Side-by-side specs comparison, Highlight differences only | NO | SHOULD |  
+| Product Detail | Product details, Product specifications | YES | MUST |  
+| Product Overview | Product listing, Pagination,  Filter, Search,Sorting, Price Range | YES | MUST |  
+| Rentals | Rental functionality | NO | WON’T |  
 
 
 ### 3.2 Out of Scope
-
-The focus of this test plan is exclusively on functional testing of the web interface.
 
 The following areas are not part of this test plan:
 
 - Performance testing (e.g. load and stress testing)  
 - Mobile applications (focus is on web application only)    
-- Security testing (e.g. penetration testing)  
 - Infrastructure and backend components outside the UI  
 - Third-party integrations (if applicable)  
 
-
-
-## 4. Test Items
-
-The test scope focuses on the presentation layer (WEBUI) of the system, including APIs and services.
 
 
 
 ## 5. Test Strategy
 
 ### 5.1 Test Levels
+
 
 | Level | Description | Comment |
 |---------|-------------|---------|
@@ -145,23 +107,25 @@ The test scope focuses on the presentation layer (WEBUI) of the system, includin
 
 The following quality characteristics are considered within the testing activities for ToolShop WEB.
 
-| Attribute     | Sub-Attribute     | Explanation                                                                       | Validation Needed |
-| ------------- | ----------------- | --------------------------------------------------------------------------------- | ----------------- |
-| Functionality | Suitability       | Can software perform the tasks required?                                          | MUST              |
-|                | Accuracy          | Is the result as expected?                                                        | MUST              |
-|                | Interoperability  | Can the system interact with another system?                                      | MUST              |
-|                | Compliance        | Does the system comply with applicable standards, regulations and business rules? | SHOULD            |
-|                | Security          | Does the system prevent unauthorized access?                                      | SHOULD            |
-| Usability     | Understandability | Can users understand how the system works?                                        | SHOULD            |
-|                    | Learnability      | Can users learn how to use the system efficiently?                                | SHOULD            |
-|                        | Operability       | Can users perform their tasks effectively?                                        | MUST              |
-| Reliability   | Maturity          | Does the system operate consistently without failures?                            | MUST              |
-|                  | Fault Tolerance   | Can the system continue to operate when faults occur?                             | SHOULD            |
-|                  | Recoverability    | Can the system recover after a failure?                                           | SHOULD            |
+| Attribute | Sub-Attribute | Explanation | Validation Needed | Comment |  
+|-----------|---------------|-------------|-------------------|---------|  
+| Functionality | Suitability | Can software perform the tasks required? | MUST | |  
+| | Accuracy | Is the result of the calculations correct? | MUST | |  
+| | Interoperability | Can the system interact with another system? | MUST | |  
+| | Compliance | Does the system comply with applicable standards, regulations and business rules? | MUST | PCI-DSS, GDPR |  
+| | Security | Does the system prevent unauthorized access? | MUST | PCI-DSS |  
+| Usability | Understandability | Can users understand how the system works? | SHOULD | |  
+| | Learnability | Can users learn how to use the system efficiently? | SHOULD | |  
+| | Operability | Can users perform their tasks effectively? | MUST | |  
+| Reliability | Maturity | Does the system operate consistently without failures? | SHOULD | |  
+| | Fault Tolerance | Can the system continue to operate when faults occur? | SHOULD | |  
+| | Recoverability | Can the system recover after a failure? | SHOULD | |  
 
-
+ 
 The selected quality characteristics are aligned with ISO 9126 and support the evaluation of the overall product quality.
 
+
+ 
 ### 5.3 Test Approach
 
 | Test Approach | Description | Comment |
@@ -170,44 +134,47 @@ The selected quality characteristics are aligned with ISO 9126 and support the e
 | Requirements-based testing | Tests are derived from requirements, user stories and acceptance criteria. | Ensures traceability between requirements and tests |
 | Use case-based testing | The focus is on validating user interactions and business-critical end-to-end processes of the web application. | Focus on end-to-end business workflows |
 | User Acceptance Testing (UAT) | Validation of predefined acceptance criteria from a user perspective. | Executed by Test Engineer |
-| CRUD & POISED for REST APIs | For REST API testing, CRUD and POISED are used to support the systematic validation of API functionality, data handling, error handling, and interface behavior. | Detailed API testing is covered in the Test Automation Strategy |
+| Exploratory Testing | Testing is performed without predefined test cases while simultaneously learning and exploring the application. | Useful for discovering unexpected defects and usability issues 
 | Regression testing | Regression testing is performed after changes or bug fixes to ensure that existing functionality remains stable. | Executed after bug fixes and releases |
 
 
 
-### 5.4 Test Design Approach (T1–T5)
-
-| Category | Description | Minimum Coverage |
-|-----------|-------------|------------------|
-| T1 | Happy Path (standard case) | MUST and SHOULD |
-| T2 | Alternative Scenarios | When alternative flows exist |
-| T3 | Exception Cases | MUST |
-| T4 | Negative Testing | MUST |
-| T5 | Misuse Scenarios | When robustness or misuse risks exist |
 
 
-
-### 5.5 Test Design Techniques
+### 5.4 Test Design Techniques
 
 The following test design techniques are applied:
 
-- Equivalence Partitioning  
-- Boundary Value Analysis  
-- Decision Table Testing  
-- State Transition Testing  
-- Scenario-based testing  
-- Exploratory testing  
-- Use-Case based (T1T5)
+
+Test Design Technique
+Description
+| Test Design Technique | Description | Minimum Coverage |  
+|-----------------------|-------------|------------------|  
+| Equivalence Partitioning | Input data is divided into valid and invalid equivalence classes to reduce the number of test cases. | All input fields |  
+| Boundary Value Analysis | Tests values at the boundaries of valid and invalid input ranges. | Numeric and range-based input fields |  
+| Decision Table Testing | Tests combinations of conditions and business rules. | Business rules with multiple conditions |  
+| State Transition Testing | Verifies valid and invalid transitions between system states. | Features with defined state changes |  
+| Scenario-based Testing | Validates complete end-to-end user scenarios. | Business-critical workflows |  
+| Exploratory Testing | Simultaneous learning, test design and execution to discover unexpected defects. | Complex or high-risk areas |  
+| Use Case-based Testing (T1–T5) | Test scenarios are derived from user interactions using the T1–T5 model. | Focus on end-to-end business workflows |  
 
 
+* The T1–T5 model is used to classify test scenarios for use case-based testing.
 
-### 5.6 Traceability
+| Category | Description | Minimum Coverage |
+|-----------|-------------|------------------|
+| T1 | Happy Path (standard case) | All MUST features |
+| T2 | Alternative Scenarios | Where alternative flows exist |
+| T3 | Exception Cases | Critical exception scenarios |
+| T4 | Negative Testing | Invalid and error scenarios |
+| T5 | Misuse Scenarios | Where robustness or misuse risks exist |
+
+
+### 5.5 Traceability
 
 Test cases are linked to corresponding user stories and acceptance criteria to ensure traceability.
 
-
-
-### 5.7 Test Reporting and Defect Management
+### 5.6 Test Reporting and Defect Management
 
 Test progress and results are continuously monitored and tracked using appropriate tools (e.g. GitHub Issues, Pull Requests, and Trello).
 
@@ -255,8 +222,6 @@ Test data should be designed in a way that tests remain repeatable despite perio
 
 Detailed test automation activities are described in the separate Test Automation Strategy document.
 
-REST API, REST API Documentation (Swagger), GraphQL API and GraphQL Playground (GraphiQL) are part of the product scope. Detailed API testing is covered separately in the Test Automation Strategy.
-
 Reference:
 - [Test Automation Strategy](https://github.com/rgroetz2/TBLL-AgileEngineeringFoundation/blob/main/courses/TestBusters-LearningLab/ISTQB-2026/TTT426-the-testproject/testwareTTT426/testAutomationStrategy.md)
 
@@ -279,7 +244,6 @@ Reference:
 
 ### 10.1 Entry Criteria
 
-The test process starts when:
 
 - Relevant requirements and user stories are defined and available  
 - Test cases based on the T1–T5 test design approach are created  
@@ -289,8 +253,6 @@ The test process starts when:
 
 
 ### 10.2 Exit Criteria
-
-The test process is considered complete when:
 
 - All planned test cases have been executed  
 - No critical or blocking defects remain open  
