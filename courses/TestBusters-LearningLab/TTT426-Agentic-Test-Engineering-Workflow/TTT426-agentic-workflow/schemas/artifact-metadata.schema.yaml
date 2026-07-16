@@ -1,0 +1,20 @@
+artifact_metadata:
+  required:
+    - artifact_id
+    - title
+    - artifact_type
+    - project
+    - version
+    - status
+    - created_by
+    - created_at
+    - source_inputs
+    - assumptions
+    - open_questions
+  status_values:
+    - draft
+    - in-review
+    - changes-requested
+    - approved
+    - rejected
+    - obsolete

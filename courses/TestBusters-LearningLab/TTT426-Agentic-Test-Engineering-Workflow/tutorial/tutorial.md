@@ -31,6 +31,8 @@ Der TTT426 Workflow überträgt dieses Prinzip auf den Softwaretestprozess.
 
 ---
 
+
+
 ## 2. Das gewünschte Zielbild
 
 Der vollständige Workflow soll später ungefähr so aussehen:
@@ -72,7 +74,11 @@ Der Workflow wird nicht sofort vollständig implementiert. Du entwickelst zuerst
 
 ---
 
+
+
 # Teil I: Grundlagen und Architektur
+
+
 
 ## 3. Die fünf Bausteine des Workflows
 
@@ -101,6 +107,8 @@ Ein Agent definiert vor allem:
 - benötigten Kontext,
 - erlaubte Skills,
 - erwartete Ergebnisse.
+
+
 
 ### 3.2 Skills
 
@@ -135,6 +143,8 @@ Requirement lesen
     -> Artefakt speichern
 ```
 
+
+
 ### 3.4 Artifacts
 
 Artifacts sind die dokumentierten Ein- und Ausgaben des Workflows.
@@ -151,6 +161,8 @@ Beispiele:
 - Defect Report
 - Test Summary Report
 
+
+
 ### 3.5 Quality Gates
 
 Quality Gates prüfen, ob ein Ergebnis vollständig und ausreichend ist, bevor der nächste Schritt beginnt.
@@ -165,6 +177,8 @@ Beispiele:
 - Menschliche Freigabe wurde erteilt.
 
 ---
+
+
 
 ## 4. Grundprinzipien für TTT426
 
@@ -204,7 +218,11 @@ Wenn eine kritische Information fehlt, markiert der Agent den Workflow als block
 
 ---
 
+
+
 # Teil II: Repository vorbereiten
+
+
 
 ## 5. Schritt 1: Neues Repository erstellen
 
@@ -244,11 +262,15 @@ git add .
 git commit -m "Initialize TTT426 agentic test engineering repository"
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Du besitzt ein leeres, versioniertes Repository.
 
 ---
+
+
 
 ## 6. Schritt 2: Verzeichnisstruktur anlegen
 
@@ -345,6 +367,8 @@ mkdir -p projects/toolshop/{input,working,output,decisions,status}
 mkdir -p skills/{analyze-test-basis,product-risk-analysis,derive-test-conditions,design-test-cases,review-test-artifact}
 ```
 
+
+
 ### Warum diese Trennung wichtig ist
 
 - `agents` definiert Rollen.
@@ -358,13 +382,19 @@ mkdir -p skills/{analyze-test-basis,product-risk-analysis,derive-test-conditions
 - `schemas` ermöglicht maschinelle Validierung.
 - `tests` prüft die Qualität des Agentensystems.
 
+
+
 ### Ergebnis dieses Schrittes
 
 Du besitzt das Grundgerüst des Frameworks.
 
 ---
 
+
+
 # Teil III: Gemeinsame Regeln definieren
+
+
 
 ## 7. Schritt 3: Zentrale Projektanweisung erstellen
 
@@ -425,11 +455,15 @@ For every substantial task:
 8. Record the handover and next step.
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Alle Agenten erhalten eine gemeinsame Basis.
 
 ---
+
+
 
 ## 8. Schritt 4: Guardrails definieren
 
@@ -497,13 +531,19 @@ Human approval is mandatory for:
 An AI agent may prepare the approval package but must not approve it.
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Die Agenten kennen ihre Grenzen und dürfen keine Freigaben erfinden.
 
 ---
 
+
+
 # Teil IV: Artifact Model entwickeln
+
+
 
 ## 9. Schritt 5: Metadatenstandard definieren
 
@@ -553,6 +593,8 @@ open_questions: []
 ---
 ```
 
+
+
 ### Namenskonvention
 
 Verwende beispielsweise:
@@ -567,11 +609,15 @@ TTT426-REV-001  Artifact Review
 TTT426-HO-001   Handover
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Artefakte werden eindeutig identifizierbar und versionierbar.
 
 ---
+
+
 
 ## 10. Schritt 6: Erstes Template erstellen
 
@@ -638,13 +684,23 @@ Erstelle auf dieselbe Weise Templates für:
 - Artifact Review
 - Handover
 
+
+
 ### Ergebnis dieses Schrittes
 
 Der Output der Agenten erhält ein stabiles Format.
 
 ---
 
+FERTIG BIS HIERHER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+---
+
+
+
 # Teil V: Den MVP mit fünf Agenten bauen
+
+
 
 ## 11. Schritt 7: Test Orchestrator Agent erstellen
 
@@ -718,6 +774,8 @@ an explicit handover to the responsible specialist agent.
 - Do not silently skip workflow steps.
 ```
 
+
+
 ### Testprompt
 
 ```text
@@ -726,12 +784,16 @@ Inspect the ToolShop project folders and determine the next valid workflow step.
 Do not create test cases.
 ```
 
+
+
 ### Erwartetes Verhalten
 
 Der Agent sollte zunächst den Projektstatus prüfen und nicht sofort Testfälle
 erzeugen.
 
 ---
+
+
 
 ## 12. Schritt 8: Test Manager Agent erstellen
 
@@ -797,6 +859,8 @@ The test plan is ready for review only when:
 
 ---
 
+
+
 ## 13. Schritt 9: Test Analyst Agent erstellen
 
 Erstelle `agents/test-analyst.agent.md`.
@@ -860,6 +924,8 @@ test basis.
 ```
 
 ---
+
+
 
 ## 14. Schritt 10: Test Designer Agent erstellen
 
@@ -928,6 +994,8 @@ conditions.
 
 ---
 
+
+
 ## 15. Schritt 11: Test Reviewer Agent erstellen
 
 Erstelle `agents/test-reviewer.agent.md`.
@@ -978,15 +1046,21 @@ for the next workflow step.
 - projects/<project>/working/reviews/<artifact-id>-review.md
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Der MVP besitzt einen Orchestrator sowie vier klar getrennte Testrollen.
 
 ---
 
+HIER GEHT ES WEITER .....................................am 16.7
+
 # Teil VI: Skills entwickeln
 
-## 16. Schritt 12: Skill für Testbasisanalyse erstellen
+
+
+## DONE 16. Schritt 12: Skill für Testbasisanalyse erstellen
 
 Erstelle `skills/analyze-test-basis/SKILL.md`.
 
@@ -1040,7 +1114,9 @@ description: Analyze requirements and other test basis documents for testability
 
 ---
 
-## 17. Schritt 13: Skill für Produktrisikoanalyse erstellen
+
+
+## DONE 17. Schritt 13: Skill für Produktrisikoanalyse erstellen
 
 Erstelle `skills/product-risk-analysis/SKILL.md`.
 
@@ -1091,7 +1167,9 @@ Use a scale from 1 to 5 for likelihood and impact.
 
 ---
 
-## 18. Schritt 14: Skill für Testbedingungen erstellen
+
+
+## DONE 18. Schritt 14: Skill für Testbedingungen erstellen
 
 Erstelle `skills/derive-test-conditions/SKILL.md`.
 
@@ -1126,7 +1204,9 @@ description: Derive traceable and risk-focused test conditions from the test bas
 
 ---
 
-## 19. Schritt 15: Skill für Testfalldesign erstellen
+
+
+## DONE 19. Schritt 15: Skill für Testfalldesign erstellen
 
 Erstelle `skills/design-test-cases/SKILL.md`.
 
@@ -1175,7 +1255,9 @@ Use exploratory charters when:
 
 ---
 
-## 20. Schritt 16: Review-Skill erstellen
+
+
+## DONE 20. Schritt 16: Review-Skill erstellen
 
 Erstelle `skills/review-test-artifact/SKILL.md`.
 
@@ -1216,6 +1298,8 @@ Every passed criterion must reference:
 - or another explicit artifact location.
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Fachlogik ist nicht mehr fest in einzelne Agenten eingebaut. Sie liegt in
@@ -1223,7 +1307,11 @@ wiederverwendbaren Skills.
 
 ---
 
+BIS HIER HER OK _ COmmit
+
 # Teil VII: Workflows definieren
+
+
 
 ## 21. Schritt 17: Workflow für Test Context Analysis erstellen
 
@@ -1286,6 +1374,8 @@ Stop the workflow when:
 
 ---
 
+
+
 ## 22. Schritt 18: Workflow für Test Analysis erstellen
 
 Erstelle `workflows/03-test-analysis.workflow.md`.
@@ -1338,6 +1428,8 @@ Transform the test basis and product risks into reviewed test conditions.
 
 ---
 
+
+
 ## 23. Schritt 19: Workflow für Test Design erstellen
 
 Erstelle `workflows/04-test-design.workflow.md`.
@@ -1382,13 +1474,19 @@ conditions.
 13. Prepare handover to implementation or execution.
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Die Reihenfolge der Agentenarbeit ist jetzt explizit beschrieben.
 
 ---
 
+
+
 # Teil VIII: Handover und Workflow State
+
+
 
 ## 24. Schritt 20: Handover-Template erstellen
 
@@ -1443,6 +1541,8 @@ created_at: <DATE>
 - Comments:
 ```
 
+
+
 ### Warum ein Handover notwendig ist
 
 Ein Dateiname allein erklärt nicht:
@@ -1456,6 +1556,8 @@ Ein Dateiname allein erklärt nicht:
 Das Handover ist daher ein eigenes Artefakt.
 
 ---
+
+
 
 ## 25. Schritt 21: Workflowstatus definieren
 
@@ -1502,13 +1604,19 @@ next_action: create-test-context
 last_updated: 2026-07-14T14:00:00+02:00
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Der Orchestrator muss den Projektstatus nicht aus Chatverläufen erraten.
 
 ---
 
+
+
 # Teil IX: Quality Gates entwickeln
+
+
 
 ## 26. Schritt 22: Quality Gate für Test Context erstellen
 
@@ -1545,6 +1653,8 @@ Confirm that sufficient context exists before planning or test analysis starts.
 
 ---
 
+
+
 ## 27. Schritt 23: Quality Gate für Test Analysis erstellen
 
 Erstelle `quality-gates/qg-02-analysis-ready.md`.
@@ -1577,6 +1687,8 @@ The gate fails when:
 
 ---
 
+
+
 ## 28. Schritt 24: Quality Gate für Test Design erstellen
 
 Erstelle `quality-gates/qg-03-design-ready.md`.
@@ -1603,6 +1715,8 @@ A PASS means that the test design is ready for implementation or execution.
 It does not mean that tests were executed successfully.
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Agenten können nicht allein aufgrund einer überzeugend klingenden Antwort zum
@@ -1610,7 +1724,11 @@ nächsten Schritt wechseln.
 
 ---
 
+
+
 # Teil X: Den ersten End-to-End-MVP ausführen
+
+
 
 ## 29. Schritt 25: Ein kleines ToolShop-Beispiel vorbereiten
 
@@ -1649,6 +1767,8 @@ The first TTT426 workflow increment focuses on customer registration.
 
 ---
 
+
+
 ## 30. Schritt 26: Orchestrator starten
 
 Verwende in deiner Agent-Umgebung folgenden Auftrag:
@@ -1670,6 +1790,8 @@ Run QG-01 and record the evidence.
 Do not create test conditions or test cases yet.
 ```
 
+
+
 ### Manuelle Prüfung
 
 Prüfe anschließend:
@@ -1689,6 +1811,8 @@ git commit -m "Create ToolShop test context through orchestrated workflow"
 ```
 
 ---
+
+
 
 ## 31. Schritt 27: Test Analysis ausführen
 
@@ -1726,6 +1850,8 @@ Record evidence for every passed criterion.
 Do not rewrite the test conditions.
 ```
 
+
+
 ### Manuelle Prüfung
 
 Kontrolliere insbesondere:
@@ -1737,6 +1863,8 @@ Kontrolliere insbesondere:
 - Verknüpft er Bedingungen mit den Acceptance Criteria?
 
 ---
+
+
 
 ## 32. Schritt 28: Test Design ausführen
 
@@ -1753,6 +1881,8 @@ Mark suitable automation candidates.
 Run the defined review and quality gate process.
 ```
 
+
+
 ### Erwartete Techniken
 
 Für die Beispielstory sind wahrscheinlich geeignet:
@@ -1766,7 +1896,11 @@ Der Agent muss seine Technikentscheidung begründen.
 
 ---
 
+
+
 # Teil XI: Agentensystem testen
+
+
 
 ## 33. Schritt 29: Agent Tests definieren
 
@@ -1817,6 +1951,8 @@ Source B: Password requires at least 12 characters.
 
 ---
 
+
+
 ## 34. Schritt 30: Skill Tests definieren
 
 Erstelle `tests/skill-tests/design-test-cases-tests.md`.
@@ -1854,6 +1990,8 @@ colour, position or component type.
 
 ---
 
+
+
 ## 35. Schritt 31: Workflow Tests definieren
 
 Erstelle `tests/workflow-tests/context-to-design-e2e.md`.
@@ -1886,13 +2024,19 @@ Erstelle `tests/workflow-tests/context-to-design-e2e.md`.
 - Every test case links to a test condition.
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Du kannst Änderungen an Agenten und Skills regressiv prüfen.
 
 ---
 
+
+
 # Teil XII: Einfache Automatisierung hinzufügen
+
+
 
 ## 36. Schritt 32: Artifact Validator bauen
 
@@ -1997,6 +2141,8 @@ Führe die Prüfung aus:
 python scripts/validate_artifact.py projects/toolshop/working/test-context.md
 ```
 
+
+
 ### Spätere Erweiterungen
 
 Der Validator kann später prüfen:
@@ -2010,6 +2156,8 @@ Der Validator kann später prüfen:
 - menschliche Freigaben.
 
 ---
+
+
 
 ## 37. Schritt 33: GitHub Action für Artifact Validation hinzufügen
 
@@ -2050,13 +2198,19 @@ jobs:
           done
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Formale Qualitätsregeln werden nicht nur dem LLM überlassen.
 
 ---
 
+
+
 # Teil XIII: Human-in-the-Loop integrieren
+
+
 
 ## 38. Schritt 34: Freigabepunkte festlegen
 
@@ -2076,6 +2230,8 @@ Prüft:
 - Annahmen
 - fehlende Informationen
 
+
+
 ### Human Gate H2: Test Plan Approval
 
 Verantwortlich:
@@ -2083,11 +2239,15 @@ Verantwortlich:
 - Test Lead
 - Projektleitung oder Product Owner, abhängig vom Projekt
 
+
+
 ### Human Gate H3: Test Design Acceptance
 
 Verantwortlich:
 
 - Test Lead oder Senior Test Engineer
+
+
 
 ### Human Gate H4: Release Recommendation
 
@@ -2119,7 +2279,11 @@ Der Agent darf das Feld `approved_by` nicht selbst befüllen.
 
 ---
 
+
+
 # Teil XIV: TTT426-spezifisches Wissen integrieren
+
+
 
 ## 39. Schritt 35: TTT426 Context File erstellen
 
@@ -2163,6 +2327,8 @@ replace their learning, reflection, review and accountability.
 
 ---
 
+
+
 ## 40. Schritt 36: Terminologie definieren
 
 Erstelle `instructions/terminology.md`.
@@ -2202,7 +2368,11 @@ unterschiedlich verwenden.
 
 ---
 
+
+
 # Teil XV: Erweiterung nach dem MVP
+
+
 
 ## 41. Schritt 37: Weitere Agenten priorisieren
 
@@ -2218,6 +2388,8 @@ Empfohlene Reihenfolge:
 - Test Designer
 - Test Reviewer
 
+
+
 ### Ausbaustufe 2
 
 - Test Data Agent
@@ -2225,12 +2397,16 @@ Empfohlene Reihenfolge:
 - Defect Analyst Agent
 - Test Execution Coordinator
 
+
+
 ### Ausbaustufe 3
 
 - Test Automation Architect Agent
 - Playwright Automation Agent
 - Automation Reviewer Agent
 - CI/CD Integration Agent
+
+
 
 ### Ausbaustufe 4
 
@@ -2252,6 +2428,8 @@ Jeder neue Agent benötigt:
 
 ---
 
+
+
 ## 42. Schritt 38: Test Data Agent ergänzen
 
 Der Test Data Agent sollte später unter anderem:
@@ -2271,6 +2449,8 @@ Er sollte nicht:
 - oder irreversible Datenbankänderungen durchführen.
 
 ---
+
+
 
 ## 43. Schritt 39: Test Automation Workflow ergänzen
 
@@ -2311,7 +2491,11 @@ Der implementierende Agent sollte seinen eigenen Code nicht allein freigeben.
 
 ---
 
+
+
 # Teil XVI: Plattformintegration
+
+
 
 ## 44. Schritt 40: Nutzung in Cursor
 
@@ -2328,16 +2512,20 @@ da sich Dateipfade und Funktionsumfang ändern können.
 
 ### Empfohlene Zuordnung
 
-| TTT426 Element | Cursor-Konzept |
-|---|---|
-| AGENTS.md | Projektkontext und gemeinsame Anweisungen |
-| agents/*.agent.md | Custom Agents oder Subagents |
-| skills/*/SKILL.md | Agent Skills |
-| workflows/*.workflow.md | explizite Workflow-Anweisungen |
-| quality-gates/*.md | Review Rules und Checklisten |
-| scripts/ | deterministische Validierung |
+
+| TTT426 Element          | Cursor-Konzept                            |
+| ----------------------- | ----------------------------------------- |
+| AGENTS.md               | Projektkontext und gemeinsame Anweisungen |
+| agents/*.agent.md       | Custom Agents oder Subagents              |
+| skills/*/SKILL.md       | Agent Skills                              |
+| workflows/*.workflow.md | explizite Workflow-Anweisungen            |
+| quality-gates/*.md      | Review Rules und Checklisten              |
+| scripts/                | deterministische Validierung              |
+
 
 ---
+
+
 
 ## 45. Schritt 41: Nutzung mit GitHub Copilot
 
@@ -2347,20 +2535,26 @@ einer `SKILL.md` und optionalen Ressourcen oder Skripten organisiert.
 
 ### Empfohlene Zuordnung
 
-| TTT426 Element | GitHub Copilot-Konzept |
-|---|---|
-| globale Regeln | repository custom instructions |
-| spezialisierte Rollen | custom agents |
-| Fachmethoden | agent skills |
-| technische Checks | scripts und GitHub Actions |
-| Review des Outputs | Pull Request Review und Quality Gates |
+
+| TTT426 Element        | GitHub Copilot-Konzept                |
+| --------------------- | ------------------------------------- |
+| globale Regeln        | repository custom instructions        |
+| spezialisierte Rollen | custom agents                         |
+| Fachmethoden          | agent skills                          |
+| technische Checks     | scripts und GitHub Actions            |
+| Review des Outputs    | Pull Request Review und Quality Gates |
+
 
 Halte die Kernlogik möglichst plattformneutral. Plattformabhängige Wrapper
 sollten nur auf die gemeinsamen Dateien verweisen.
 
 ---
 
+
+
 # Teil XVII: Governance und Sicherheit
+
+
 
 ## 46. Schritt 42: Agent Registry erstellen
 
@@ -2408,6 +2602,8 @@ Dokumentiere pro Agent:
 
 ---
 
+
+
 ## 47. Schritt 43: Audit Trail definieren
 
 Jeder relevante Agentenlauf sollte mindestens dokumentieren:
@@ -2446,7 +2642,11 @@ human_review: pending
 
 ---
 
+
+
 # Teil XVIII: Erfolg messen
+
+
 
 ## 48. Schritt 44: Qualitätsmetriken definieren
 
@@ -2461,11 +2661,15 @@ Geeignete Metriken:
 - Anteil nicht belegter Aussagen
 - Anteil fehlender Pflichtfelder
 
+
+
 ### Traceability
 
 - Anteil der Testbedingungen mit Requirement-Link
 - Anteil der Testfälle mit Test-Condition-Link
 - Anteil kritischer Risiken mit Testabdeckung
+
+
 
 ### Workflow Reliability
 
@@ -2474,11 +2678,15 @@ Geeignete Metriken:
 - Anzahl blockierter Läufe wegen fehlenden Kontexts
 - Wiederholbarkeit bei identischem Input
 
+
+
 ### Human Effort
 
 - Reviewzeit pro Artefakt
 - Anzahl notwendiger Korrekturschleifen
 - Anteil akzeptierter Agentenvorschläge
+
+
 
 ### Learning Value
 
@@ -2489,9 +2697,15 @@ Geeignete Metriken:
 
 ---
 
+
+
 # Teil XIX: Empfohlener Implementierungsplan
 
+
+
 ## 49. Vier Iterationen zum ersten stabilen Workflow
+
+
 
 ### Iteration 1: Repository und Context Workflow
 
@@ -2513,6 +2727,8 @@ Definition of Done:
 - Fehlende Inputs werden sichtbar.
 - Ein Handover wird erzeugt.
 
+
+
 ### Iteration 2: Test Analysis
 
 Implementiere:
@@ -2533,6 +2749,8 @@ Definition of Done:
 - Kritische Risiken besitzen Abdeckung.
 - Ein unabhängiger Reviewbericht existiert.
 
+
+
 ### Iteration 3: Test Design
 
 Implementiere:
@@ -2550,6 +2768,8 @@ Definition of Done:
 - Testtechniken sind erkennbar angewandt.
 - Testfälle verweisen auf Testbedingungen.
 - Automatisierungskandidaten sind markiert.
+
+
 
 ### Iteration 4: Automation und Governance
 
@@ -2571,9 +2791,15 @@ Definition of Done:
 
 ---
 
+
+
 # Teil XX: Häufige Fehler
 
+
+
 ## 50. Vermeide diese Anti-Patterns
+
+
 
 ### Ein Agent für alles
 
@@ -2648,7 +2874,11 @@ Evidence-based Reviews und Traceability verlangen.
 
 ---
 
+
+
 # Teil XXI: Deine unmittelbare Start-Checkliste
+
+
 
 ## 51. Die ersten zehn konkreten Aktionen
 
@@ -2666,6 +2896,8 @@ Evidence-based Reviews und Traceability verlangen.
 Beginne erst danach mit Test Analyst und Test Designer.
 
 ---
+
+
 
 # Teil XXII: Zielstruktur des ersten MVP
 
@@ -2718,23 +2950,27 @@ Testiny, Playwright, GitHub Issues oder andere externe Systeme integrierst.
 
 ---
 
+
+
 # Quellen und weiterführende Dokumentation
 
 Die folgenden Quellen wurden für die strukturelle Einordnung verwendet. Prüfe
 bei der technischen Umsetzung jeweils die aktuellste Version der offiziellen
 Dokumentation.
 
-- BMAD Method Repository: https://github.com/bmad-code-org/BMAD-METHOD
-- BMAD Getting Started: https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/tutorials/getting-started.md
-- BMAD Workflow Map: https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/reference/workflow-map.md
-- BMAD Documentation: https://docs.bmad-method.org/
-- Cursor Documentation: https://cursor.com/docs
-- Cursor Agent Skills: https://cursor.com/docs/skills
-- VS Code Agent Skills: https://code.visualstudio.com/docs/copilot/customization/agent-skills
-- GitHub Copilot Agent Skills: https://docs.github.com/en/copilot/concepts/agents/about-agent-skills
-- GitHub Copilot Custom Skills: https://docs.github.com/en/copilot/how-tos/copilot-sdk/features/skills
+- BMAD Method Repository: [https://github.com/bmad-code-org/BMAD-METHOD](https://github.com/bmad-code-org/BMAD-METHOD)
+- BMAD Getting Started: [https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/tutorials/getting-started.md](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/tutorials/getting-started.md)
+- BMAD Workflow Map: [https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/reference/workflow-map.md](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/reference/workflow-map.md)
+- BMAD Documentation: [https://docs.bmad-method.org/](https://docs.bmad-method.org/)
+- Cursor Documentation: [https://cursor.com/docs](https://cursor.com/docs)
+- Cursor Agent Skills: [https://cursor.com/docs/skills](https://cursor.com/docs/skills)
+- VS Code Agent Skills: [https://code.visualstudio.com/docs/copilot/customization/agent-skills](https://code.visualstudio.com/docs/copilot/customization/agent-skills)
+- GitHub Copilot Agent Skills: [https://docs.github.com/en/copilot/concepts/agents/about-agent-skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills)
+- GitHub Copilot Custom Skills: [https://docs.github.com/en/copilot/how-tos/copilot-sdk/features/skills](https://docs.github.com/en/copilot/how-tos/copilot-sdk/features/skills)
 
 ---
+
+
 
 # Abschluss
 
@@ -2761,6 +2997,8 @@ die bestehende Kette stabil ist.# TTT426 Agentic Test Engineering Workflow
 
 ---
 
+
+
 ## 1. Ziel dieses Tutorials
 
 Dieses Tutorial zeigt, wie du einen agentischen Test-Engineering-Workflow für
@@ -2784,6 +3022,8 @@ einer Phase bilden dabei den Kontext für die nächste Phase.
 Der TTT426 Workflow überträgt dieses Prinzip auf den Softwaretestprozess.
 
 ---
+
+
 
 ## 2. Das gewünschte Zielbild
 
@@ -2828,7 +3068,11 @@ einen kleinen, überprüfbaren MVP und erweiterst ihn anschließend.
 
 ---
 
+
+
 # Teil I: Grundlagen und Architektur
+
+
 
 ## 3. Die fünf Bausteine des Workflows
 
@@ -2858,6 +3102,8 @@ Ein Agent definiert vor allem:
 - benötigten Kontext,
 - erlaubte Skills,
 - erwartete Ergebnisse.
+
+
 
 ### 3.2 Skills
 
@@ -2893,6 +3139,8 @@ Requirement lesen
     -> Artefakt speichern
 ```
 
+
+
 ### 3.4 Artifacts
 
 Artifacts sind die dokumentierten Ein- und Ausgaben des Workflows.
@@ -2909,6 +3157,8 @@ Beispiele:
 - Defect Report
 - Test Summary Report
 
+
+
 ### 3.5 Quality Gates
 
 Quality Gates prüfen, ob ein Ergebnis vollständig und ausreichend ist, bevor
@@ -2924,6 +3174,8 @@ Beispiele:
 - Menschliche Freigabe wurde erteilt.
 
 ---
+
+
 
 ## 4. Grundprinzipien für TTT426
 
@@ -2970,7 +3222,11 @@ blockiert. Er erfindet keine Anforderungen.
 
 ---
 
+
+
 # Teil II: Repository vorbereiten
+
+
 
 ## 5. Schritt 1: Neues Repository erstellen
 
@@ -3011,11 +3267,15 @@ git add .
 git commit -m "Initialize TTT426 agentic test engineering repository"
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Du besitzt ein leeres, versioniertes Repository.
 
 ---
+
+
 
 ## 6. Schritt 2: Verzeichnisstruktur anlegen
 
@@ -3112,6 +3372,8 @@ mkdir -p projects/toolshop/{input,working,output,decisions,status}
 mkdir -p skills/{analyze-test-basis,product-risk-analysis,derive-test-conditions,design-test-cases,review-test-artifact}
 ```
 
+
+
 ### Warum diese Trennung wichtig ist
 
 - `agents` definiert Rollen.
@@ -3125,13 +3387,19 @@ mkdir -p skills/{analyze-test-basis,product-risk-analysis,derive-test-conditions
 - `schemas` ermöglicht maschinelle Validierung.
 - `tests` prüft die Qualität des Agentensystems.
 
+
+
 ### Ergebnis dieses Schrittes
 
 Du besitzt das Grundgerüst des Frameworks.
 
 ---
 
+
+
 # Teil III: Gemeinsame Regeln definieren
+
+
 
 ## 7. Schritt 3: Zentrale Projektanweisung erstellen
 
@@ -3192,11 +3460,15 @@ For every substantial task:
 8. Record the handover and next step.
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Alle Agenten erhalten eine gemeinsame Basis.
 
 ---
+
+
 
 ## 8. Schritt 4: Guardrails definieren
 
@@ -3264,13 +3536,19 @@ Human approval is mandatory for:
 An AI agent may prepare the approval package but must not approve it.
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Die Agenten kennen ihre Grenzen und dürfen keine Freigaben erfinden.
 
 ---
 
+
+
 # Teil IV: Artifact Model entwickeln
+
+
 
 ## 9. Schritt 5: Metadatenstandard definieren
 
@@ -3320,6 +3598,8 @@ open_questions: []
 ---
 ```
 
+
+
 ### Namenskonvention
 
 Verwende beispielsweise:
@@ -3334,11 +3614,15 @@ TTT426-REV-001  Artifact Review
 TTT426-HO-001   Handover
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Artefakte werden eindeutig identifizierbar und versionierbar.
 
 ---
+
+
 
 ## 10. Schritt 6: Erstes Template erstellen
 
@@ -3405,13 +3689,19 @@ Erstelle auf dieselbe Weise Templates für:
 - Artifact Review
 - Handover
 
+
+
 ### Ergebnis dieses Schrittes
 
 Der Output der Agenten erhält ein stabiles Format.
 
 ---
 
+
+
 # Teil V: Den MVP mit fünf Agenten bauen
+
+
 
 ## 11. Schritt 7: Test Orchestrator Agent erstellen
 
@@ -3485,6 +3775,8 @@ an explicit handover to the responsible specialist agent.
 - Do not silently skip workflow steps.
 ```
 
+
+
 ### Testprompt
 
 ```text
@@ -3493,12 +3785,16 @@ Inspect the ToolShop project folders and determine the next valid workflow step.
 Do not create test cases.
 ```
 
+
+
 ### Erwartetes Verhalten
 
 Der Agent sollte zunächst den Projektstatus prüfen und nicht sofort Testfälle
 erzeugen.
 
 ---
+
+
 
 ## 12. Schritt 8: Test Manager Agent erstellen
 
@@ -3564,6 +3860,8 @@ The test plan is ready for review only when:
 
 ---
 
+
+
 ## 13. Schritt 9: Test Analyst Agent erstellen
 
 Erstelle `agents/test-analyst.agent.md`.
@@ -3627,6 +3925,8 @@ test basis.
 ```
 
 ---
+
+
 
 ## 14. Schritt 10: Test Designer Agent erstellen
 
@@ -3695,6 +3995,8 @@ conditions.
 
 ---
 
+
+
 ## 15. Schritt 11: Test Reviewer Agent erstellen
 
 Erstelle `agents/test-reviewer.agent.md`.
@@ -3745,13 +4047,19 @@ for the next workflow step.
 - projects/<project>/working/reviews/<artifact-id>-review.md
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Der MVP besitzt einen Orchestrator sowie vier klar getrennte Testrollen.
 
 ---
 
+
+
 # Teil VI: Skills entwickeln
+
+
 
 ## 16. Schritt 12: Skill für Testbasisanalyse erstellen
 
@@ -3807,6 +4115,8 @@ description: Analyze requirements and other test basis documents for testability
 
 ---
 
+
+
 ## 17. Schritt 13: Skill für Produktrisikoanalyse erstellen
 
 Erstelle `skills/product-risk-analysis/SKILL.md`.
@@ -3858,6 +4168,8 @@ Use a scale from 1 to 5 for likelihood and impact.
 
 ---
 
+
+
 ## 18. Schritt 14: Skill für Testbedingungen erstellen
 
 Erstelle `skills/derive-test-conditions/SKILL.md`.
@@ -3892,6 +4204,8 @@ description: Derive traceable and risk-focused test conditions from the test bas
 ```
 
 ---
+
+
 
 ## 19. Schritt 15: Skill für Testfalldesign erstellen
 
@@ -3942,6 +4256,8 @@ Use exploratory charters when:
 
 ---
 
+
+
 ## 20. Schritt 16: Review-Skill erstellen
 
 Erstelle `skills/review-test-artifact/SKILL.md`.
@@ -3983,6 +4299,8 @@ Every passed criterion must reference:
 - or another explicit artifact location.
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Fachlogik ist nicht mehr fest in einzelne Agenten eingebaut. Sie liegt in
@@ -3990,7 +4308,11 @@ wiederverwendbaren Skills.
 
 ---
 
+
+
 # Teil VII: Workflows definieren
+
+
 
 ## 21. Schritt 17: Workflow für Test Context Analysis erstellen
 
@@ -4053,6 +4375,8 @@ Stop the workflow when:
 
 ---
 
+
+
 ## 22. Schritt 18: Workflow für Test Analysis erstellen
 
 Erstelle `workflows/03-test-analysis.workflow.md`.
@@ -4105,6 +4429,8 @@ Transform the test basis and product risks into reviewed test conditions.
 
 ---
 
+
+
 ## 23. Schritt 19: Workflow für Test Design erstellen
 
 Erstelle `workflows/04-test-design.workflow.md`.
@@ -4149,13 +4475,19 @@ conditions.
 13. Prepare handover to implementation or execution.
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Die Reihenfolge der Agentenarbeit ist jetzt explizit beschrieben.
 
 ---
 
+
+
 # Teil VIII: Handover und Workflow State
+
+
 
 ## 24. Schritt 20: Handover-Template erstellen
 
@@ -4210,6 +4542,8 @@ created_at: <DATE>
 - Comments:
 ```
 
+
+
 ### Warum ein Handover notwendig ist
 
 Ein Dateiname allein erklärt nicht:
@@ -4223,6 +4557,8 @@ Ein Dateiname allein erklärt nicht:
 Das Handover ist daher ein eigenes Artefakt.
 
 ---
+
+
 
 ## 25. Schritt 21: Workflowstatus definieren
 
@@ -4269,13 +4605,19 @@ next_action: create-test-context
 last_updated: 2026-07-14T14:00:00+02:00
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Der Orchestrator muss den Projektstatus nicht aus Chatverläufen erraten.
 
 ---
 
+
+
 # Teil IX: Quality Gates entwickeln
+
+
 
 ## 26. Schritt 22: Quality Gate für Test Context erstellen
 
@@ -4312,6 +4654,8 @@ Confirm that sufficient context exists before planning or test analysis starts.
 
 ---
 
+
+
 ## 27. Schritt 23: Quality Gate für Test Analysis erstellen
 
 Erstelle `quality-gates/qg-02-analysis-ready.md`.
@@ -4344,6 +4688,8 @@ The gate fails when:
 
 ---
 
+
+
 ## 28. Schritt 24: Quality Gate für Test Design erstellen
 
 Erstelle `quality-gates/qg-03-design-ready.md`.
@@ -4370,6 +4716,8 @@ A PASS means that the test design is ready for implementation or execution.
 It does not mean that tests were executed successfully.
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Agenten können nicht allein aufgrund einer überzeugend klingenden Antwort zum
@@ -4377,7 +4725,11 @@ nächsten Schritt wechseln.
 
 ---
 
+
+
 # Teil X: Den ersten End-to-End-MVP ausführen
+
+
 
 ## 29. Schritt 25: Ein kleines ToolShop-Beispiel vorbereiten
 
@@ -4416,6 +4768,8 @@ The first TTT426 workflow increment focuses on customer registration.
 
 ---
 
+
+
 ## 30. Schritt 26: Orchestrator starten
 
 Verwende in deiner Agent-Umgebung folgenden Auftrag:
@@ -4437,6 +4791,8 @@ Run QG-01 and record the evidence.
 Do not create test conditions or test cases yet.
 ```
 
+
+
 ### Manuelle Prüfung
 
 Prüfe anschließend:
@@ -4456,6 +4812,8 @@ git commit -m "Create ToolShop test context through orchestrated workflow"
 ```
 
 ---
+
+
 
 ## 31. Schritt 27: Test Analysis ausführen
 
@@ -4493,6 +4851,8 @@ Record evidence for every passed criterion.
 Do not rewrite the test conditions.
 ```
 
+
+
 ### Manuelle Prüfung
 
 Kontrolliere insbesondere:
@@ -4504,6 +4864,8 @@ Kontrolliere insbesondere:
 - Verknüpft er Bedingungen mit den Acceptance Criteria?
 
 ---
+
+
 
 ## 32. Schritt 28: Test Design ausführen
 
@@ -4520,6 +4882,8 @@ Mark suitable automation candidates.
 Run the defined review and quality gate process.
 ```
 
+
+
 ### Erwartete Techniken
 
 Für die Beispielstory sind wahrscheinlich geeignet:
@@ -4533,7 +4897,11 @@ Der Agent muss seine Technikentscheidung begründen.
 
 ---
 
+
+
 # Teil XI: Agentensystem testen
+
+
 
 ## 33. Schritt 29: Agent Tests definieren
 
@@ -4584,6 +4952,8 @@ Source B: Password requires at least 12 characters.
 
 ---
 
+
+
 ## 34. Schritt 30: Skill Tests definieren
 
 Erstelle `tests/skill-tests/design-test-cases-tests.md`.
@@ -4621,6 +4991,8 @@ colour, position or component type.
 
 ---
 
+
+
 ## 35. Schritt 31: Workflow Tests definieren
 
 Erstelle `tests/workflow-tests/context-to-design-e2e.md`.
@@ -4653,13 +5025,19 @@ Erstelle `tests/workflow-tests/context-to-design-e2e.md`.
 - Every test case links to a test condition.
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Du kannst Änderungen an Agenten und Skills regressiv prüfen.
 
 ---
 
+
+
 # Teil XII: Einfache Automatisierung hinzufügen
+
+
 
 ## 36. Schritt 32: Artifact Validator bauen
 
@@ -4764,6 +5142,8 @@ Führe die Prüfung aus:
 python scripts/validate_artifact.py projects/toolshop/working/test-context.md
 ```
 
+
+
 ### Spätere Erweiterungen
 
 Der Validator kann später prüfen:
@@ -4777,6 +5157,8 @@ Der Validator kann später prüfen:
 - menschliche Freigaben.
 
 ---
+
+
 
 ## 37. Schritt 33: GitHub Action für Artifact Validation hinzufügen
 
@@ -4817,13 +5199,19 @@ jobs:
           done
 ```
 
+
+
 ### Ergebnis dieses Schrittes
 
 Formale Qualitätsregeln werden nicht nur dem LLM überlassen.
 
 ---
 
+
+
 # Teil XIII: Human-in-the-Loop integrieren
+
+
 
 ## 38. Schritt 34: Freigabepunkte festlegen
 
@@ -4843,6 +5231,8 @@ Prüft:
 - Annahmen
 - fehlende Informationen
 
+
+
 ### Human Gate H2: Test Plan Approval
 
 Verantwortlich:
@@ -4850,11 +5240,15 @@ Verantwortlich:
 - Test Lead
 - Projektleitung oder Product Owner, abhängig vom Projekt
 
+
+
 ### Human Gate H3: Test Design Acceptance
 
 Verantwortlich:
 
 - Test Lead oder Senior Test Engineer
+
+
 
 ### Human Gate H4: Release Recommendation
 
@@ -4886,7 +5280,11 @@ Der Agent darf das Feld `approved_by` nicht selbst befüllen.
 
 ---
 
+
+
 # Teil XIV: TTT426-spezifisches Wissen integrieren
+
+
 
 ## 39. Schritt 35: TTT426 Context File erstellen
 
@@ -4930,6 +5328,8 @@ replace their learning, reflection, review and accountability.
 
 ---
 
+
+
 ## 40. Schritt 36: Terminologie definieren
 
 Erstelle `instructions/terminology.md`.
@@ -4969,7 +5369,11 @@ unterschiedlich verwenden.
 
 ---
 
+
+
 # Teil XV: Erweiterung nach dem MVP
+
+
 
 ## 41. Schritt 37: Weitere Agenten priorisieren
 
@@ -4985,6 +5389,8 @@ Empfohlene Reihenfolge:
 - Test Designer
 - Test Reviewer
 
+
+
 ### Ausbaustufe 2
 
 - Test Data Agent
@@ -4992,12 +5398,16 @@ Empfohlene Reihenfolge:
 - Defect Analyst Agent
 - Test Execution Coordinator
 
+
+
 ### Ausbaustufe 3
 
 - Test Automation Architect Agent
 - Playwright Automation Agent
 - Automation Reviewer Agent
 - CI/CD Integration Agent
+
+
 
 ### Ausbaustufe 4
 
@@ -5019,6 +5429,8 @@ Jeder neue Agent benötigt:
 
 ---
 
+
+
 ## 42. Schritt 38: Test Data Agent ergänzen
 
 Der Test Data Agent sollte später unter anderem:
@@ -5038,6 +5450,8 @@ Er sollte nicht:
 - oder irreversible Datenbankänderungen durchführen.
 
 ---
+
+
 
 ## 43. Schritt 39: Test Automation Workflow ergänzen
 
@@ -5078,7 +5492,11 @@ Der implementierende Agent sollte seinen eigenen Code nicht allein freigeben.
 
 ---
 
+
+
 # Teil XVI: Plattformintegration
+
+
 
 ## 44. Schritt 40: Nutzung in Cursor
 
@@ -5095,16 +5513,20 @@ da sich Dateipfade und Funktionsumfang ändern können.
 
 ### Empfohlene Zuordnung
 
-| TTT426 Element | Cursor-Konzept |
-|---|---|
-| AGENTS.md | Projektkontext und gemeinsame Anweisungen |
-| agents/*.agent.md | Custom Agents oder Subagents |
-| skills/*/SKILL.md | Agent Skills |
-| workflows/*.workflow.md | explizite Workflow-Anweisungen |
-| quality-gates/*.md | Review Rules und Checklisten |
-| scripts/ | deterministische Validierung |
+
+| TTT426 Element          | Cursor-Konzept                            |
+| ----------------------- | ----------------------------------------- |
+| AGENTS.md               | Projektkontext und gemeinsame Anweisungen |
+| agents/*.agent.md       | Custom Agents oder Subagents              |
+| skills/*/SKILL.md       | Agent Skills                              |
+| workflows/*.workflow.md | explizite Workflow-Anweisungen            |
+| quality-gates/*.md      | Review Rules und Checklisten              |
+| scripts/                | deterministische Validierung              |
+
 
 ---
+
+
 
 ## 45. Schritt 41: Nutzung mit GitHub Copilot
 
@@ -5114,20 +5536,26 @@ einer `SKILL.md` und optionalen Ressourcen oder Skripten organisiert.
 
 ### Empfohlene Zuordnung
 
-| TTT426 Element | GitHub Copilot-Konzept |
-|---|---|
-| globale Regeln | repository custom instructions |
-| spezialisierte Rollen | custom agents |
-| Fachmethoden | agent skills |
-| technische Checks | scripts und GitHub Actions |
-| Review des Outputs | Pull Request Review und Quality Gates |
+
+| TTT426 Element        | GitHub Copilot-Konzept                |
+| --------------------- | ------------------------------------- |
+| globale Regeln        | repository custom instructions        |
+| spezialisierte Rollen | custom agents                         |
+| Fachmethoden          | agent skills                          |
+| technische Checks     | scripts und GitHub Actions            |
+| Review des Outputs    | Pull Request Review und Quality Gates |
+
 
 Halte die Kernlogik möglichst plattformneutral. Plattformabhängige Wrapper
 sollten nur auf die gemeinsamen Dateien verweisen.
 
 ---
 
+
+
 # Teil XVII: Governance und Sicherheit
+
+
 
 ## 46. Schritt 42: Agent Registry erstellen
 
@@ -5175,6 +5603,8 @@ Dokumentiere pro Agent:
 
 ---
 
+
+
 ## 47. Schritt 43: Audit Trail definieren
 
 Jeder relevante Agentenlauf sollte mindestens dokumentieren:
@@ -5213,7 +5643,11 @@ human_review: pending
 
 ---
 
+
+
 # Teil XVIII: Erfolg messen
+
+
 
 ## 48. Schritt 44: Qualitätsmetriken definieren
 
@@ -5228,11 +5662,15 @@ Geeignete Metriken:
 - Anteil nicht belegter Aussagen
 - Anteil fehlender Pflichtfelder
 
+
+
 ### Traceability
 
 - Anteil der Testbedingungen mit Requirement-Link
 - Anteil der Testfälle mit Test-Condition-Link
 - Anteil kritischer Risiken mit Testabdeckung
+
+
 
 ### Workflow Reliability
 
@@ -5241,11 +5679,15 @@ Geeignete Metriken:
 - Anzahl blockierter Läufe wegen fehlenden Kontexts
 - Wiederholbarkeit bei identischem Input
 
+
+
 ### Human Effort
 
 - Reviewzeit pro Artefakt
 - Anzahl notwendiger Korrekturschleifen
 - Anteil akzeptierter Agentenvorschläge
+
+
 
 ### Learning Value
 
@@ -5256,9 +5698,15 @@ Geeignete Metriken:
 
 ---
 
+
+
 # Teil XIX: Empfohlener Implementierungsplan
 
+
+
 ## 49. Vier Iterationen zum ersten stabilen Workflow
+
+
 
 ### Iteration 1: Repository und Context Workflow
 
@@ -5280,6 +5728,8 @@ Definition of Done:
 - Fehlende Inputs werden sichtbar.
 - Ein Handover wird erzeugt.
 
+
+
 ### Iteration 2: Test Analysis
 
 Implementiere:
@@ -5300,6 +5750,8 @@ Definition of Done:
 - Kritische Risiken besitzen Abdeckung.
 - Ein unabhängiger Reviewbericht existiert.
 
+
+
 ### Iteration 3: Test Design
 
 Implementiere:
@@ -5317,6 +5769,8 @@ Definition of Done:
 - Testtechniken sind erkennbar angewandt.
 - Testfälle verweisen auf Testbedingungen.
 - Automatisierungskandidaten sind markiert.
+
+
 
 ### Iteration 4: Automation und Governance
 
@@ -5338,9 +5792,15 @@ Definition of Done:
 
 ---
 
+
+
 # Teil XX: Häufige Fehler
 
+
+
 ## 50. Vermeide diese Anti-Patterns
+
+
 
 ### Ein Agent für alles
 
@@ -5415,7 +5875,11 @@ Evidence-based Reviews und Traceability verlangen.
 
 ---
 
+
+
 # Teil XXI: Deine unmittelbare Start-Checkliste
+
+
 
 ## 51. Die ersten zehn konkreten Aktionen
 
@@ -5433,6 +5897,8 @@ Evidence-based Reviews und Traceability verlangen.
 Beginne erst danach mit Test Analyst und Test Designer.
 
 ---
+
+
 
 # Teil XXII: Zielstruktur des ersten MVP
 
@@ -5485,23 +5951,27 @@ Testiny, Playwright, GitHub Issues oder andere externe Systeme integrierst.
 
 ---
 
+
+
 # Quellen und weiterführende Dokumentation
 
 Die folgenden Quellen wurden für die strukturelle Einordnung verwendet. Prüfe
 bei der technischen Umsetzung jeweils die aktuellste Version der offiziellen
 Dokumentation.
 
-- BMAD Method Repository: https://github.com/bmad-code-org/BMAD-METHOD
-- BMAD Getting Started: https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/tutorials/getting-started.md
-- BMAD Workflow Map: https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/reference/workflow-map.md
-- BMAD Documentation: https://docs.bmad-method.org/
-- Cursor Documentation: https://cursor.com/docs
-- Cursor Agent Skills: https://cursor.com/docs/skills
-- VS Code Agent Skills: https://code.visualstudio.com/docs/copilot/customization/agent-skills
-- GitHub Copilot Agent Skills: https://docs.github.com/en/copilot/concepts/agents/about-agent-skills
-- GitHub Copilot Custom Skills: https://docs.github.com/en/copilot/how-tos/copilot-sdk/features/skills
+- BMAD Method Repository: [https://github.com/bmad-code-org/BMAD-METHOD](https://github.com/bmad-code-org/BMAD-METHOD)
+- BMAD Getting Started: [https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/tutorials/getting-started.md](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/tutorials/getting-started.md)
+- BMAD Workflow Map: [https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/reference/workflow-map.md](https://github.com/bmad-code-org/BMAD-METHOD/blob/main/docs/reference/workflow-map.md)
+- BMAD Documentation: [https://docs.bmad-method.org/](https://docs.bmad-method.org/)
+- Cursor Documentation: [https://cursor.com/docs](https://cursor.com/docs)
+- Cursor Agent Skills: [https://cursor.com/docs/skills](https://cursor.com/docs/skills)
+- VS Code Agent Skills: [https://code.visualstudio.com/docs/copilot/customization/agent-skills](https://code.visualstudio.com/docs/copilot/customization/agent-skills)
+- GitHub Copilot Agent Skills: [https://docs.github.com/en/copilot/concepts/agents/about-agent-skills](https://docs.github.com/en/copilot/concepts/agents/about-agent-skills)
+- GitHub Copilot Custom Skills: [https://docs.github.com/en/copilot/how-tos/copilot-sdk/features/skills](https://docs.github.com/en/copilot/how-tos/copilot-sdk/features/skills)
 
 ---
+
+
 
 # Abschluss
 
