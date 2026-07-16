@@ -1313,7 +1313,7 @@ BIS HIER HER OK _ COmmit
 
 
 
-## 21. Schritt 17: Workflow für Test Context Analysis erstellen
+## DONE 21. Schritt 17: Workflow für Test Context Analysis erstellen
 
 Erstelle `workflows/01-test-context-analysis.workflow.md`.
 
@@ -1376,7 +1376,7 @@ Stop the workflow when:
 
 
 
-## 22. Schritt 18: Workflow für Test Analysis erstellen
+## DONE 22. Schritt 18: Workflow für Test Analysis erstellen
 
 Erstelle `workflows/03-test-analysis.workflow.md`.
 
@@ -1488,7 +1488,7 @@ Die Reihenfolge der Agentenarbeit ist jetzt explizit beschrieben.
 
 
 
-## 24. Schritt 20: Handover-Template erstellen
+## DONE 24. Schritt 20: Handover-Template erstellen
 
 Erstelle `templates/handover.template.md`.
 
@@ -1559,7 +1559,7 @@ Das Handover ist daher ein eigenes Artefakt.
 
 
 
-## 25. Schritt 21: Workflowstatus definieren
+## DONE 25. Schritt 21: Workflowstatus definieren
 
 Erstelle `schemas/workflow-state.schema.yaml`.
 
@@ -1606,7 +1606,7 @@ last_updated: 2026-07-14T14:00:00+02:00
 
 
 
-### Ergebnis dieses Schrittes
+### OK DONE - Ergebnis dieses Schrittes
 
 Der Orchestrator muss den Projektstatus nicht aus Chatverläufen erraten.
 
@@ -1618,7 +1618,7 @@ Der Orchestrator muss den Projektstatus nicht aus Chatverläufen erraten.
 
 
 
-## 26. Schritt 22: Quality Gate für Test Context erstellen
+## DONE 26. Schritt 22: Quality Gate für Test Context erstellen
 
 Erstelle `quality-gates/qg-01-context-ready.md`.
 
@@ -1655,7 +1655,7 @@ Confirm that sufficient context exists before planning or test analysis starts.
 
 
 
-## 27. Schritt 23: Quality Gate für Test Analysis erstellen
+## DONE 27. Schritt 23: Quality Gate für Test Analysis erstellen
 
 Erstelle `quality-gates/qg-02-analysis-ready.md`.
 

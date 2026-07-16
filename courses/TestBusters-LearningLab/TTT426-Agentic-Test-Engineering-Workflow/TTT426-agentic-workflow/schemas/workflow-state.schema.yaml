@@ -1,0 +1,19 @@
+project: string
+current_phase: string
+current_step: string
+status:
+  allowed:
+    - not-started
+    - ready
+    - in-progress
+    - blocked
+    - in-review
+    - awaiting-human-approval
+    - completed
+active_agent: string
+required_inputs: array
+available_artifacts: array
+blockers: array
+next_agent: string
+next_action: string
+last_updated: date-time
