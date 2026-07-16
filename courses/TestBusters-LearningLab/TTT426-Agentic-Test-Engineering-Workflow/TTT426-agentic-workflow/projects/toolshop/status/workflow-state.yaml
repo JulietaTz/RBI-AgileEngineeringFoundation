@@ -1,12 +1,16 @@
 project: toolshop
 current_phase: context-analysis
-current_step: inventory-inputs
-status: ready
+current_step: qg-01-complete
+status: completed
 active_agent: test-orchestrator
 required_inputs:
   - product-description
-available_artifacts: []
+  - registration-user-story
+available_artifacts:
+  - test-context
+  - qg-01-evidence
+  - context-handover
 blockers: []
-next_agent: test-orchestrator
-next_action: create-test-context
-last_updated: 2026-07-14T14:00:00+02:00
+next_agent: test-manager
+next_action: start-test-planning
+last_updated: 2026-07-16T14:27:54+02:00
