@@ -692,8 +692,6 @@ Der Output der Agenten erhält ein stabiles Format.
 
 ---
 
-FERTIG BIS HIERHER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
 ---
 
 
@@ -1054,7 +1052,7 @@ Der MVP besitzt einen Orchestrator sowie vier klar getrennte Testrollen.
 
 ---
 
-HIER GEHT ES WEITER .....................................am 16.7
+
 
 # Teil VI: Skills entwickeln
 
@@ -1307,7 +1305,7 @@ wiederverwendbaren Skills.
 
 ---
 
-BIS HIER HER OK _ COmmit
+
 
 # Teil VII: Workflows definieren
 
@@ -1834,7 +1832,15 @@ Create:
 - analysis-to-design-handover.md
 
 Do not create detailed test cases.
+
+
 ```
+
+17.7 Artifacts created
+projects/toolshop/working/test-basis-analysis.md — ambiguities documented (email syntax, password rules beyond length 8, undefined “invalid input”, error-message expectations)
+projects/toolshop/working/test-conditions.md — TC-REG-001–009, traced to ACs and risks; email uniqueness + password BVA covered; no invented UI/format rules
+projects/toolshop/working/handovers/analysis-to-design-handover.md
+projects/toolshop/status/workflow-state.yaml updated → awaiting review
 
 Danach startet der Reviewer:
 
@@ -4731,7 +4737,7 @@ nächsten Schritt wechseln.
 
 
 
-## 29. Schritt 25: Ein kleines ToolShop-Beispiel vorbereiten
+## DONE - 29. Schritt 25: Ein kleines ToolShop-Beispiel vorbereiten
 
 Erstelle:
 
@@ -4770,7 +4776,7 @@ The first TTT426 workflow increment focuses on customer registration.
 
 
 
-## 30. Schritt 26: Orchestrator starten
+## DONE - 30. Schritt 26: Orchestrator starten
 
 Verwende in deiner Agent-Umgebung folgenden Auftrag:
 
@@ -4815,7 +4821,7 @@ git commit -m "Create ToolShop test context through orchestrated workflow"
 
 
 
-## 31. Schritt 27: Test Analysis ausführen
+## DONE 17.7 / 31. Schritt 27: Test Analysis ausführen
 
 Verwende folgenden Auftrag:
 
@@ -4824,8 +4830,7 @@ Use the TTT426 Test Analyst.
 
 Project: toolshop
 
-Read the current workflow state, the reviewed test context, the registration
-user story and applicable instructions.
+Read the current workflow state, the reviewed test context, the registration user story and applicable instructions.
 
 Execute Workflow 03: Test Analysis.
 Use the analyze-test-basis and derive-test-conditions skills.
@@ -4836,6 +4841,16 @@ Create:
 
 Do not create detailed test cases.
 ```
+
+++++++ 20260717 created by 31.Schritt 27: Test Anlyse durchführen:  
+
+`- projects/toolshop/working/test-basis-analysis.md`
+
+`- projects/toolshop/working/test-conditions.md`
+
+`- projects/toolshop/working/handovers/analysis-to-design-handover.md`
+
+- projects/toolshop/status/workflow-state.yaml
 
 Danach startet der Reviewer:
 
@@ -4894,6 +4909,60 @@ Für die Beispielstory sind wahrscheinlich geeignet:
 - Error Guessing für bereits registrierte E-Mail-Adressen
 
 Der Agent muss seine Technikentscheidung begründen.
+
+TC wurden erstellt: projects/toolshop/working/[test-cases.md](http://test-cases.md)
+
+
+
+
+
+
+
+
+
+
+
+
+
++++
+
++++
+
++++
+
++++
+
++++
+
++++
+
++++
+
++++ BIS HIERHER DURCHGEFÜHRT 20260717 22:32
+
++++
+
++++
+
++++
+
++++
+
++++
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 

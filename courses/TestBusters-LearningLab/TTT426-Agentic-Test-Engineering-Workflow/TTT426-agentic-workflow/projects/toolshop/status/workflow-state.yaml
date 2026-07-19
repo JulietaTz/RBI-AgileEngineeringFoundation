@@ -1,16 +1,38 @@
 project: toolshop
-current_phase: context-analysis
-current_step: qg-01-complete
-status: completed
-active_agent: test-orchestrator
+current_phase: test-design
+current_step: qg-03-complete
+status: design-ready
+active_agent: test-designer
 required_inputs:
-  - product-description
+  - reviewed-test-conditions
   - registration-user-story
+  - test-data-constraints
+  - environment-information
 available_artifacts:
   - test-context
   - qg-01-evidence
   - context-handover
-blockers: []
-next_agent: test-manager
-next_action: start-test-planning
-last_updated: 2026-07-16T14:27:54+02:00
+  - test-basis-analysis
+  - test-conditions
+  - test-conditions-review
+  - qg-02-evidence
+  - analysis-to-design-handover
+  - test-cases
+  - test-cases-review
+  - qg-03-evidence
+  - design-to-execution-handover
+blockers:
+  - formal-product-risk-analysis-missing
+  - test-policy-empty
+  - sut-environment-version-unknown
+next_agent: human-executor-or-orchestrator
+next_action: resolve-sut-environment-then-manual-execution-or-request-automation-workflow
+last_updated: 2026-07-17T22:36:00+02:00
+notes:
+  - Workflow 04 completed by test-designer for reviewed registration conditions.
+  - Techniques: EP, BVA (password 7/8/9), Decision Table (missing fields), Error Guessing (duplicate email), limited state/scenario (login after registration).
+  - Manual test cases only in TCA-TOOLSHOP-001; no Playwright code created.
+  - Automation candidates marked on all cases.
+  - Independent review REV-TCA-TOOLSHOP-001 recommendation: PASS (no Critical/Major findings).
+  - QG-02 evidence recorded PASS; QG-03 evidence recorded PASS.
+  - This is not human approval and not execution evidence.

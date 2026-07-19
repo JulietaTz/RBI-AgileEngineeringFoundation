@@ -40,9 +40,7 @@ Source: `projects/toolshop/input/registration-user-story.md`
 
 ## 3. Test Assignment
 
-Perform structured test engineering for the first TTT426 workflow increment,
-focused on **customer registration**, using the available product description
-and registration user story as the initial test basis.
+Perform structured test engineering for the first TTT426 workflow increment, focused on **customer registration**, using the available product description and registration user story as the initial test basis.
 
 Out of this assignment for Workflow 01: create a reviewable test context only.
 Test conditions and test cases are explicitly excluded from this step.
