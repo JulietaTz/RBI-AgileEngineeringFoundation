@@ -228,7 +228,7 @@ Detailed test automation activities are described in the separate **Test Automat
 | Test Project Lead | Gülbin Deniz | Coordination of test planning activities, project communication, maintenance of the Product Test Plan, and support of test design and test execution activities. |
 | QA Lead / Test Policy Owner | Julieta Tzouridis | Definition, maintenance and review of the Test Policy |
 | Test Automation Lead | Dilek Firat | Definition and maintenance of the Test Automation Strategy and automation-related activities |
-| Developer & Test Automation | Rashin | Definition and maintenance of the Test Automation Strategy and automation-related activities |
+| Developer & Test Automation | Rashin Harisi | Definition and maintenance of the Test Automation Strategy and automation-related activities |
 | Test Designer / Analyst | Jane Doe | Test analysis, test design and support of test execution activities |
 | Product Owner / QE Specialist / Reviewer | Rudolf Grötz | Defines business priorities, reviews test deliverables, makes the final release decision and provides quality assurance guidance |
 
