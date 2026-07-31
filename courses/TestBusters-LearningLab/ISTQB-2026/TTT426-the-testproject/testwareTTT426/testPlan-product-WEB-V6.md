@@ -10,12 +10,11 @@
 
 # Document Control
 
-| Version | State | Date | Description | Author | Reviewed |
-|---------|-------|------------|-------------|-------------|------------|
-| v1.0 | Released | 2026-06-18 | Document structure updated and prepared for future enhancements. | Gülbin Deniz | R. Grötz |
-| v1.1 | Released | 2026-06-24 | Test Planning for the Test Sprint on July 1, 2026 at 42 Vienna. | Gülbin Deniz | R. Grötz |
-| v1.2 | In Progress | 2026-07-04 | Updated for Release 6.0 (Czech Market). The project timeline has been adjusted to reflect the revised milestone schedule. The planned product features remained unchanged. | Gülbin Deniz | R. Grötz |
-| v1.3 | Draft (In Progress) | 2026-07-10 | Updated Release 6.0 planning to include the AI Assistant (F2.1), revised project timeline and updated test scope. | Gülbin Deniz | R. Grötz |
+| Version | State       | Date       | Description                                                                                                                                                                        | Author       | Reviewed |
+| ------- | ----------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | -------- |
+| v1.0    | Released    | 2026-06-18 | Document structure updated and prepared for future enhancements.                                                                                                                   | Gülbin Deniz | R. Grötz |
+| v1.1    | Released    | 2026-06-24 | Test Planning for the Test Sprint on July 1, 2026 at 42 Vienna.                                                                                                                    | Gülbin Deniz | R. Grötz |
+| v1.2    | In Progress | 2026-07-10 | Updated for Release 6.0. Product Test Plan revised to include the Czech Market features and the AI Assistant (F2.1). The project timeline and test scope were updated accordingly. | Gülbin Deniz | R. Grötz |
 
 ---
 
@@ -27,7 +26,7 @@ The test plan is derived from the overarching Test Policy and defines how testin
 
 The objective of this test plan is to ensure that the application is tested in a systematic, structured, and traceable manner.
 
-This version of the Product Test Plan has been updated for Release 6.0. The project timeline has been revised to reflect the updated milestone schedule, including the postponement of Milestone M3 and the shortened Phase 2. The existing product features remain within the test scope. In addition, the AI Assistant feature (F2.1) has been included in Release 6.0 to support the planned investor presentation. Test activities continue to be based on the project's Test Policy and the risk-based testing approach.
+This version of the Product Test Plan has been updated for Release 6.0. The project timeline has been revised to reflect the updated milestone schedule, including the postponement of Milestone M3 and the shortened Phase 2. The existing product features remain within the test scope, while Release 6.0 extends the scope with the AI Assistant (F2.1) and additional Czech Market features. Test activities continue to be based on the project's Test Policy and the risk-based testing approach.
 
 ## 1.1 Timeline
 
@@ -35,13 +34,13 @@ This version of the Product Test Plan has been updated for Release 6.0. The proj
 |--------------|-----------|------------|---------|
 | M1 | Project Kick-off | 2026-06-19 | Shared understanding of objectives, roles, and scope |
 | M2 | Product Test Plan Approved | 2026-06-26 | Overall test direction agreed |
-| M3 | AI Assistant Ready for Investor Presentation | **2026-07-15** | AI Assistant (F2.1) available for investor presentation |
-| M4 | Phase 1 Readiness Review | **2026-08-01** | Czech market readiness assessed according to the updated project schedule |
-| M5 | Phase 2 Readiness Review | 2026-09-04 | Phase 2 readiness assessed following the shortened project schedule |
-| M6 | Phase 3 Readiness Review | 2026-10-16 | US West Coast readiness assessed |
-| M7 | Phase 4 Readiness Review | 2026-11-27 | Japan readiness assessed |
+| M3 | AI Assistant Ready for Investor Presentation | 2026-08-15 | AI Assistant (F2.1) available for investor presentation |
+| M4 | Phase 1 Readiness Review | 2026-09-01 | Czech market readiness assessed according to the updated project schedule |
+| M5 | Phase 2 Readiness Review | 2026-10-04 | Phase 2 readiness assessed following the shortened project schedule |
+| M6 | Phase 3 Readiness Review | 2026-11-16 | US West Coast readiness assessed |
+| M7 | Phase 4 Readiness Review | 2026-12-27 | Japan readiness assessed |
 | M8 | Final Project Review | TBD | Overall quality status and recommendation delivered |
-| M9 | Investor Presentation | 2027-01-02 | Final project presentation to investors |
+| M9 | Investor Presentation | 2027-02-02 | Final project presentation to investors |
 
 ---
 
@@ -54,7 +53,6 @@ The main objectives of this test plan are:
 - Ensuring a stable and error-free user experience.
 - Early detection of critical defects.
 - Reduction of risks in key business processes and features.
-- Verification that existing functionality remains stable through regression testing.
 
 ---
 
@@ -64,24 +62,28 @@ The main objectives of this test plan are:
 
 ### Feature Classification Table
 
-| Feature | Description | Business Critical (YES/NO) | Tested (MUST/SHOULD/WON'T) |
-|----------|-------------|----------------------------|----------------------------|
-| Admin Account | CRUD all entities, Reporting | NO | MUST |
-| AI Assistant | Chat interface, AI-assisted tool recommendations, recommendation storage, response time | YES | MUST |
-| Authentication | Login, Two-Factor Authentication, Register, Forgot Password, Lock Account after Failed Attempts, Social Login (Google, GitHub) | YES | MUST |
-| Chat Widget | Customer support chat functionality | NO | SHOULD |
-| Checkout Flow | Increase/Decrease Quantity, Delete Item, Address Details, Payment Options (Advanced) | YES | MUST |
-| Contact Form (Advanced) | Advanced Contact Form, File Upload | NO | SHOULD |
-| Customer Account | Update Profile, Change Password, Invoices Overview, Invoice Detail, Invoice PDF, Favorites, Contact Messages | YES | MUST |
-| Discount | Geo-location, Combined Products | NO | WON'T |
-| Google Analytics | Analytics integration | NO | WON'T |
-| Multi-Language | Multi-language support | YES | MUST |
-| Privacy Policy | Privacy policy information | NO | MUST |
-| Product Category | Product categorization and navigation | YES | MUST |
-| Product Comparison | Side-by-side specifications comparison, highlight differences only | NO | SHOULD |
-| Product Detail | Product details, Product specifications | YES | MUST |
-| Product Overview | Product listing, Pagination, Filter, Search, Sorting, Price Range | YES | MUST |
-| Rentals | Rental functionality | NO | WON'T |
+| Feature                 | Description                                                                                                                                          | Business Critical (YES/NO) | Tested (MUST/SHOULD/WON'T) |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------- | -------------------------- |
+| Admin Account           | CRUD all entities, Reporting                                                                                                                         | NO                         | MUST                       |
+| AI Assistant            | Chat interface, AI-powered recommendations, recommendation history, response time                                                              | YES                        | MUST                       |
+| Authentication          | Login, Register, Forgot Password, 2FA, Account Lock, Register with Google | YES                        | MUST                       |
+| Chat Widget             | Customer support chat functionality                                                                                                                  | NO                         | SHOULD                     |
+| Checkout Flow           | Increase/Decrease Quantity, Delete Item, Address Details, Payment Options (Advanced), PayU Payment, Delivery Costs                                   | YES                        | MUST                       |
+| Compliance Readiness    | Compliance requirements for the Czech market                                                                                                         | YES                        | MUST                       |
+| Contact Form (Advanced) | Advanced Contact Form, File Upload                                                                                                                   | NO                         | SHOULD                     |
+| Customer Account        | Update Profile, Change Password, Invoices Overview, Invoice Detail, Invoice PDF, Favorites, Contact Messages                                         | YES                        | MUST                       |
+| Discount                | Geo-location, Combined Products                                                                                                                      | NO                         | WON'T                      |
+| Google Analytics        | Analytics integration                                                                                                                                | NO                         | WON'T                      |
+| Multi-Language          | Multi-language support, including Czech language support                                                                                             | YES                        | MUST                       |
+| New Logo                | Updated application logo                                                                                                                             | NO                         | SHOULD                     |
+| Privacy Policy          | Privacy policy information                                                                                                                           | NO                         | MUST                       |
+| Product Category        | Product categorization and navigation                                                                                                                | YES                        | MUST                       |
+| Product Comparison      | Side-by-side specifications comparison, highlight differences only                                                                                   | NO                         | SHOULD                     |
+| Product Detail          | Product details, Product specifications                                                                                                              | YES                        | MUST                       |
+| Product Overview        | Product listing, Pagination, Filter, Search, Sorting, Price Range, Czech products                                                                    | YES                        | MUST                       |
+| Rentals                 | Removal of the Rentals product group from the web-shop interface                                                                                     | YES                        | MUST                       |
+| Version Information     | Display of the correct application version                                                                                                           | NO                         | SHOULD                     |
+
 
 ## 3.2 Out of Scope
 
@@ -134,7 +136,7 @@ The selected quality characteristics are aligned with ISO 9126 and support the e
 | Use case-based testing | The focus is on validating user interactions and business-critical end-to-end processes of the web application. | Focus on end-to-end business workflows |
 | User Acceptance Testing (UAT) | Validation of predefined acceptance criteria for the Czech Market features and the AI Assistant from a user perspective. | Executed by Test Engineer |
 | Exploratory Testing | Testing is performed without predefined test cases while simultaneously learning and exploring the application. | Useful for discovering unexpected defects and usability issues |
-| Regression Testing | Regression testing is performed after changes or bug fixes to ensure that existing functionality remains stable while introducing the AI Assistant feature. | Executed after bug fixes and releases |
+| Regression Testing | Regression testing is performed after changes or bug fixes to ensure that existing functionality remains stable while introducing the Release 6.0 features. | Executed after bug fixes and releases |
 
 ## 5.4 Test Design Techniques
 
@@ -226,6 +228,7 @@ Detailed test automation activities are described in the separate **Test Automat
 | Test Project Lead | Gülbin Deniz | Coordination of test planning activities, project communication, maintenance of the Product Test Plan, and support of test design and test execution activities. |
 | QA Lead / Test Policy Owner | Julieta Tzouridis | Definition, maintenance and review of the Test Policy |
 | Test Automation Lead | Dilek Firat | Definition and maintenance of the Test Automation Strategy and automation-related activities |
+| Developer & Test Automation | Rashin Harisi | Definition and maintenance of the Test Automation Strategy and automation-related activities |
 | Test Designer / Analyst | Jane Doe | Test analysis, test design and support of test execution activities |
 | Product Owner / QE Specialist / Reviewer | Rudolf Grötz | Defines business priorities, reviews test deliverables, makes the final release decision and provides quality assurance guidance |
 
@@ -239,7 +242,7 @@ Detailed test automation activities are described in the separate **Test Automat
 - Test cases based on the T1–T5 test design approach have been created.
 - The test environment is ready and accessible.
 - Required test data is available.
-- AI Assistant (F2.1) is available in the test environment.
+- Release 6.0 features, including the AI Assistant (F2.1) and Czech Market functionality, are available in the test environment.
 
 ## 10.2 Exit Criteria
 
@@ -261,7 +264,7 @@ Detailed test automation activities are described in the separate **Test Automat
 | R2 | Checkout defects may lead to revenue loss. | High | Medium | End-to-end and regression testing |
 | R3 | Invalid validation may cause security issues. | High | Medium | Negative testing |
 | R4 | Pricing or tax errors may cause inconsistencies. | High | Medium | Boundary testing |
-| R5 | AI Assistant does not provide accurate or relevant recommendations. | High | Medium | Functional testing, UAT and regression testing |
+| R5 | AI Assistant provides inaccurate, incomplete or irrelevant recommendations. | High | Medium | Functional testing, UAT and regression testing |
 | R6 | Reduced Phase 2 schedule may limit available testing time. | High | High | Prioritize business-critical features using risk-based testing and focus on MUST requirements first |
 
 ## Assumptions
