@@ -14,6 +14,7 @@
 | Version | State    | Date       | Description                                     | Author            | Reviewed     |
 | ------- | -------- | ---------- | ----------------------------------------------- | ----------------- | ------------ |
 | v2.0    | Released | 2026-06-18 | Initial release of the QualityQuest Test Policy | Julieta Tzouridis | Rudolf Grötz |
+| v2.1    | Released | 2026-07-15 | Added Link to Test Automation Policy | Dilek Firat | Rudolf Grötz |
 
 ---
 
@@ -508,60 +509,13 @@ Significant AI-generated artifacts and decisions should be documented where appr
 
 # 6. Test Automation
 
-## 6.1 Automation Principles
+The project adopts a dedicated Test Automation Policy that defines the governance and organizational principles for test automation.
 
-Test automation supports efficient, repeatable, and reliable testing activities throughout the software development lifecycle.
+The Test Automation Policy is maintained as a separate document to allow independent evolution while remaining aligned with this Test Policy.
 
-Automation should be applied where it provides measurable value, reduces repetitive manual effort, improves test coverage, or enables faster feedback.
+For details, refer to:
 
-Automated testing complements but does not replace exploratory testing, critical thinking, or human judgement.
-
-## 6.2 Automation Responsibilities
-
-Test automation is a shared responsibility across the Agile team.
-
-The Test Automation Lead is responsible for defining automation standards, supporting automation activities, and promoting best practices.
-
-Developers and Test Engineers contribute to the creation, execution, review, and maintenance of automated tests.
-
-## 6.3 Automation Frameworks and Tools
-
-Approved automation frameworks and tools shall be selected based on project requirements, maintainability, scalability, and team capabilities.
-
-Examples may include:
-
-* Selenium
-* Playwright
-* Cypress
-* Postman
-* JMeter
-* GitHub Actions
-* Azure DevOps Pipelines
-
-Additional tools may be introduced following team agreement and project needs.
-
-## 6.4 Maintenance of Automated Tests
-
-Automated tests shall be maintained to ensure reliability and continued business value.
-
-Obsolete, unstable, duplicate, or failing automated tests should be reviewed and updated regularly.
-
-Changes to requirements, user stories, or system functionality shall be reflected in the automated test suite.
-
-## 6.5 Automation Reporting
-
-Results from automated test execution shall be documented and made visible to relevant stakeholders.
-
-Automation reports should provide information about:
-
-* Executed tests
-* Passed tests
-* Failed tests
-* Blocked tests
-* Test coverage
-* Trends and quality indicators
-
-Automation reporting supports transparency and informed decision-making.
+- [Test Automation Policy](./testAutomationPolicy.md)
 
 # 7. Compliance and Security
 
