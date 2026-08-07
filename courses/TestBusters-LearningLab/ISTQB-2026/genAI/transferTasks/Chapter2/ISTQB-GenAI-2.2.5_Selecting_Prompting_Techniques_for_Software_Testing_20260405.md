@@ -19,7 +19,7 @@ Testers use mixed prompting approaches with inconsistent outcomes. The team need
 ---
 
 ### 5. Task Instructions
-1. Define selection criteria (complexity, precision needed, context volume, explainability).
+1. Define selection criteria of 5 test activities (complexity, precision needed, context volume, explainability).
 2. Map at least 5 test tasks to recommended techniques.
 3. Add one anti-pattern per task.
 4. Define fallback strategy if output quality is insufficient.
@@ -32,7 +32,7 @@ A one-page decision guide for prompting strategy.
 ---
 
 ### 7. Timebox
-20 minutes
+NA
 
 ---
 
