@@ -440,7 +440,6 @@ Higher priority should be given to areas that:
 
 Limited time shall not be used as a reason to omit all testing. When time is limited, critical and high-risk requirements shall be tested first.
 
-
 ### 7.2 Defect Management
 
 Important defects found during self-testing or team testing should be documented sufficiently to support reproduction and correction.
@@ -490,64 +489,6 @@ This policy should be reviewed periodically and updated when:
 - the policy contains unclear, outdated, or impractical requirements.
 
 Changes should be versioned and reviewed before publication.
-
-## Appendix A: Project Examples
-
-### A.1 `minishell`
-
-Suggested focus areas include:
-
-- quoting and tokenisation;
-- environment-variable expansion;
-- pipes and redirections;
-- heredoc behaviour;
-- built-in commands;
-- exit status;
-- signals in interactive mode;
-- invalid syntax;
-- file-descriptor handling;
-- child-process handling; and
-- memory leaks.
-
-Bash may be used as a behavioural reference where the subject requires Bash-compatible behaviour. Differences explicitly allowed by the subject shall not be reported as defects.
-
-### A.2 `push_swap`
-
-Suggested focus areas include:
-
-- empty input;
-- one or more arguments;
-- duplicate numbers;
-- non-numeric input;
-- integer overflow and underflow;
-- already sorted input;
-- reverse-sorted input;
-- random datasets;
-- generated operation validity;
-- checker result;
-- operation-count expectations; and
-- memory handling.
-
-### A.3 `so_long`
-
-Suggested focus areas include:
-
-- valid and invalid map shapes;
-- required map components;
-- enclosure by walls;
-- inaccessible collectibles or exits;
-- player movement;
-- move counting;
-- texture and window handling;
-- keyboard and window-close events;
-- successful completion; and
-- clean termination without leaks.
-
-### Example Test Prompts
-
-- **push_swap:** Does invalid input print `Error` on stderr? Does the generated instruction sequence pass the checker?
-- **minishell:** Does the shell handle invalid commands and syntax errors without crashing or quitting unexpectedly?
-- **so_long:** Does the game reject an invalid map and terminate cleanly without crashes or memory leaks?
 
 ## Learning Summary
 
