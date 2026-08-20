@@ -1,4 +1,4 @@
-# Holistic Testing Model
+# Holistic Testing Model - Story line for course
 
 In January 2021, I wrote a blog post called “Testing And Coding, Not Coding ‘Then’ Testing” to emphasize that testing and coding are part of the same process. In that post, I introduced a diagram (Figure 1) to show continuous testing.
 
