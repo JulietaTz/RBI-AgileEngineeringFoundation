@@ -1,0 +1,218 @@
+toolshop/e2e/catalog_filters.spec.ts::filters_by_brand | FAIL | 2026-05-13T08:33:51.024Z | ValidationError: coupon 'SPRING2024' not present in promo seed for staging
+toolshop/e2e/cart_persistence.spec.ts::restores_cart_after_reload | FAIL | 2026-05-13T08:33:51.197Z | expect(locator).toBeVisible() failed after 20000ms — lazy image never intersected viewport
+toolshop/e2e/newsletter.spec.ts::subscribes_with_double_opt_in | PASS | 2026-05-13T08:33:51.315Z | -
+toolshop/e2e/returns.spec.ts::start_return_flow | FAIL | 2026-05-13T08:33:51.386Z | Test timeout of 30000ms exceeded while waiting for navigation to /checkout/confirm
+toolshop/e2e/payment_methods.spec.ts::card_form_validation | FAIL | 2026-05-13T08:33:51.507Z | locator.waitFor: Timeout 45000ms exceeded — spinner never cleared on slow CDN
+toolshop/e2e/order_history.spec.ts::reorder_from_history | FLAKY_PASS | 2026-05-13T08:33:51.661Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/api/catalog_contract.test.ts::GET_product_by_slug | FAIL | 2026-05-13T08:33:51.746Z | getByTestId('mini-cart-toggle') not found — attribute renamed to data-qa='mini-cart'
+toolshop/e2e/i18n_currency.spec.ts::switch_locale_czk | FAIL | 2026-05-13T08:33:51.881Z | Expected shipping 9.90; test address ZIP maps to remote island surcharge not in baseline
+toolshop/e2e/i18n_currency.spec.ts::switch_currency_eur | FAIL | 2026-05-13T08:33:52.005Z | API 404: POST /orders used legacy endpoint '/v1/order' — contract updated to '/v2/orders'
+toolshop/e2e/product_detail.spec.ts::add_to_cart_from_detail | FAIL | 2026-05-13T08:33:52.139Z | Locator 'text=Proceed to checkout' strict mode: matched banner CTA and drawer CTA
+toolshop/e2e/payment_methods.spec.ts::invoice_for_b2b | FAIL | 2026-05-13T08:33:52.240Z | Timeout waiting for selector '[data-testid="btn-add-cart-legacy"]' — 0 nodes matched (locator changed)
+toolshop/e2e/order_history.spec.ts::lists_last_orders | SKIP | 2026-05-13T08:33:52.392Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/inventory.spec.ts::prevents_oversell | FLAKY_PASS | 2026-05-13T08:33:52.442Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/unit/pricing.test.ts::computes_discount_stack | FAIL | 2026-05-13T08:33:52.634Z | Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/api/catalog_contract.test.ts::GET_products_pagination | FLAKY_PASS | 2026-05-13T08:33:52.709Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/e2e/newsletter.spec.ts::subscribes_with_double_opt_in | FLAKY_PASS | 2026-05-13T08:33:52.863Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/e2e/inventory.spec.ts::prevents_oversell | SKIP | 2026-05-13T08:33:52.963Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/smoke.spec.ts::homepage_loads_under_budget | FAIL | 2026-05-13T08:33:53.102Z | page.goto: Timeout 60000ms exceeded for https://toolshop-staging.example/catalog
+toolshop/e2e/login_session.spec.ts::logout_clears_session | SKIP | 2026-05-13T08:33:53.181Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/shipping_options.spec.ts::selects_express_shipping | FAIL | 2026-05-13T08:33:53.342Z | getByTestId('mini-cart-toggle') not found — attribute renamed to data-qa='mini-cart'
+toolshop/e2e/accessibility.spec.ts::product_page_ax_core | PASS | 2026-05-13T08:33:53.407Z | -
+toolshop/e2e/catalog_filters.spec.ts::filters_by_brand | SKIP | 2026-05-13T08:33:53.529Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/login_session.spec.ts::logout_clears_session | FAIL | 2026-05-13T08:33:53.692Z | expect(locator).toBeVisible() failed after 20000ms — lazy image never intersected viewport
+toolshop/e2e/search.spec.ts::full_text_search_suggestions | PASS | 2026-05-13T08:33:53.768Z | -
+toolshop/component/mini_cart.spec.tsx::opens_on_hover | FAIL | 2026-05-13T08:33:53.944Z | Expected shipping 9.90; test address ZIP maps to remote island surcharge not in baseline
+toolshop/component/header_nav.spec.tsx::highlights_active_category | FLAKY_PASS | 2026-05-13T08:33:54.078Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/e2e/performance.spec.ts::lcp_below_threshold | FLAKY_PASS | 2026-05-13T08:33:54.120Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/e2e/accessibility.spec.ts::product_page_ax_core | SKIP | 2026-05-13T08:33:54.242Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/i18n_currency.spec.ts::switch_locale_czk | PASS | 2026-05-13T08:33:54.428Z | -
+toolshop/e2e/shipping_options.spec.ts::selects_express_shipping | PASS | 2026-05-13T08:33:54.535Z | -
+toolshop/e2e/accessibility.spec.ts::product_page_ax_core | PASS | 2026-05-13T08:33:54.612Z | -
+toolshop/e2e/coupons_stack.spec.ts::stacks_compatible_coupons | FLAKY_PASS | 2026-05-13T08:33:54.744Z | Passed after retry; first attempt: Element is not attached to the DOM (detached node) after click on category chip
+toolshop/api/catalog_contract.test.ts::GET_product_by_slug | PASS | 2026-05-13T08:33:54.874Z | -
+toolshop/component/mini_cart.spec.tsx::opens_on_hover | FLAKY_PASS | 2026-05-13T08:33:55.011Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/e2e/i18n_currency.spec.ts::switch_currency_eur | FLAKY_PASS | 2026-05-13T08:33:55.108Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/e2e/product_detail.spec.ts::shows_stock_badge | FAIL | 2026-05-13T08:33:55.204Z | waiting for locator('.product-grid .tile:nth-child(1) .price') failed: DOM order unstable
+toolshop/e2e/catalog_filters.spec.ts::filters_by_brand | FLAKY_PASS | 2026-05-13T08:33:55.380Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/e2e/product_detail.spec.ts::shows_stock_badge | FAIL | 2026-05-13T08:33:55.461Z | Playwright: locator('[aria-label="Search products"]') resolved to 0 — icon-only button markup changed
+toolshop/e2e/contact_form.spec.ts::sends_message_with_attachment | FAIL | 2026-05-13T08:33:55.602Z | locator.waitFor: Timeout 45000ms exceeded — spinner never cleared on slow CDN
+toolshop/e2e/cart_persistence.spec.ts::restores_cart_after_reload | PASS | 2026-05-13T08:33:55.747Z | -
+toolshop/component/header_nav.spec.tsx::highlights_active_category | FAIL | 2026-05-13T08:33:55.872Z | Test timeout of 30000ms exceeded while waiting for navigation to /checkout/confirm
+toolshop/e2e/performance.spec.ts::lcp_below_threshold | FLAKY_PASS | 2026-05-13T08:33:55.955Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/e2e/wishlist.spec.ts::add_remove_wishlist | PASS | 2026-05-13T08:33:56.062Z | -
+toolshop/e2e/b2b_quotes.spec.ts::requests_quote_cart | PASS | 2026-05-13T08:33:56.186Z | -
+toolshop/e2e/catalog_filters.spec.ts::filters_by_price_range | FAIL | 2026-05-13T08:33:56.330Z | 401 Unauthorized: test user 'toolshop_ci_expired@example.com' token invalid — refresh credentials
+toolshop/api/catalog_contract.test.ts::GET_products_pagination | FLAKY_PASS | 2026-05-13T08:33:56.472Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/api/catalog_contract.test.ts::GET_products_pagination | SKIP | 2026-05-13T08:33:56.562Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/product_detail.spec.ts::shows_stock_badge | FAIL | 2026-05-13T08:33:56.657Z | Timeout waiting for selector '[data-testid="btn-add-cart-legacy"]' — 0 nodes matched (locator changed)
+toolshop/unit/pricing.test.ts::vat_for_country_AT | PASS | 2026-05-13T08:33:56.772Z | -
+toolshop/e2e/returns.spec.ts::start_return_flow | FLAKY_PASS | 2026-05-13T08:33:56.889Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/api/catalog_contract.test.ts::GET_product_by_slug | FAIL | 2026-05-13T08:33:57.076Z | Timeout waiting for selector '[data-testid="btn-add-cart-legacy"]' — 0 nodes matched (locator changed)
+toolshop/e2e/inventory.spec.ts::back_in_stock_notification | FAIL | 2026-05-13T08:33:57.123Z | Locator 'text=Proceed to checkout' strict mode: matched banner CTA and drawer CTA
+toolshop/e2e/order_history.spec.ts::lists_last_orders | FAIL | 2026-05-13T08:33:57.302Z | getByTestId('mini-cart-toggle') not found — attribute renamed to data-qa='mini-cart'
+toolshop/e2e/b2b_quotes.spec.ts::requests_quote_cart | FLAKY_PASS | 2026-05-13T08:33:57.383Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/e2e/i18n_currency.spec.ts::switch_locale_czk | FAIL | 2026-05-13T08:33:57.559Z | locator.waitFor: Timeout 45000ms exceeded — spinner never cleared on slow CDN
+toolshop/e2e/inventory.spec.ts::back_in_stock_notification | PASS | 2026-05-13T08:33:57.610Z | -
+toolshop/api/catalog_contract.test.ts::GET_products_pagination | FAIL | 2026-05-13T08:33:57.739Z | Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/e2e/i18n_currency.spec.ts::switch_currency_eur | FAIL | 2026-05-13T08:33:57.840Z | page.goto: Timeout 60000ms exceeded for https://toolshop-staging.example/catalog
+toolshop/e2e/login_session.spec.ts::logout_clears_session | PASS | 2026-05-13T08:33:57.973Z | -
+toolshop/unit/cart_reducer.test.ts::merge_guest_cart | FLAKY_PASS | 2026-05-13T08:33:58.135Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/e2e/product_detail.spec.ts::add_to_cart_from_detail | PASS | 2026-05-13T08:33:58.252Z | -
+toolshop/e2e/newsletter.spec.ts::subscribes_with_double_opt_in | PASS | 2026-05-13T08:33:58.365Z | -
+toolshop/e2e/wishlist.spec.ts::add_remove_wishlist | FAIL | 2026-05-13T08:33:58.516Z | Test timeout of 30000ms exceeded while waiting for navigation to /checkout/confirm
+toolshop/unit/pricing.test.ts::computes_discount_stack | FAIL | 2026-05-13T08:33:58.597Z | Locator resolved hidden element: .modal-backdrop intercepts pointer events
+toolshop/e2e/order_history.spec.ts::reorder_from_history | FLAKY_PASS | 2026-05-13T08:33:58.751Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/e2e/search.spec.ts::empty_query_shows_trending | PASS | 2026-05-13T08:33:58.848Z | -
+toolshop/e2e/inventory.spec.ts::back_in_stock_notification | FAIL | 2026-05-13T08:33:58.958Z | Element is not attached to the DOM (detached node) after click on category chip
+toolshop/e2e/inventory.spec.ts::back_in_stock_notification | FAIL | 2026-05-13T08:33:59.095Z | Timeout waiting for selector '[data-testid="btn-add-cart-legacy"]' — 0 nodes matched (locator changed)
+toolshop/e2e/inventory.spec.ts::prevents_oversell | FAIL | 2026-05-13T08:33:59.206Z | Playwright: locator('[aria-label="Search products"]') resolved to 0 — icon-only button markup changed
+toolshop/e2e/stock_reservation.spec.ts::holds_stock_during_checkout | FLAKY_PASS | 2026-05-13T08:33:59.343Z | Passed after retry; first attempt: Element is not attached to the DOM (detached node) after click on category chip
+toolshop/e2e/login_session.spec.ts::logout_clears_session | FAIL | 2026-05-13T08:33:59.413Z | Locator 'text=Proceed to checkout' strict mode: matched banner CTA and drawer CTA
+toolshop/api/catalog_contract.test.ts::GET_products_pagination | FAIL | 2026-05-13T08:33:59.599Z | Timeout waiting for selector '[data-testid="btn-add-cart-legacy"]' — 0 nodes matched (locator changed)
+toolshop/e2e/returns.spec.ts::start_return_flow | FAIL | 2026-05-13T08:33:59.696Z | waitForResponse: Timeout waiting for POST /api/cart/merge matching predicate
+toolshop/e2e/i18n_currency.spec.ts::switch_currency_eur | FAIL | 2026-05-13T08:33:59.777Z | locator.waitFor: Timeout 45000ms exceeded — spinner never cleared on slow CDN
+toolshop/e2e/wishlist.spec.ts::add_remove_wishlist | PASS | 2026-05-13T08:33:59.941Z | -
+toolshop/e2e/wishlist.spec.ts::add_remove_wishlist | FAIL | 2026-05-13T08:34:00.050Z | expect(locator).toBeVisible() failed after 20000ms — lazy image never intersected viewport
+toolshop/e2e/order_history.spec.ts::reorder_from_history | FAIL | 2026-05-13T08:34:00.193Z | getByTestId('mini-cart-toggle') not found — attribute renamed to data-qa='mini-cart'
+toolshop/e2e/login_session.spec.ts::logs_in_demo_user | FAIL | 2026-05-13T08:34:00.286Z | expect(locator).toBeVisible() failed after 20000ms — lazy image never intersected viewport
+toolshop/e2e/performance.spec.ts::lcp_below_threshold | PASS | 2026-05-13T08:34:00.435Z | -
+toolshop/e2e/checkout_voucher.spec.ts::rejects_expired_voucher | FAIL | 2026-05-13T08:34:00.550Z | Locator 'text=Proceed to checkout' strict mode: matched banner CTA and drawer CTA
+toolshop/unit/cart_reducer.test.ts::merge_guest_cart | FAIL | 2026-05-13T08:34:00.626Z | locator.waitFor: Timeout 45000ms exceeded — spinner never cleared on slow CDN
+toolshop/e2e/smoke.spec.ts::homepage_loads_under_budget | PASS | 2026-05-13T08:34:00.772Z | -
+toolshop/e2e/order_history.spec.ts::reorder_from_history | FAIL | 2026-05-13T08:34:00.878Z | Locator resolved hidden element: .modal-backdrop intercepts pointer events
+toolshop/api/catalog_contract.test.ts::GET_products_pagination | PASS | 2026-05-13T08:34:01.014Z | -
+toolshop/component/header_nav.spec.tsx::highlights_active_category | FLAKY_PASS | 2026-05-13T08:34:01.156Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/unit/pricing.test.ts::computes_discount_stack | FLAKY_PASS | 2026-05-13T08:34:01.264Z | Passed after retry; first attempt: Element is not attached to the DOM (detached node) after click on category chip
+toolshop/e2e/stock_reservation.spec.ts::holds_stock_during_checkout | FLAKY_PASS | 2026-05-13T08:34:01.388Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/e2e/order_history.spec.ts::reorder_from_history | FLAKY_PASS | 2026-05-13T08:34:01.453Z | Passed after retry; first attempt: Element is not attached to the DOM (detached node) after click on category chip
+toolshop/e2e/coupons_stack.spec.ts::stacks_compatible_coupons | PASS | 2026-05-13T08:34:01.581Z | -
+toolshop/e2e/returns.spec.ts::start_return_flow | FAIL | 2026-05-13T08:34:01.731Z | Error: page.waitForSelector('#old-checkout-submit'): selector replaced in US-Checkout refresh
+toolshop/e2e/checkout_voucher.spec.ts::applies_valid_voucher | PASS | 2026-05-13T08:34:01.813Z | -
+toolshop/e2e/smoke.spec.ts::critical_path_buy_now | SKIP | 2026-05-13T08:34:01.948Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/b2b_quotes.spec.ts::requests_quote_cart | FLAKY_PASS | 2026-05-13T08:34:02.111Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/api/orders_contract.test.ts::POST_orders_422_invalid_sku | FAIL | 2026-05-13T08:34:02.217Z | waitForResponse: Timeout waiting for POST /api/cart/merge matching predicate
+toolshop/e2e/search.spec.ts::full_text_search_suggestions | FAIL | 2026-05-13T08:34:02.344Z | Intermittent: race — networkidle fired before hydration; element reflowed
+toolshop/e2e/i18n_currency.spec.ts::switch_locale_czk | FAIL | 2026-05-13T08:34:02.413Z | Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/api/orders_contract.test.ts::POST_orders_201 | FAIL | 2026-05-13T08:34:02.538Z | Error: page.waitForSelector('#old-checkout-submit'): selector replaced in US-Checkout refresh
+toolshop/component/header_nav.spec.tsx::highlights_active_category | FAIL | 2026-05-13T08:34:02.706Z | Intermittent: race — networkidle fired before hydration; element reflowed
+toolshop/e2e/wishlist.spec.ts::add_remove_wishlist | PASS | 2026-05-13T08:34:02.817Z | -
+toolshop/e2e/login_session.spec.ts::logs_in_demo_user | PASS | 2026-05-13T08:34:02.885Z | -
+toolshop/e2e/product_detail.spec.ts::add_to_cart_from_detail | FLAKY_PASS | 2026-05-13T08:34:03.043Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/e2e/accessibility.spec.ts::product_page_ax_core | PASS | 2026-05-13T08:34:03.151Z | -
+toolshop/e2e/returns.spec.ts::start_return_flow | FLAKY_PASS | 2026-05-13T08:34:03.260Z | Passed after retry; first attempt: Element is not attached to the DOM (detached node) after click on category chip
+toolshop/api/catalog_contract.test.ts::GET_product_by_slug | FLAKY_PASS | 2026-05-13T08:34:03.389Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/api/catalog_contract.test.ts::GET_product_by_slug | PASS | 2026-05-13T08:34:03.535Z | -
+toolshop/e2e/payment_methods.spec.ts::card_form_validation | FAIL | 2026-05-13T08:34:03.678Z | getByTestId('mini-cart-toggle') not found — attribute renamed to data-qa='mini-cart'
+toolshop/e2e/payment_methods.spec.ts::invoice_for_b2b | PASS | 2026-05-13T08:34:03.720Z | -
+toolshop/e2e/contact_form.spec.ts::sends_message_with_attachment | PASS | 2026-05-13T08:34:03.848Z | -
+toolshop/e2e/shipping_options.spec.ts::selects_express_shipping | FAIL | 2026-05-13T08:34:04.028Z | Intermittent: race — networkidle fired before hydration; element reflowed
+toolshop/e2e/inventory.spec.ts::prevents_oversell | FLAKY_PASS | 2026-05-13T08:34:04.094Z | Passed after retry; first attempt: Element is not attached to the DOM (detached node) after click on category chip
+toolshop/e2e/wishlist.spec.ts::add_remove_wishlist | FLAKY_PASS | 2026-05-13T08:34:04.267Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/e2e/b2b_quotes.spec.ts::requests_quote_cart | PASS | 2026-05-13T08:34:04.370Z | -
+toolshop/component/mini_cart.spec.tsx::opens_on_hover | FLAKY_PASS | 2026-05-13T08:34:04.485Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/e2e/coupons_stack.spec.ts::stacks_compatible_coupons | FLAKY_PASS | 2026-05-13T08:34:04.598Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/e2e/wishlist.spec.ts::add_remove_wishlist | PASS | 2026-05-13T08:34:04.697Z | -
+toolshop/e2e/login_session.spec.ts::logs_in_demo_user | PASS | 2026-05-13T08:34:04.839Z | -
+toolshop/e2e/smoke.spec.ts::critical_path_buy_now | FAIL | 2026-05-13T08:34:04.938Z | 401 Unauthorized: test user 'toolshop_ci_expired@example.com' token invalid — refresh credentials
+toolshop/api/catalog_contract.test.ts::GET_products_pagination | FAIL | 2026-05-13T08:34:05.113Z | Playwright: locator('[aria-label="Search products"]') resolved to 0 — icon-only button markup changed
+toolshop/e2e/shipping_options.spec.ts::selects_express_shipping | FLAKY_PASS | 2026-05-13T08:34:05.228Z | Passed after retry; first attempt: Element is not attached to the DOM (detached node) after click on category chip
+toolshop/e2e/login_session.spec.ts::logout_clears_session | PASS | 2026-05-13T08:34:05.316Z | -
+toolshop/e2e/coupons_stack.spec.ts::stacks_compatible_coupons | PASS | 2026-05-13T08:34:05.457Z | -
+toolshop/e2e/checkout_voucher.spec.ts::applies_valid_voucher | FAIL | 2026-05-13T08:34:05.565Z | Intermittent: race — networkidle fired before hydration; element reflowed
+toolshop/e2e/smoke.spec.ts::critical_path_buy_now | FLAKY_PASS | 2026-05-13T08:34:05.711Z | Passed after retry; first attempt: Element is not attached to the DOM (detached node) after click on category chip
+toolshop/unit/pricing.test.ts::computes_discount_stack | FLAKY_PASS | 2026-05-13T08:34:05.822Z | Passed after retry; first attempt: Element is not attached to the DOM (detached node) after click on category chip
+toolshop/e2e/search.spec.ts::empty_query_shows_trending | PASS | 2026-05-13T08:34:05.942Z | -
+toolshop/e2e/order_history.spec.ts::lists_last_orders | FAIL | 2026-05-13T08:34:06.003Z | Error: page.waitForSelector('#old-checkout-submit'): selector replaced in US-Checkout refresh
+toolshop/e2e/i18n_currency.spec.ts::switch_locale_czk | PASS | 2026-05-13T08:34:06.188Z | -
+toolshop/e2e/contact_form.spec.ts::sends_message_with_attachment | SKIP | 2026-05-13T08:34:06.298Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/newsletter.spec.ts::subscribes_with_double_opt_in | FAIL | 2026-05-13T08:34:06.423Z | AssertionError: expected basket currency 'EUR' but UI shows 'CZK' (fixture user_region mismatch)
+toolshop/e2e/performance.spec.ts::lcp_below_threshold | FAIL | 2026-05-13T08:34:06.514Z | Timeout waiting for selector '[data-testid="btn-add-cart-legacy"]' — 0 nodes matched (locator changed)
+toolshop/e2e/cart_persistence.spec.ts::restores_cart_after_reload | SKIP | 2026-05-13T08:34:06.669Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/performance.spec.ts::lcp_below_threshold | PASS | 2026-05-13T08:34:06.776Z | -
+toolshop/e2e/product_detail.spec.ts::add_to_cart_from_detail | SKIP | 2026-05-13T08:34:06.894Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/i18n_currency.spec.ts::switch_currency_eur | FAIL | 2026-05-13T08:34:06.991Z | Test timeout of 30000ms exceeded while waiting for navigation to /checkout/confirm
+toolshop/e2e/inventory.spec.ts::prevents_oversell | FAIL | 2026-05-13T08:34:07.137Z | Test timeout of 30000ms exceeded while waiting for navigation to /checkout/confirm
+toolshop/e2e/login_session.spec.ts::logs_in_demo_user | SKIP | 2026-05-13T08:34:07.256Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/payment_methods.spec.ts::invoice_for_b2b | FAIL | 2026-05-13T08:34:07.350Z | waiting for locator('.product-grid .tile:nth-child(1) .price') failed: DOM order unstable
+toolshop/e2e/coupons_stack.spec.ts::stacks_compatible_coupons | FLAKY_PASS | 2026-05-13T08:34:07.484Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/e2e/login_session.spec.ts::logout_clears_session | FAIL | 2026-05-13T08:34:07.638Z | expect(locator).toBeVisible() failed after 20000ms — lazy image never intersected viewport
+toolshop/e2e/contact_form.spec.ts::sends_message_with_attachment | FAIL | 2026-05-13T08:34:07.687Z | waiting for locator('.product-grid .tile:nth-child(1) .price') failed: DOM order unstable
+toolshop/e2e/search.spec.ts::empty_query_shows_trending | FAIL | 2026-05-13T08:34:07.868Z | page.goto: Timeout 60000ms exceeded for https://toolshop-staging.example/catalog
+toolshop/e2e/contact_form.spec.ts::sends_message_with_attachment | FAIL | 2026-05-13T08:34:07.957Z | waitForResponse: Timeout waiting for POST /api/cart/merge matching predicate
+toolshop/e2e/login_session.spec.ts::logout_clears_session | FAIL | 2026-05-13T08:34:08.052Z | Error: page.waitForSelector('#old-checkout-submit'): selector replaced in US-Checkout refresh
+toolshop/e2e/inventory.spec.ts::back_in_stock_notification | FAIL | 2026-05-13T08:34:08.167Z | page.goto: Timeout 60000ms exceeded for https://toolshop-staging.example/catalog
+toolshop/e2e/order_history.spec.ts::reorder_from_history | PASS | 2026-05-13T08:34:08.296Z | -
+toolshop/e2e/order_history.spec.ts::reorder_from_history | SKIP | 2026-05-13T08:34:08.441Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/smoke.spec.ts::homepage_loads_under_budget | PASS | 2026-05-13T08:34:08.570Z | -
+toolshop/e2e/inventory.spec.ts::back_in_stock_notification | FLAKY_PASS | 2026-05-13T08:34:08.720Z | Passed after retry; first attempt: Element is not attached to the DOM (detached node) after click on category chip
+toolshop/e2e/catalog_filters.spec.ts::filters_by_price_range | FLAKY_PASS | 2026-05-13T08:34:08.817Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/e2e/smoke.spec.ts::critical_path_buy_now | SKIP | 2026-05-13T08:34:08.931Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/component/mini_cart.spec.tsx::opens_on_hover | FAIL | 2026-05-13T08:34:09.047Z | Timeout waiting for selector '[data-testid="btn-add-cart-legacy"]' — 0 nodes matched (locator changed)
+toolshop/e2e/checkout_voucher.spec.ts::applies_valid_voucher | FAIL | 2026-05-13T08:34:09.194Z | locator.waitFor: Timeout 45000ms exceeded — spinner never cleared on slow CDN
+toolshop/api/orders_contract.test.ts::POST_orders_201 | FAIL | 2026-05-13T08:34:09.298Z | getByTestId('mini-cart-toggle') not found — attribute renamed to data-qa='mini-cart'
+toolshop/e2e/payment_methods.spec.ts::invoice_for_b2b | FAIL | 2026-05-13T08:34:09.410Z | expect(locator).toBeVisible() failed after 20000ms — lazy image never intersected viewport
+toolshop/e2e/inventory.spec.ts::back_in_stock_notification | FAIL | 2026-05-13T08:34:09.543Z | Locator 'text=Proceed to checkout' strict mode: matched banner CTA and drawer CTA
+toolshop/e2e/contact_form.spec.ts::sends_message_with_attachment | PASS | 2026-05-13T08:34:09.670Z | -
+toolshop/e2e/returns.spec.ts::start_return_flow | FAIL | 2026-05-13T08:34:09.782Z | Test timeout of 30000ms exceeded while waiting for navigation to /checkout/confirm
+toolshop/e2e/product_detail.spec.ts::add_to_cart_from_detail | FLAKY_PASS | 2026-05-13T08:34:09.845Z | Passed after retry; first attempt: Element is not attached to the DOM (detached node) after click on category chip
+toolshop/e2e/login_session.spec.ts::logs_in_demo_user | FAIL | 2026-05-13T08:34:09.962Z | page.goto: Timeout 60000ms exceeded for https://toolshop-staging.example/catalog
+toolshop/component/mini_cart.spec.tsx::opens_on_hover | PASS | 2026-05-13T08:34:10.136Z | -
+toolshop/e2e/payment_methods.spec.ts::card_form_validation | FAIL | 2026-05-13T08:34:10.254Z | page.goto: Timeout 60000ms exceeded for https://toolshop-staging.example/catalog
+toolshop/e2e/search.spec.ts::empty_query_shows_trending | FAIL | 2026-05-13T08:34:10.358Z | waitForResponse: Timeout waiting for POST /api/cart/merge matching predicate
+toolshop/api/orders_contract.test.ts::POST_orders_422_invalid_sku | FAIL | 2026-05-13T08:34:10.451Z | Playwright: locator('[aria-label="Search products"]') resolved to 0 — icon-only button markup changed
+toolshop/e2e/catalog_filters.spec.ts::filters_by_brand | FAIL | 2026-05-13T08:34:10.581Z | Playwright: locator('[aria-label="Search products"]') resolved to 0 — icon-only button markup changed
+toolshop/unit/pricing.test.ts::vat_for_country_AT | FLAKY_PASS | 2026-05-13T08:34:10.709Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/e2e/checkout_voucher.spec.ts::applies_valid_voucher | PASS | 2026-05-13T08:34:10.812Z | -
+toolshop/e2e/login_session.spec.ts::logout_clears_session | FLAKY_PASS | 2026-05-13T08:34:10.929Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/e2e/checkout_voucher.spec.ts::applies_valid_voucher | PASS | 2026-05-13T08:34:11.096Z | -
+toolshop/e2e/login_session.spec.ts::logs_in_demo_user | FAIL | 2026-05-13T08:34:11.203Z | Error: page.waitForSelector('#old-checkout-submit'): selector replaced in US-Checkout refresh
+toolshop/component/header_nav.spec.tsx::highlights_active_category | PASS | 2026-05-13T08:34:11.296Z | -
+toolshop/e2e/product_detail.spec.ts::shows_stock_badge | SKIP | 2026-05-13T08:34:11.449Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/product_detail.spec.ts::add_to_cart_from_detail | FAIL | 2026-05-13T08:34:11.533Z | page.goto: Timeout 60000ms exceeded for https://toolshop-staging.example/catalog
+toolshop/api/catalog_contract.test.ts::GET_products_pagination | SKIP | 2026-05-13T08:34:11.657Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/search.spec.ts::full_text_search_suggestions | PASS | 2026-05-13T08:34:11.777Z | -
+toolshop/e2e/checkout_voucher.spec.ts::applies_valid_voucher | FLAKY_PASS | 2026-05-13T08:34:11.952Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/api/orders_contract.test.ts::POST_orders_201 | SKIP | 2026-05-13T08:34:12.056Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/search.spec.ts::full_text_search_suggestions | FAIL | 2026-05-13T08:34:12.200Z | waiting for locator('.product-grid .tile:nth-child(1) .price') failed: DOM order unstable
+toolshop/e2e/payment_methods.spec.ts::invoice_for_b2b | PASS | 2026-05-13T08:34:12.296Z | -
+toolshop/e2e/login_session.spec.ts::logout_clears_session | SKIP | 2026-05-13T08:34:12.372Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/api/catalog_contract.test.ts::GET_products_pagination | FAIL | 2026-05-13T08:34:12.555Z | Locator 'text=Proceed to checkout' strict mode: matched banner CTA and drawer CTA
+toolshop/e2e/order_history.spec.ts::reorder_from_history | FAIL | 2026-05-13T08:34:12.617Z | Element is not attached to the DOM (detached node) after click on category chip
+toolshop/e2e/stock_reservation.spec.ts::holds_stock_during_checkout | FLAKY_PASS | 2026-05-13T08:34:12.790Z | Passed after retry; first attempt: Retry 2/3: locator.click: Target closed (page navigated during action)
+toolshop/e2e/checkout_voucher.spec.ts::rejects_expired_voucher | FAIL | 2026-05-13T08:34:12.876Z | Playwright: locator('[aria-label="Search products"]') resolved to 0 — icon-only button markup changed
+toolshop/e2e/payment_methods.spec.ts::invoice_for_b2b | FAIL | 2026-05-13T08:34:12.998Z | 401 Unauthorized: test user 'toolshop_ci_expired@example.com' token invalid — refresh credentials
+toolshop/e2e/i18n_currency.spec.ts::switch_locale_czk | FLAKY_PASS | 2026-05-13T08:34:13.130Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/api/catalog_contract.test.ts::GET_products_pagination | PASS | 2026-05-13T08:34:13.263Z | -
+toolshop/e2e/stock_reservation.spec.ts::holds_stock_during_checkout | PASS | 2026-05-13T08:34:13.383Z | -
+toolshop/api/orders_contract.test.ts::POST_orders_422_invalid_sku | FAIL | 2026-05-13T08:34:13.441Z | page.goto: Timeout 60000ms exceeded for https://toolshop-staging.example/catalog
+toolshop/e2e/contact_form.spec.ts::sends_message_with_attachment | FAIL | 2026-05-13T08:34:13.609Z | Expected shipping 9.90; test address ZIP maps to remote island surcharge not in baseline
+toolshop/component/header_nav.spec.tsx::highlights_active_category | FAIL | 2026-05-13T08:34:13.702Z | locator.waitFor: Timeout 45000ms exceeded — spinner never cleared on slow CDN
+toolshop/e2e/b2b_quotes.spec.ts::requests_quote_cart | PASS | 2026-05-13T08:34:13.802Z | -
+toolshop/e2e/payment_methods.spec.ts::invoice_for_b2b | PASS | 2026-05-13T08:34:13.953Z | -
+toolshop/api/catalog_contract.test.ts::GET_product_by_slug | FAIL | 2026-05-13T08:34:14.047Z | Expected shipping 9.90; test address ZIP maps to remote island surcharge not in baseline
+toolshop/unit/pricing.test.ts::computes_discount_stack | FAIL | 2026-05-13T08:34:14.224Z | Timeout waiting for selector '[data-testid="btn-add-cart-legacy"]' — 0 nodes matched (locator changed)
+toolshop/e2e/performance.spec.ts::lcp_below_threshold | FLAKY_PASS | 2026-05-13T08:34:14.348Z | Passed after retry; first attempt: Element is not attached to the DOM (detached node) after click on category chip
+toolshop/e2e/i18n_currency.spec.ts::switch_currency_eur | PASS | 2026-05-13T08:34:14.410Z | -
+toolshop/e2e/search.spec.ts::full_text_search_suggestions | FLAKY_PASS | 2026-05-13T08:34:14.546Z | Passed after retry; first attempt: Element is not attached to the DOM (detached node) after click on category chip
+toolshop/e2e/catalog_filters.spec.ts::filters_by_price_range | FAIL | 2026-05-13T08:34:14.715Z | Playwright: locator('[aria-label="Search products"]') resolved to 0 — icon-only button markup changed
+toolshop/e2e/catalog_filters.spec.ts::filters_by_brand | FAIL | 2026-05-13T08:34:14.790Z | expect(locator).toBeVisible() failed after 20000ms — lazy image never intersected viewport
+toolshop/component/mini_cart.spec.tsx::opens_on_hover | FLAKY_PASS | 2026-05-13T08:34:14.894Z | Passed after retry; first attempt: Strict mode violation: locator resolved to 2 elements: getByRole('button', { name: 'Add to cart' })
+toolshop/e2e/shipping_options.spec.ts::selects_express_shipping | PASS | 2026-05-13T08:34:15.039Z | -
+toolshop/e2e/checkout_voucher.spec.ts::applies_valid_voucher | PASS | 2026-05-13T08:34:15.137Z | -
+toolshop/e2e/accessibility.spec.ts::product_page_ax_core | FAIL | 2026-05-13T08:34:15.284Z | page.goto: Timeout 60000ms exceeded for https://toolshop-staging.example/catalog
+toolshop/api/orders_contract.test.ts::POST_orders_422_invalid_sku | PASS | 2026-05-13T08:34:15.381Z | -
+toolshop/e2e/login_session.spec.ts::logs_in_demo_user | SKIP | 2026-05-13T08:34:15.514Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/returns.spec.ts::start_return_flow | FAIL | 2026-05-13T08:34:15.603Z | waitForResponse: Timeout waiting for POST /api/cart/merge matching predicate
+toolshop/e2e/catalog_filters.spec.ts::filters_by_price_range | FAIL | 2026-05-13T08:34:15.787Z | Expected shipping 9.90; test address ZIP maps to remote island surcharge not in baseline
+toolshop/e2e/smoke.spec.ts::homepage_loads_under_budget | FAIL | 2026-05-13T08:34:15.849Z | Timeout waiting for selector '[data-testid="btn-add-cart-legacy"]' — 0 nodes matched (locator changed)
+toolshop/e2e/contact_form.spec.ts::sends_message_with_attachment | PASS | 2026-05-13T08:34:16.023Z | -
+toolshop/e2e/inventory.spec.ts::prevents_oversell | SKIP | 2026-05-13T08:34:16.100Z | Skipped: feature flag checkout_v2 disabled on this shard
+toolshop/e2e/login_session.spec.ts::logs_in_demo_user | PASS | 2026-05-13T08:34:16.273Z | -
+toolshop/e2e/checkout_voucher.spec.ts::applies_valid_voucher | PASS | 2026-05-13T08:34:16.385Z | -
+toolshop/e2e/order_history.spec.ts::reorder_from_history | PASS | 2026-05-13T08:34:16.441Z | -
+toolshop/api/catalog_contract.test.ts::GET_products_pagination | FAIL | 2026-05-13T08:34:16.606Z | page.goto: Timeout 60000ms exceeded for https://toolshop-staging.example/catalog
+toolshop/e2e/newsletter.spec.ts::subscribes_with_double_opt_in | FAIL | 2026-05-13T08:34:16.684Z | Playwright: locator('[aria-label="Search products"]') resolved to 0 — icon-only button markup changed
+toolshop/e2e/order_history.spec.ts::lists_last_orders | FAIL | 2026-05-13T08:34:16.853Z | Playwright: locator('[aria-label="Search products"]') resolved to 0 — icon-only button markup changed
+toolshop/e2e/inventory.spec.ts::back_in_stock_notification | FAIL | 2026-05-13T08:34:16.960Z | waiting for locator('.product-grid .tile:nth-child(1) .price') failed: DOM order unstable
+toolshop/e2e/login_session.spec.ts::logs_in_demo_user | FAIL | 2026-05-13T08:34:17.087Z | Test timeout of 30000ms exceeded while waiting for navigation to /checkout/confirm
