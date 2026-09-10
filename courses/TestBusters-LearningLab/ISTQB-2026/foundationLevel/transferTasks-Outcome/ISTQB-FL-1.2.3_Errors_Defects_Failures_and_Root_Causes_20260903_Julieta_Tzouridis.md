@@ -120,7 +120,7 @@ This finding is used as the bug for this transfer task.
 - Application: Toolshop
 - Feature: Login / Account Lockout
 - Browser: **Firefox**
-- Test User: **tester@mail.at**
+- Test User: **ju@mail.at**
 - Password: **not stored in this repository artifact**
 - Test Date: **10 September 2026**
 
