@@ -6,7 +6,7 @@
 
 ## Link to the Transfer Task File
 
-courses/TestBusters-LearningLab/ISTQB-2026/genAI/transferTasks/ISTQB-GenAI-2.2.1-Test-Analysis-with-Generative-AI.md
+(https://github.com/rgroetz2/TBLL-AgileEngineeringFoundation/blob/main/courses/TestBusters-LearningLab/ISTQB-2026/genAI/transferTasks-Outcome/Chapter2/ISTQB-GenAI-2.2.1_Test_Analysis_with_Generative_AI_20260405_Serife.md)
 
 ---
 
