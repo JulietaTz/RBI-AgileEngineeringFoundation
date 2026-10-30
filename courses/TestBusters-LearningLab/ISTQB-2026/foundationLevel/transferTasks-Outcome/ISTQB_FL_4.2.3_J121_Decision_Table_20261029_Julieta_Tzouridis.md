@@ -200,7 +200,7 @@ The "My account" page opened successfully.
 
 **Test Evidence:**
 
-![TC-01 Valid Password](images/FL_J21/TC-01.png)
+![TC-01 Valid Password](images/FL_J121/TC-01.png)
 
 ---
 
@@ -230,7 +230,7 @@ I discovered an additional security check that was not included in my original d
 
 **Test Evidence:**
 
-![TC-01b Leaked Password](images/FL_J21/TC_01b.png)
+![TC-01b Leaked Password](images/FL_J121/TC_01b.png)
 
 ---
 
@@ -278,7 +278,7 @@ Error message:
 
 **Test Evidence:**
 
-![TC-02a 6 Characters](images/FL_J21/TC_02a.png)
+![TC-02a 6 Characters](images/FL_J121/TC_02a.png)
 
 ---
 
@@ -308,7 +308,7 @@ The error message does not match the visible requirement.
 
 **Test Evidence:**
 
-![TC-02b 7 Characters](images/FL_J21/TC_02b.png)
+![TC-02b 7 Characters](images/FL_J121/TC_02b.png)
 
 ---
 
@@ -336,7 +336,7 @@ The message does not clearly explain that an uppercase letter is missing.
 
 **Test Evidence:**
 
-![TC-03 Missing Uppercase](images/FL_J21/TC_03.png)
+![TC-03 Missing Uppercase](images/FL_J121/TC_03.png)
 
 ---
 
@@ -364,7 +364,7 @@ The message does not explain that a number is missing.
 
 **Test Evidence:**
 
-![TC-04 Missing Number](images/FL_J21/TC-04.png)
+![TC-04 Missing Number](images/FL_J121/TC-04.png)
 
 ---
 
@@ -392,7 +392,7 @@ The message does not explain that a special character is missing.
 
 **Test Evidence:**
 
-![TC-05 Missing Special Character](images/FL_J21/TC-05.png)
+![TC-05 Missing Special Character](images/FL_J121/TC-05.png)
 
 ---
 
@@ -422,7 +422,7 @@ The application correctly rejected the empty password, but the additional messag
 
 **Test Evidence:**
 
-![TC-06 Empty Password](images/FL_J21/TC-06.png)
+![TC-06 Empty Password](images/FL_J121/TC-06.png)
 
 ---
 
@@ -454,7 +454,7 @@ The password was rejected, but the error message did not explain which requireme
 
 **Test Evidence:**
 
-![TC-07 Multiple Invalid Conditions](images/FL_J21/TC-07.png)
+![TC-07 Multiple Invalid Conditions](images/FL_J121/TC-07.png)
 
 ---
 
@@ -545,15 +545,15 @@ I saved screenshots during test execution.
 
 | Test Case | Evidence |
 |---|---|
-| TC-01 | [Valid Password](images/FL_J21/TC-01.png) |
-| TC-01b | [Leaked Password](images/FL_J21/TC_01b.png) |
-| TC-02a | [6 Characters](images/FL_J21/TC_02a.png) |
-| TC-02b | [7 Characters](images/FL_J21/TC_02b.png) |
-| TC-03 | [Missing Uppercase](images/FL_J21/TC_03.png) |
-| TC-04 | [Missing Number](images/FL_J21/TC-04.png) |
-| TC-05 | [Missing Special Character](images/FL_J21/TC-05.png) |
-| TC-06 | [Empty Password](images/FL_J21/TC-06.png) |
-| TC-07 | [Multiple Invalid Conditions](images/FL_J21/TC-07.png) |
+| TC-01 | [Valid Password](images/FL_J121/TC-01.png) |
+| TC-01b | [Leaked Password](images/FL_J121/TC_01b.png) |
+| TC-02a | [6 Characters](images/FL_J121/TC_02a.png) |
+| TC-02b | [7 Characters](images/FL_J121/TC_02b.png) |
+| TC-03 | [Missing Uppercase](images/FL_J121/TC_03.png) |
+| TC-04 | [Missing Number](images/FL_J121/TC-04.png) |
+| TC-05 | [Missing Special Character](images/FL_J121/TC-05.png) |
+| TC-06 | [Empty Password](images/FL_J121/TC-06.png) |
+| TC-07 | [Multiple Invalid Conditions](images/FL_J121/TC-07.png) |
 
 The screenshots show the password inputs, validation messages and results.
 
